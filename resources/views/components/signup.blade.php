@@ -494,7 +494,17 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                 <div class="navbar-header">
                     <ul class="nav navbar-nav">
                         <li class="nav-item"><a href="javascript:void(0);" class="navbar-brand nav-link">
-                            <img alt="Punjab Charity Commission" src="Images/logo-charity-header.png" data-expand="Images/logo-charity-header.png" data-collapse="Images/logo-charity-header.png" class="brand-logo" /></a></li>
+<li>
+  <a href="/">
+    <img 
+      alt="AJK Charity Commission"
+      src="Images/logo-charity.png"
+      class="brand-logo ps-2"
+      data-expand="Images/logo-charity.png"
+      data-collapse="Images/logo-charity.png"
+    />
+  </a>
+</li>
                     </ul>
                 </div>
             </div>
