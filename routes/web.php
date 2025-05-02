@@ -13,8 +13,11 @@ Route::get('/', function () {
 Route::get('/',function(){
     return view('UserSignUp');
 })->name('signup');
-
 Route::prefix('admin')->group(function () {
+    Route::get('/login', function () {
+        return view('admin.login');
+    });
+    
     Route::get('/',[HomeControoler::class, 'index']);
 });
      
