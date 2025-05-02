@@ -1,0 +1,95 @@
+ 
+ 
+        a:focus, a:hover {
+            color: #4925A1;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .small, small {
+            font-size: 90% !important;
+            font-weight: 400;
+        }
+
+        .danger {
+            color: #DA4453 !important;
+        }
+
+        .content-wrapper {
+            margin: 0px 0px -48px 0px !important;
+        }
+
+        .card-title {
+            color: #006837;
+            font-size: 28px;
+        }
+
+        .card-header {
+            padding: 0px 15px !important;
+        }
+
+        form .form-group {
+            margin-bottom: 0.5rem !important;
+        }
+
+        .card-block {
+            padding: 1.0rem 1.5rem 1.0rem 1.5rem;
+        }
+
+        .modal {
+            z-index: 999999 !important;
+        }
+
+            .modal .modal-content {
+                border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+                border: 1px solid #006400;
+            }
+
+        .modal-dialog {
+            max-width: 600px;
+        }
+
+        .modal-header {
+            padding: .50rem 1.25rem;
+            border-bottom: none;
+            background-color: #F70000;
+            color: #fff;
+        }
+
+        .modal-title {
+            line-height: inherit;
+            color: #fff;
+        }
+
+        .close {
+            color: #fff;
+            opacity: inherit;
+        }
+
+            .close:hover {
+                color: #fff;
+                opacity: inherit;
+            }
+
+        .modal-header .close {
+            margin-top: 2px;
+        }
+
+        .font-16 {
+            font-size: 16px;
+        }
+
+        .btn1 {
+            background-image: none !important;
+            background-color: #F70000 !important;
+        }
+
+            .btn1.focus, .btn1:focus, .btn1:hover {
+                background-image: none !important;
+                background-color: #F70000 !important;
+			}
+        .m-t-50 {
+            margin-top: 50px;
+        }
+    
+	
