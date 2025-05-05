@@ -27,3 +27,4 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard',[HomeControoler::class, 'index'])->name('dashboard');
 });
 require __DIR__.'/auth.php';
+
