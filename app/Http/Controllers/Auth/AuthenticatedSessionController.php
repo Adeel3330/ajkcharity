@@ -14,21 +14,25 @@ class AuthenticatedSessionController extends Controller
     /**
      * Display the login view.
      */
-    public function create(): View
-    {
-        return view('auth.login');
-    }
+    // public function create(): View
+    // {
+    //     return view('auth.login');
+    // }
 
     /**
      * Handle an incoming authentication request.
      */
     public function store(LoginRequest $request): RedirectResponse
     {
+        // dd($request->all());
         $request->authenticate();
 
         $request->session()->regenerate();
 
-        return redirect()->intended(route('dashboard', absolute: false));
+        return redirect()->route('admin.dashboard');
+
+
+        // return redirect()->intended(route('admin.dashboard', absolute: false));
     }
 
     /**
@@ -42,6 +46,6 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect('/admin/dashboard');
     }
 }

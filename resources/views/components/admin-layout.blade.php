@@ -27,7 +27,7 @@
 
 <link href="WebResource7cac.css?d=bZQu9IErOfGRZdP9C3BB5QgjSbKqeaV4Bxcma6dBpba8Uc6m76SBoJQy21V3oSMhSjnPTGCp11qqY6mxYrHfJLeQx7xhJrcHHeKIrygk1zgsza4nYcGxCLIXcX19-_Js0&amp;t=635760710720000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="WebResourcef4a2.css?d=EkHr37SACCjvnXcRDMYA5UEZCGBQ7RkTani35bwNMNgmXQ83llRhD8UmOVL06i2S9p1bHMdw3jkUWalrZo_oPphobiirB8r7HOqyqV15PvczesT-ZHU5JgIVWJU49k5X7iXCdNbhnl0oij98CulLog2&amp;t=635760710720000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /></head>
 <body data-open="hover" data-menu="horizontal-menu" data-col="1-column" class="horizontal-layout horizontal-menu 1-column bg-full-screen-image blank-page blank-page">
-    <form method="post" action="https://mis.charitycommission.punjab.gov.pk/" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ContentPlaceHolder1_lbtnLogin')" id="form1">
+    
 <div class="aspNetHidden">
 <input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
@@ -99,7 +99,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                         <div class="card-header no-border">
                             
                             <div class="card-title text-xs-center">
-                                <h4 class="card-title">LOGIN</h4>
+                                <h4 class="card-title">ADMIN LOGIN</h4>
 
                             </div>
                         </div>
@@ -120,7 +120,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                             </label>
                                             <fieldset class="position-relative has-icon-left">
                                                 <!-- 2015.2.826.45 --><span id="ctl00_ContentPlaceHolder1_txtUsername_wrapper" class="riSingle RadInput RadInput_Default" style="width:160px;">
-                                                    <input name="email" type="text" size="20" class="riTextBox riEnabled form-control" value="_____-_______-_" /><input id="ctl00_ContentPlaceHolder1_txtUsername_ClientState" name="ctl00_ContentPlaceHolder1_txtUsername_ClientState" type="hidden" /></span>
+                                                    <input name="email" type="text" size="20" class="form-control" value="_____-_______-_" />
+                                                </span>
                                                 <div class="form-control-position">
                                                     <i class="icon-head"></i>
                                                 </div>
@@ -135,7 +136,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                 Password ( <span class="urdu_Font">پاس ورڈ</span> ) <span class="danger">&nbsp;*</span>
                                             </label>
                                             <fieldset class="position-relative has-icon-left">
-                                                <input name="password" type="password"  class="Password form-control" placeholder="Password" />
+                                                <input  type="password" name="password"  class="Password form-control" placeholder="Password" />
                                                 <div class="form-control-position">
                                                     <i class="icon-key3"></i>
                                                 </div>
@@ -253,7 +254,6 @@ Sys.Application.add_init(function() {
 });
 //]]>
 </script>
-</form>
 
 </body>
 

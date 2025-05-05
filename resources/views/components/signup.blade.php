@@ -436,58 +436,60 @@
 
 <link href="WebResource7cac.css?d=bZQu9IErOfGRZdP9C3BB5QgjSbKqeaV4Bxcma6dBpba8Uc6m76SBoJQy21V3oSMhSjnPTGCp11qqY6mxYrHfJLeQx7xhJrcHHeKIrygk1zgsza4nYcGxCLIXcX19-_Js0&amp;t=635760710720000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="WebResourcef4a2.css?d=EkHr37SACCjvnXcRDMYA5UEZCGBQ7RkTani35bwNMNgmXQ83llRhD8UmOVL06i2S9p1bHMdw3jkUWalrZo_oPphobiirB8r7HOqyqV15PvczesT-ZHU5JgIVWJU49k5X7iXCdNbhnl0oij98CulLog2&amp;t=635760710720000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /></head>
 <body data-open="hover" data-menu="horizontal-menu" data-col="1-column" class="horizontal-layout horizontal-menu 1-column bg-full-screen-image blank-page blank-page">
-    <form method="post" action="https://mis.charitycommission.punjab.gov.pk/UserSignUp.aspx" id="form1" enctype="multipart/form-data">
-<div class="aspNetHidden">
-<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
-<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
-</div>
-
-<script type="text/javascript">
-//<![CDATA[
-var theForm = document.forms['form1'];
-if (!theForm) {
-    theForm = document.form1;
-}
-function __doPostBack(eventTarget, eventArgument) {
-    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-        theForm.__EVENTTARGET.value = eventTarget;
-        theForm.__EVENTARGUMENT.value = eventArgument;
-        theForm.submit();
-    }
-}
-//]]>
-</script>
+    <form action="{{ route('charity.store') }}" method="POST" enctype="multipart/form-data">@csrf
+        {{-- <div class="aspNetHidden">
+            <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+            <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+            <input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+        </div> --}}
 
 
-<script src="WebResourcef5b2.js?d=pynGkmcFUV13He1Qd6_TZLqI86qciVwo1588Ueb8h3-yJKFhar5h_uACf8O1LzasUqqgTeLQjKked9CQS8EZcw2&amp;t=638744898302013759" type="text/javascript"></script>
+
+        {{-- <script type="text/javascript">
+                //<![CDATA[
+                var theForm = document.forms['form1'];
+                if (!theForm) {
+                    theForm = document.form1;
+                }
+                function __doPostBack(eventTarget, eventArgument) {
+                    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                        theForm.__EVENTTARGET.value = eventTarget;
+                        theForm.__EVENTARGUMENT.value = eventArgument;
+                        theForm.submit();
+                    }
+                }
+                //]]>
+        </script> --}}
 
 
-<script src="Scripts/WebForms/MsAjax/MicrosoftAjax.js" type="text/javascript"></script>
-<script type="text/javascript">
-//<![CDATA[
-if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
-//]]>
-</script>
+        {{-- <script src="WebResourcef5b2.js?d=pynGkmcFUV13He1Qd6_TZLqI86qciVwo1588Ueb8h3-yJKFhar5h_uACf8O1LzasUqqgTeLQjKked9CQS8EZcw2&amp;t=638744898302013759" type="text/javascript"></script>
 
-<script src="Scripts/WebForms/MsAjax/MicrosoftAjaxWebForms.js" type="text/javascript"></script>
-<script src="ScriptResourced06f.axd?d=ncOnHn38dHLLzUF7WgPYMWuRRitvz3MKUUP3Xq0StldztQfSFYbgC9121qWCGNoj8ss7317vqoZOStHCxZ9c70ckJKCW5T8pnoKA-VDuF2f65JYnJw2v1erEPl69Zp7AKmZWTgoITIg_HMLec2C7-g2&amp;t=ffffffff8f9c0479" type="text/javascript"></script>
-<script src="ScriptResourceb893.axd?d=TDVjdgRbdvNAY3tnbizUcIzYkiQQVgRq6vv0DsBQK-9q1geZNGP8e8PLi0ik8HCBaDKITdUodf70j61Dw0xEyr4OwkmoyX1fiQj2fEAN5YclY8bxPSRW2wedOldzjB8V0&amp;t=5606f732" type="text/javascript"></script>
-<script src="ScriptResourced0de.axd?d=CKWp3hTbfUbZoJvrOz6P-4mAAqBcH44t6NXy3FQx0vCTTTkzY_AUlm9vJbFT3bZ6pchUkwgG4sv6gTHb61cG94-F9kXscUvCX9h191ba7GJK6V4vT8lqoF7Hhamr864qP1clfFsl8q1dOj36x9Nnyw2&amp;t=5606f732" type="text/javascript"></script>
-<script src="ScriptResource6163.axd?d=uxk4EFsjul2cezmp9vKGFPx_sIImjqO10bUpzRj-Lx8d-uWXYfSWmTQzJramkxYMu0KSIYSqNmuww0SOr5Gvot4HyBy1aydqTOQ7iKW6QYj-7LV6wE7UjLcV2YtqEDRUdm-MaXQ3lAtJPCays2K5-FuCcVQQjixOmI38PWnUYvI1&amp;t=5606f732" type="text/javascript"></script>
-<script src="ScriptResourcef7ac.axd?d=8CjII1v0OLoMNKf5zGXmeq5K9Drhfbcqn4y817S79k6Oa-5oTA826Kc_fM7YDUR3G0bOyjn5ETUjDkl7P2jrBgsRFwBCFbzRY5SqYwl6ra8_TjGaauUqH9N3h7aEClk9XUthV_e7P4URXuuLZrIUEVZghhXyA4MgEoEzO8NeJ5w1&amp;t=ffffffff9fdaf3c6" type="text/javascript"></script>
-<script src="ScriptResource81e5.axd?d=qiCbui8_q4m0BAPh1b3lI1_xFM3tBIAzmH7nkymCkXtK3Q1VlrjC0EqlWrv9cSsgVUJm13VFSYVQYCSKVsT5XwJ9ItcuixszdQmehkGjmPqMjAM31bx_dwGSBFNoapz3Nqmbw52s_T5ZB7COnN8Ar5l-H02zIYtjamrihPlj4mBK4UsN8aEMSscw9Ew-xR390&amp;t=ffffffff9fdaf3c6" type="text/javascript"></script>
-<div class="aspNetHidden">
 
-	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="095AD3EC" />
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="WeXE8lo5jL+OiMD7lqemrdLY1PYBnpKSbdx2rE8huHid8fjwx34KKSCEpsVG8D2kQ7OAsmwea7hIfNlw9hX3U/wRL1pdsd0hoTvGNpVYevn4WxaHADDGXNuxMMZJc8aBqDtavFEonjJAb193u/tLliAujicOtZQZSiDgnFu3aTYTvkPr1rPPHpf01KtjururrL2LXujQ+lu2unxG6MSILsx1GypuXvRLYMeWPjeyRIMkQsKJb1BUA570qT7SJ+A9TYtl4hgHVk+DI1ch7e+CKvOlMlqAsKQ7nrX4/w/T7QYkhDWS3ZCs6TRd3t5anf+nnLNvUAUUdN3eQM8VMUDEng336+TKiuPQtxNgedGF6s3SdPC81Qg6l34WJ5G3NWn2mVnORItBNkMKjXsg/27W0D8YgwVPlrrH+kCnDmMDFoNr3kZxKLgwtcGrmoDmo1cjzr2rKouwdpwi6oOGPsdI1Hze5SgcyE0T4xk5bvjv079zZo4tYLRxVILnxcPEDRaHs62VBt1pujBSOBycFsi2lojP0Oxdn7N326KEg/Ee0jd9AoPV9LJVYClgheXMJ60obJB/6Syb1OYk2EDB1LQ/J0uR3zwR6WxA79FKbBayMX9LtMgt/axUIRu+a/VSqh6yUeJLfquyb2gqIHKMKXQShOWtinX88D32q5t1uMGZ19SiAcFGsHlwFzszLa+kTy6+K3MhdNeClf/o56WX9ai2URibzWZ14GKQ6fx56mM4KcXcmUssVK3EEgNVDhLBoSjYx3Smpf4hrnvu5lMbXCqxhoepS0zFQrY3+BxL0bnNonNfDKAKL5k0pKhfUoCzWSDsYImHhwu4sPjoVLDri8vNMoyqTDTYv7kYSKYFUo4M+pyERG3Cns+igU9SFDd9xRWczOnSdYFrF9xryg8DQsEiiIqeDdDrbcu/bVUVo8D6u3b1rJGghBzZM7fuc5UQ96l7AAJOXIaZFfEVv/nn+VkBm+2hWow/01RL++r+sqyJqC9url8x/3a1is+diRZwwbhtSR0+/5Di0UDNfmz4T/ppacX9sdFGb9ku9Ao+fJBVuD1x6/WDvTMpCGPlQu/JiCgKBidHbQ13iWlQxmSxI3kkOBoVugdN3xXgISd1WLkOpVP1J+OFlElM/SzU/op8ZB0s8Ps0RqCYiqWdIjMNxdTFOaJK2G3lV+BIEUNmdc0YdSDvsusoJaAOAQngW/LTF8sGkB7GeIHKCo9+Y1V/pndh9Djug6o/mJUkydEjLwiMYAQMBI7o49CT4Uvh5/Em3zqNWMyrBwIscpOEsLVt1kVUzGojkA52fbBN1C15yBUotIkRjE+ymjt6vf8BLvM9r9LLZ1bToVAIe8FyS6Wc0EetRxMDVCi1xm9z40yVReBCNngYaCR3cRxBrElZH8/5z/1Mpofale9Jo2oe2UsnTj5uyqviVoNVf+TinP55hy6RNQKphwuULOenho6THueupq5VV2fEXZ6L+0JvZWUlaS74zFldKhm/DLoyo2pk11lPciCuLzoP9G5NnZ+ILH6Tly9cDQEg7kCN75ET0ZfyqSwF+4ECWgq9q8xhIeaF26gSqgdNQvgIBnJMD+u7AVGIDrH5yeM2CLB4SCk/Ktjtr85hdWWKir2XttU8lJnuuKHmySUP5RnYSJappZUD6Adog7HuoWj3vAOygLi3sk+tewBM/86POR4+aNW4PVSwVe8pZso=" />
-</div>
+        <script src="Scripts/WebForms/MsAjax/MicrosoftAjax.js" type="text/javascript"></script>
         <script type="text/javascript">
-//<![CDATA[
-Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['tctl00$ContentPlaceHolder1$UpdatePanel1','ContentPlaceHolder1_UpdatePanel1','tctl00$ContentPlaceHolder1$UpdatePanel2','ContentPlaceHolder1_UpdatePanel2'], ['ctl00$ContentPlaceHolder1$lbtnClose','ContentPlaceHolder1_lbtnClose'], [], 90, 'ctl00');
-//]]>
-</script>
+        //<![CDATA[
+        if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+        //]]>
+        </script> --}}
+
+        {{-- <script src="Scripts/WebForms/MsAjax/MicrosoftAjaxWebForms.js" type="text/javascript"></script>
+        <script src="ScriptResourced06f.axd?d=ncOnHn38dHLLzUF7WgPYMWuRRitvz3MKUUP3Xq0StldztQfSFYbgC9121qWCGNoj8ss7317vqoZOStHCxZ9c70ckJKCW5T8pnoKA-VDuF2f65JYnJw2v1erEPl69Zp7AKmZWTgoITIg_HMLec2C7-g2&amp;t=ffffffff8f9c0479" type="text/javascript"></script>
+        <script src="ScriptResourceb893.axd?d=TDVjdgRbdvNAY3tnbizUcIzYkiQQVgRq6vv0DsBQK-9q1geZNGP8e8PLi0ik8HCBaDKITdUodf70j61Dw0xEyr4OwkmoyX1fiQj2fEAN5YclY8bxPSRW2wedOldzjB8V0&amp;t=5606f732" type="text/javascript"></script>
+        <script src="ScriptResourced0de.axd?d=CKWp3hTbfUbZoJvrOz6P-4mAAqBcH44t6NXy3FQx0vCTTTkzY_AUlm9vJbFT3bZ6pchUkwgG4sv6gTHb61cG94-F9kXscUvCX9h191ba7GJK6V4vT8lqoF7Hhamr864qP1clfFsl8q1dOj36x9Nnyw2&amp;t=5606f732" type="text/javascript"></script>
+        <script src="ScriptResource6163.axd?d=uxk4EFsjul2cezmp9vKGFPx_sIImjqO10bUpzRj-Lx8d-uWXYfSWmTQzJramkxYMu0KSIYSqNmuww0SOr5Gvot4HyBy1aydqTOQ7iKW6QYj-7LV6wE7UjLcV2YtqEDRUdm-MaXQ3lAtJPCays2K5-FuCcVQQjixOmI38PWnUYvI1&amp;t=5606f732" type="text/javascript"></script>
+        <script src="ScriptResourcef7ac.axd?d=8CjII1v0OLoMNKf5zGXmeq5K9Drhfbcqn4y817S79k6Oa-5oTA826Kc_fM7YDUR3G0bOyjn5ETUjDkl7P2jrBgsRFwBCFbzRY5SqYwl6ra8_TjGaauUqH9N3h7aEClk9XUthV_e7P4URXuuLZrIUEVZghhXyA4MgEoEzO8NeJ5w1&amp;t=ffffffff9fdaf3c6" type="text/javascript"></script>
+        <script src="ScriptResource81e5.axd?d=qiCbui8_q4m0BAPh1b3lI1_xFM3tBIAzmH7nkymCkXtK3Q1VlrjC0EqlWrv9cSsgVUJm13VFSYVQYCSKVsT5XwJ9ItcuixszdQmehkGjmPqMjAM31bx_dwGSBFNoapz3Nqmbw52s_T5ZB7COnN8Ar5l-H02zIYtjamrihPlj4mBK4UsN8aEMSscw9Ew-xR390&amp;t=ffffffff9fdaf3c6" type="text/javascript"></script> --}}
+        {{-- <div class="aspNetHidden">
+
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="095AD3EC" />
+            <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="WeXE8lo5jL+OiMD7lqemrdLY1PYBnpKSbdx2rE8huHid8fjwx34KKSCEpsVG8D2kQ7OAsmwea7hIfNlw9hX3U/wRL1pdsd0hoTvGNpVYevn4WxaHADDGXNuxMMZJc8aBqDtavFEonjJAb193u/tLliAujicOtZQZSiDgnFu3aTYTvkPr1rPPHpf01KtjururrL2LXujQ+lu2unxG6MSILsx1GypuXvRLYMeWPjeyRIMkQsKJb1BUA570qT7SJ+A9TYtl4hgHVk+DI1ch7e+CKvOlMlqAsKQ7nrX4/w/T7QYkhDWS3ZCs6TRd3t5anf+nnLNvUAUUdN3eQM8VMUDEng336+TKiuPQtxNgedGF6s3SdPC81Qg6l34WJ5G3NWn2mVnORItBNkMKjXsg/27W0D8YgwVPlrrH+kCnDmMDFoNr3kZxKLgwtcGrmoDmo1cjzr2rKouwdpwi6oOGPsdI1Hze5SgcyE0T4xk5bvjv079zZo4tYLRxVILnxcPEDRaHs62VBt1pujBSOBycFsi2lojP0Oxdn7N326KEg/Ee0jd9AoPV9LJVYClgheXMJ60obJB/6Syb1OYk2EDB1LQ/J0uR3zwR6WxA79FKbBayMX9LtMgt/axUIRu+a/VSqh6yUeJLfquyb2gqIHKMKXQShOWtinX88D32q5t1uMGZ19SiAcFGsHlwFzszLa+kTy6+K3MhdNeClf/o56WX9ai2URibzWZ14GKQ6fx56mM4KcXcmUssVK3EEgNVDhLBoSjYx3Smpf4hrnvu5lMbXCqxhoepS0zFQrY3+BxL0bnNonNfDKAKL5k0pKhfUoCzWSDsYImHhwu4sPjoVLDri8vNMoyqTDTYv7kYSKYFUo4M+pyERG3Cns+igU9SFDd9xRWczOnSdYFrF9xryg8DQsEiiIqeDdDrbcu/bVUVo8D6u3b1rJGghBzZM7fuc5UQ96l7AAJOXIaZFfEVv/nn+VkBm+2hWow/01RL++r+sqyJqC9url8x/3a1is+diRZwwbhtSR0+/5Di0UDNfmz4T/ppacX9sdFGb9ku9Ao+fJBVuD1x6/WDvTMpCGPlQu/JiCgKBidHbQ13iWlQxmSxI3kkOBoVugdN3xXgISd1WLkOpVP1J+OFlElM/SzU/op8ZB0s8Ps0RqCYiqWdIjMNxdTFOaJK2G3lV+BIEUNmdc0YdSDvsusoJaAOAQngW/LTF8sGkB7GeIHKCo9+Y1V/pndh9Djug6o/mJUkydEjLwiMYAQMBI7o49CT4Uvh5/Em3zqNWMyrBwIscpOEsLVt1kVUzGojkA52fbBN1C15yBUotIkRjE+ymjt6vf8BLvM9r9LLZ1bToVAIe8FyS6Wc0EetRxMDVCi1xm9z40yVReBCNngYaCR3cRxBrElZH8/5z/1Mpofale9Jo2oe2UsnTj5uyqviVoNVf+TinP55hy6RNQKphwuULOenho6THueupq5VV2fEXZ6L+0JvZWUlaS74zFldKhm/DLoyo2pk11lPciCuLzoP9G5NnZ+ILH6Tly9cDQEg7kCN75ET0ZfyqSwF+4ECWgq9q8xhIeaF26gSqgdNQvgIBnJMD+u7AVGIDrH5yeM2CLB4SCk/Ktjtr85hdWWKir2XttU8lJnuuKHmySUP5RnYSJappZUD6Adog7HuoWj3vAOygLi3sk+tewBM/86POR4+aNW4PVSwVe8pZso=" />
+        </div>
+        <script type="text/javascript">
+        //<![CDATA[
+        Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['tctl00$ContentPlaceHolder1$UpdatePanel1','ContentPlaceHolder1_UpdatePanel1','tctl00$ContentPlaceHolder1$UpdatePanel2','ContentPlaceHolder1_UpdatePanel2'], ['ctl00$ContentPlaceHolder1$lbtnClose','ContentPlaceHolder1_lbtnClose'], [], 90, 'ctl00');
+        //]]>
+        </script> --}}
 
         <nav class="header-navbar navbar navbar-with-menu navbar-fixed-top navbar-dark navbar-border header_BackgroundImage">
             <div class="navbar-wrapper">
@@ -525,7 +527,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                 <div class="card-body">
                                     <div class="card-block">
                                         
-                                        <div class="row">
+                                        {{-- <div class="row">
                                             <div class="col-md-12">
                                                 <fieldset class="position-relative">
                                                     <!--*******************************Start Hidden Field & Message Alert**********************************-->
@@ -539,7 +541,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                     <input type="hidden" name="ctl00$ContentPlaceHolder1$hfMobileNoVerified" id="ContentPlaceHolder1_hfMobileNoVerified" />
                                                 </fieldset>
                                             </div>
-                                        </div>
+                                        </div> --}}
                                         
                                         <div class="row">
                                             <div class="col-md-12">
@@ -548,7 +550,10 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                         Name of the Charity ( <span class="urdu_Font">چیریٹی / خیراتی ادارے کا نام</span> ) <span class="danger">&nbsp;*</span>
                                                     </label>
                                                     <fieldset class="position-relative has-icon-left">
-                                                        <input name="ctl00$ContentPlaceHolder1$txtCharity" type="text" maxlength="200" id="ContentPlaceHolder1_txtCharity" class="form-control" placeholder="Name of the Charity" />
+                                                        <input name="charity_name" type="text" maxlength="200" id="ContentPlaceHolder1_txtCharity" class="form-control" placeholder="Name of the Charity" />
+                                                        @error('charity_name')
+                                                            <div style="color: red;">{{ $message }}</div>
+                                                        @enderror
                                                         <div class="form-control-position">
                                                             <i class="icon-file-empty"></i>
                                                         </div>
@@ -562,36 +567,41 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                 <div class="form-group">
                                                     <label class="label-control">
                                                         Province ( <span class="urdu_Font">صوبہ</span> ) <span class="danger">&nbsp;*</span></label>
-                                                    <select name="ctl00$ContentPlaceHolder1$ddlProvince" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlProvince\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_ddlProvince" class="form-control select2">
-		<option selected="selected" value="0">--- Please Select ---</option>
-		<option value="7">Punjab</option>
-		<option value="8">Sindh</option>
-		<option value="5">Islamabad Capital Territory</option>
-		<option value="6">Khyber Pakhtunkhwa</option>
-		<option value="2">Balochistan</option>
-		<option value="1">Azad Jammu and Kashmir</option>
-		<option value="3">Federally Administered Tribal Areas</option>
-		<option value="4">Gilgit Baltistan</option>
+                                                    <select name="province" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlProvince\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_ddlProvince" class="form-control select2">
+                                                    <option selected="selected" value="0">--- Please Select ---</option>
+                                                    <option value="7">Punjab</option>
+                                                    <option value="8">Sindh</option>
+                                                    <option value="5">Islamabad Capital Territory</option>
+                                                    <option value="6">Khyber Pakhtunkhwa</option>
+                                                    <option value="2">Balochistan</option>
+                                                    <option value="1">Azad Jammu and Kashmir</option>
+                                                    <option value="3">Federally Administered Tribal Areas</option>
+                                                    <option value="4">Gilgit Baltistan</option>
 
-	</select>
+	                                                </select>
+                                                    @error('province')
+                                                    <div style="color: red;">{{ $message }}</div>
+                                                    @enderror
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="label-control">
                                                         Law under which registered ( <span class="urdu_Font">قانون جس کے تحت رجسٹرڈ ہے</span> ) <span class="danger">&nbsp;*</span></label>
-                                                    <select name="ctl00$ContentPlaceHolder1$ddlNatureofEntity" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlNatureofEntity\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_ddlNatureofEntity" class="form-control select2">
-		<option selected="selected" value="0">--- Please Select ---</option>
-		<option value="1">Companies Act, 2017</option>
-		<option value="2">Societies Registration Act, 1860</option>
-		<option value="3">Trusts Act, 1882</option>
-		<option value="4">Voluntary Social Welfare Agencies (Registration and Control) Ordinance, 1961</option>
-		<option value="13">Companies Ordinance 1984 (Registrar Joint Stock Companies)</option>
-		<option value="14">Companies Act 2017 (Registrar Joint Stock Companies)</option>
-		<option value="5">Any other Law</option>
+                                                    <select name="law_under_which_registered" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlNatureofEntity\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_ddlNatureofEntity" class="form-control select2">
+                                                    <option selected="selected" value="0">--- Please Select ---</option>
+                                                    <option value="1">Companies Act, 2017</option>
+                                                    <option value="2">Societies Registration Act, 1860</option>
+                                                    <option value="3">Trusts Act, 1882</option>
+                                                    <option value="4">Voluntary Social Welfare Agencies (Registration and Control) Ordinance, 1961</option>
+                                                    <option value="13">Companies Ordinance 1984 (Registrar Joint Stock Companies)</option>
+                                                    <option value="14">Companies Act 2017 (Registrar Joint Stock Companies)</option>
+                                                    <option value="5">Any other Law</option>
 
-	</select>
-
+	                                               </select>
+                                                   @error('law_under_which_registered')
+                                                   <div style="color: red;">{{ $message }}</div>
+                                                   @enderror
                                                 </div>
                                             </div>
                                              
@@ -604,13 +614,16 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                 <div class="form-group">
                                                     <label class="label-control">
                                                         Category: Area of Operations ( <span class="urdu_Font">کیٹیگری: آپریشنز کا علاقہ</span> ) <span class="danger">&nbsp;*</span></label>
-                                                    <select name="ctl00$ContentPlaceHolder1$ddlCategory" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlCategory\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_ddlCategory" class="form-control select2">
-		<option selected="selected" value="0">--- Please Select ---</option>
-		<option value="1">Category (A): Currently operating in the entire Province/ two or more Districts</option>
-		<option value="2">Category (B): Currently operating within one District (more than one Tehsils of the District)</option>
-		<option value="3">Category (C): Currently operating within one Tehsil</option>
+                                                    <select name="category_area_operations" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlCategory\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_ddlCategory" class="form-control select2">
+                                                    <option selected="selected" value="0">--- Please Select ---</option>
+                                                    <option value="1">Category (A): Currently operating in the entire Province/ two or more Districts</option>
+                                                    <option value="2">Category (B): Currently operating within one District (more than one Tehsils of the District)</option>
+                                                    <option value="3">Category (C): Currently operating within one Tehsil</option>
 
-	</select>
+                                                </select>
+                                                @error('category_area_operations')
+                                                <div style="color: red;">{{ $message }}</div>
+                                                @enderror
                                                 </div>
                                             </div>
                                            
@@ -630,7 +643,10 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                             Full Name ( <span class="urdu_Font">مکمل نام</span> ) <span class="danger">&nbsp;*</span>
                                                         </label>
                                                         <fieldset class="position-relative has-icon-left">
-                                                            <input name="ctl00$ContentPlaceHolder1$txtFullName" type="text" maxlength="100" id="ContentPlaceHolder1_txtFullName" class="form-control" placeholder="Name" />
+                                                            <input name="fullname" type="text" maxlength="100" id="ContentPlaceHolder1_txtFullName" class="form-control" placeholder="Name" />
+                                                            @error('fullname')
+                                                            <div style="color: red;">{{ $message }}</div>
+                                                            @enderror
                                                             <div class="form-control-position">
                                                                 <i class="icon-head"></i>
                                                             </div>
@@ -643,15 +659,22 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
 
                                                             <span class="float-md-left">
                                                                 <table id="ContentPlaceHolder1_rblRelationship">
-		<tr>
-			<td><input id="ContentPlaceHolder1_rblRelationship_0" type="radio" name="ctl00$ContentPlaceHolder1$rblRelationship" value="1" /><label for="ContentPlaceHolder1_rblRelationship_0">S/o</label></td><td><input id="ContentPlaceHolder1_rblRelationship_1" type="radio" name="ctl00$ContentPlaceHolder1$rblRelationship" value="2" /><label for="ContentPlaceHolder1_rblRelationship_1">D/o</label></td><td><input id="ContentPlaceHolder1_rblRelationship_2" type="radio" name="ctl00$ContentPlaceHolder1$rblRelationship" value="3" /><label for="ContentPlaceHolder1_rblRelationship_2">W/o</label></td>
-		</tr>
-	</table>
+                                                                <tr>
+                                                                    <td><input id="ContentPlaceHolder1_rblRelationship_0" type="radio" name="guardian" value="1" /><label for="ContentPlaceHolder1_rblRelationship_0">S/o</label></td><td><input id="ContentPlaceHolder1_rblRelationship_1" type="radio" name="guardian" value="2" /><label for="ContentPlaceHolder1_rblRelationship_1">D/o</label></td><td><input id="ContentPlaceHolder1_rblRelationship_2" type="radio" name="guardian" value="3" /><label for="ContentPlaceHolder1_rblRelationship_2">W/o</label></td>
+
+                                                                </tr>
+                                                                @error('guardian')
+                                                                <div style="color: red;">{{ $message }}</div>
+                                                                @enderror
+                                                            </table>
                                                             </span>
                                                             <span class="float-md-left">&nbsp;( <span class="urdu_Font">ولدیت/ زوجیت</span> )</span> <span class="float-md-left danger">&nbsp; *</span>
                                                         </label>
                                                         <fieldset class="position-relative has-icon-left">
-                                                            <input name="ctl00$ContentPlaceHolder1$txtFatherHusbandName" type="text" maxlength="100" id="ContentPlaceHolder1_txtFatherHusbandName" class="form-control" placeholder="Father&#39;s / Husband&#39;s Name" />
+                                                            <input name="guardian_name" type="text" maxlength="100" id="ContentPlaceHolder1_txtFatherHusbandName" class="form-control" placeholder="Father&#39;s / Husband&#39;s Name" />
+                                                            @error('guardian_name')
+                                                            <div style="color: red;">{{ $message }}</div>
+                                                            @enderror
                                                             <div class="form-control-position">
                                                                 <i class="icon-head"></i>
                                                             </div>
@@ -670,7 +693,12 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                                 </span>
                                                         </label>
                                                         <fieldset class="position-relative has-icon-left">
-                                                            <!-- 2015.2.826.45 --><span id="ctl00_ContentPlaceHolder1_txtCNICNo_wrapper" class="riSingle RadInput RadInput_Default" style="width:160px;"><input id="ctl00_ContentPlaceHolder1_txtCNICNo" name="ctl00$ContentPlaceHolder1$txtCNICNo" type="text" size="20" class="riTextBox riEnabled form-control" value="_____-_______-_" /><input id="ctl00_ContentPlaceHolder1_txtCNICNo_ClientState" name="ctl00_ContentPlaceHolder1_txtCNICNo_ClientState" type="hidden" /></span>
+                                                            <!-- 2015.2.826.45 --><span id="ctl00_ContentPlaceHolder1_txtCNICNo_wrapper" class="riSingle RadInput RadInput_Default" style="width:160px;"><input id="ctl00_ContentPlaceHolder1_txtCNICNo" name="cnic" type="text" size="20" class="riTextBox riEnabled form-control" value="_____-_______-_" />
+                                                                @error('cnic')
+                                                                <div style="color: red;">{{ $message }}</div>
+                                                                @enderror
+                                                            {{-- <input id="ctl00_ContentPlaceHolder1_txtCNICNo_ClientState" name="ctl00_ContentPlaceHolder1_txtCNICNo_ClientState" type="hidden" /> --}}
+                                                        </span>
                                                             <div class="form-control-position">
                                                                 <i class="icon-file-empty"></i>
                                                             </div>
@@ -681,13 +709,16 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                     <div class="form-group">
                                                         <label class="label-control">
                                                             Nature of Authorization ( <span class="urdu_Font">اختیار کی نوعیت</span> ) <span class="danger">&nbsp;*</span></label>
-                                                        <select name="ctl00$ContentPlaceHolder1$ddlNatureofAuthorization" id="ContentPlaceHolder1_ddlNatureofAuthorization" class="form-control select2">
-		<option value="0">--- Please Select ---</option>
-		<option value="3">Trustee of Charity</option>
-		<option value="2">Officer of Charity</option>
-		<option value="1">Authorized Representative</option>
+                                                        <select name="nature_of_authorization" id="ContentPlaceHolder1_ddlNatureofAuthorization" class="form-control select2">
+                                                        <option value="0">--- Please Select ---</option>
+                                                        <option value="3">Trustee of Charity</option>
+                                                        <option value="2">Officer of Charity</option>
+                                                        <option value="1">Authorized Representative</option>
 
-	</select>
+                                                    </select>
+                                                    @error('nature_of_authorization')
+                                                        <div style="color: red;">{{ $message }}</div>
+                                                    @enderror
                                                     </div>
                                                 </div>
                                             </div>
@@ -697,15 +728,18 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                     <div class="form-group">
                                                         <label class="label-control">
                                                             Network ( <span class="urdu_Font">نیٹ ورک</span> ) <span class="danger">&nbsp;*</span></label>
-                                                        <select name="ctl00$ContentPlaceHolder1$ddlTelcoService" id="ContentPlaceHolder1_ddlTelcoService" class="form-control select2">
-		<option value="0">--- Select ---</option>
-		<option value="1">Mobilink</option>
-		<option value="2">Telenor</option>
-		<option value="3">Ufone</option>
-		<option value="4">Warid</option>
-		<option value="5">Zong</option>
+                                                        <select name="network" id="ContentPlaceHolder1_ddlTelcoService" class="form-control select2">
+                                                        <option value="0">--- Select ---</option>
+                                                        <option value="1">Mobilink</option>
+                                                        <option value="2">Telenor</option>
+                                                        <option value="3">Ufone</option>
+                                                        <option value="4">Warid</option>
+                                                        <option value="5">Zong</option>
 
-	</select>
+                                                    </select>
+                                                    @error('network')
+                                                        <div style="color: red;">{{ $message }}</div>
+                                                    @enderror
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3">
@@ -714,7 +748,14 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                             Mobile No. ( <span class="urdu_Font">موبائل نمبر</span> ) <span class="danger">&nbsp;*
                                                                 </span></label>
                                                         <fieldset class="position-relative has-icon-left">
-                                                            <span id="ctl00_ContentPlaceHolder1_txtMobileNo_wrapper" class="riSingle RadInput RadInput_Default" style="width:160px;"><input id="ctl00_ContentPlaceHolder1_txtMobileNo" name="ctl00$ContentPlaceHolder1$txtMobileNo" type="text" size="20" class="riTextBox riEnabled form-control" value="____-_______" /><input id="ctl00_ContentPlaceHolder1_txtMobileNo_ClientState" name="ctl00_ContentPlaceHolder1_txtMobileNo_ClientState" type="hidden" /></span>
+                                                            <span id="ctl00_ContentPlaceHolder1_txtMobileNo_wrapper" class="riSingle RadInput RadInput_Default" style="width:160px;">
+                                                                
+                                                                <input id="ctl00_ContentPlaceHolder1_txtMobileNo" name="mobile_no" type="text" size="20" class="riTextBox riEnabled form-control" value="____-_______" />
+                                                                @error('mobile_no')
+                                                                    <div style="color: red;">{{ $message }}</div>
+                                                                @enderror
+                                                            {{-- <input id="ctl00_ContentPlaceHolder1_txtMobileNo_ClientState" name="ctl00_ContentPlaceHolder1_txtMobileNo_ClientState" type="hidden" /> --}}
+                                                        </span>
                                                             <div class="form-control-position">
                                                                 <i class="icon-phone2"></i>
                                                             </div>
@@ -739,7 +780,10 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                                 </span>
                                                         </label>
                                                         <fieldset class="position-relative has-icon-left">
-                                                            <input name="ctl00$ContentPlaceHolder1$txtEmailAddress" type="text" maxlength="75" id="ContentPlaceHolder1_txtEmailAddress" class="form-control" placeholder="Email Address" />
+                                                            <input name="email" type="text" maxlength="75" id="ContentPlaceHolder1_txtEmailAddress" class="form-control" placeholder="Email Address" />
+                                                            @error('email')
+                                                            <div style="color: red;">{{ $message }}</div>
+                                                            @enderror
                                                             <div class="form-control-position">
                                                                 <i class="icon-mail6"></i>
                                                             </div>
@@ -773,13 +817,16 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                     <div class="form-group">
                                                         <label class="label-control">
                                                             Authorization Document ( <span class="urdu_Font">اجازتی دستاویز</span> ) <span class="danger">&nbsp;*</span></label>
-                                                        <select name="ctl00$ContentPlaceHolder1$ddlAuthorizationDocument" id="ContentPlaceHolder1_ddlAuthorizationDocument" class="form-control select2">
-		<option value="0">--- Please Select ---</option>
-		<option value="3">Authorization Letter from the Charity Head</option>
-		<option value="1">Authorization Letter from the Charity Trustee</option>
-		<option value="2">Resolution of the Charity</option>
+                                                        <select name="authorization_document" id="ContentPlaceHolder1_ddlAuthorizationDocument" class="form-control select2">
+                                                        <option value="0">--- Please Select ---</option>
+                                                        <option value="3">Authorization Letter from the Charity Head</option>
+                                                        <option value="1">Authorization Letter from the Charity Trustee</option>
+                                                        <option value="2">Resolution of the Charity</option>
 
-	</select>
+                                                    </select>
+                                                    @error('authorization_document')
+                                                    <div style="color: red;">{{ $message }}</div>
+                                                    @enderror
                                                         <span class="float-left">Download <a href="DownloadFile/PCC-CRP_Authorization_Document_Format_v1_26062020.docx" target="_blank">Authorization Letter Format</a></span>  <span class="float-right" dir="rtl">( <span class="urdu_Font"><a href="DownloadFile/PCC-CRP_Authorization_Document_Format_v1_26062020.docx" class="card-link" target="_blank">اجازت نامے کا فارمیٹ</a> ڈاؤن لوڈ کریں</span> ) </span>
                                                     </div>
                                                 </div>
@@ -789,9 +836,12 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                     </label>
                                                     <span class="danger">&nbsp;*</span>
                                                     <div class="controls">
-                                                        <input type="file" name="ctl00$ContentPlaceHolder1$fuAuthorizationEvidence" id="ContentPlaceHolder1_fuAuthorizationEvidence" class="form-control border-primary" onchange="UploadFileAuthorizationEvidence(this)" />
-                                                        <input type="hidden" name="ctl00$ContentPlaceHolder1$hfAuthorizationEvidence" id="ContentPlaceHolder1_hfAuthorizationEvidence" />
-                                                        <input type="hidden" name="ctl00$ContentPlaceHolder1$hfuploadNewAuthorizationEvidence" id="ContentPlaceHolder1_hfuploadNewAuthorizationEvidence" />
+                                                        <input type="file" name="document_file" id="ContentPlaceHolder1_fuAuthorizationEvidence" class="form-control border-primary" onchange="UploadFileAuthorizationEvidence(this)" />
+                                                        @error('document_file')
+                                                        <div style="color: red;">{{ $message }}</div>
+                                                        @enderror
+                                                        {{-- <input type="hidden" name="ctl00$ContentPlaceHolder1$hfAuthorizationEvidence" id="ContentPlaceHolder1_hfAuthorizationEvidence" /> --}}
+                                                        {{-- <input type="hidden" name="ctl00$ContentPlaceHolder1$hfuploadNewAuthorizationEvidence" id="ContentPlaceHolder1_hfuploadNewAuthorizationEvidence" /> --}}
                                                         <span class="help-block float-left">(Maximum File Size: 1MB, File Format: JPG/ JPEG/ PNG/ PDF)</span>
                                                         <a id="ContentPlaceHolder1_hrefuploadAuthorizationEvidence" title="Preview" class="float-left m-5" target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o margin-left-5"></i></a>
                                                         <progress class="progress progress-striped progress-light-green" id="fileProgress" style="display: none"></progress>
@@ -825,14 +875,20 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                     <div class="form-group">
                                                         <label class="label-control">
                                                             Name of the Applicant ( <span class="urdu_Font">صارف کا نام</span> ( <span class="urdu_Font">درخواست دہندہ</span> <span class="danger">&nbsp;*</span></label>
-                                                        <input name="ctl00$ContentPlaceHolder1$txtNameofTenderer" type="text" maxlength="100" id="ContentPlaceHolder1_txtNameofTenderer" class="form-control border-primary" />
+                                                        <input name="applicant_name" type="text" maxlength="100" id="ContentPlaceHolder1_txtNameofTenderer" class="form-control border-primary" />
+                                                        @error('applicant_name')
+                                                        <div style="color: red;">{{ $message }}</div>
+                                                        @enderror
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label class="label-control">
                                                             Challan No. ( <span class="urdu_Font">چالان نمبر</span> )<span class="danger">&nbsp;*</span></label>
-                                                        <input name="ctl00$ContentPlaceHolder1$txtChallanNo" type="text" maxlength="30" id="ContentPlaceHolder1_txtChallanNo" class="form-control border-primary" />
+                                                        <input name="challan_no" type="text" maxlength="30" id="ContentPlaceHolder1_txtChallanNo" class="form-control border-primary" />
+                                                        @error('challan_no')
+                                                        <div style="color: red;">{{ $message }}</div>
+                                                        @enderror
                                                         
                                                     </div>
                                                 </div>
@@ -843,7 +899,10 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                     <div class="form-group">
                                                         <label class="label-control">
                                                             Head of Account ( <span class="urdu_Font">اکاؤنٹ ہیڈ</span> )<span class="danger">&nbsp;*</span></label>
-                                                        <input name="ctl00$ContentPlaceHolder1$txtHeadAccount" type="text" maxlength="100" id="ContentPlaceHolder1_txtHeadAccount" class="form-control border-primary" />
+                                                        <input name="account_name" type="text" maxlength="100" id="ContentPlaceHolder1_txtHeadAccount" class="form-control border-primary" />
+                                                        @error('account_name')
+                                                        <div style="color: red;">{{ $message }}</div>
+                                                        @enderror
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
@@ -853,12 +912,15 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                             Bank Name ( <span class="urdu_Font">بینک کا نام</span> )<span class="danger">&nbsp;*
                                                         </span></label>
 
-                                                        <select name="ctl00$ContentPlaceHolder1$ddlBankName" id="ContentPlaceHolder1_ddlBankName" class="form-control select2 border-primary">
-		<option value="0">--- Please Select ---</option>
-		<option value="21">National Bank of Pakistan</option>
-		<option value="36">State Bank of Pakistan</option>
+                                                        <select name="bank_name" id="ContentPlaceHolder1_ddlBankName" class="form-control select2 border-primary">
+                                                        <option value="0">--- Please Select ---</option>
+                                                        <option value="21">National Bank of Pakistan</option>
+                                                        <option value="36">State Bank of Pakistan</option>
 
-	</select>
+                                                    </select>
+                                                    @error('bank_name')
+                                                        <div style="color: red;">{{ $message }}</div>
+                                                    @enderror
 
 
                                                     </div>
@@ -870,14 +932,20 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                     <div class="form-group">
                                                         <label class="label-control">
                                                             Branch Name ( <span class="urdu_Font">برانچ کا نام</span> )<span class="danger">&nbsp;*</span></label>
-                                                        <input name="ctl00$ContentPlaceHolder1$txtBranchName" type="text" maxlength="150" id="ContentPlaceHolder1_txtBranchName" class="form-control border-primary" />
+                                                        <input name="bank_branch_name" type="text" maxlength="150" id="ContentPlaceHolder1_txtBranchName" class="form-control border-primary" />
+                                                        @error('bank_branch_name')
+                                                        <div style="color: red;">{{ $message }}</div>
+                                                        @enderror
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label class="label-control">
                                                             Branch Code ( <span class="urdu_Font">برانچ کوڈ</span> )<span class="danger">&nbsp;*</span></label>
-                                                        <input name="ctl00$ContentPlaceHolder1$txtBranchCode" type="text" maxlength="5" id="ContentPlaceHolder1_txtBranchCode" class="form-control border-primary" />
+                                                        <input name="bank_branch_code" type="text" maxlength="5" id="ContentPlaceHolder1_txtBranchCode" class="form-control border-primary" />
+                                                        @error('bank_branch_code')
+                                                        <div style="color: red;">{{ $message }}</div>
+                                                        @enderror
                                                         
                                                     </div>
                                                 </div>
@@ -887,8 +955,10 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label class="label-control">Paid Amount (PKR) ( <span class="urdu_Font">ادا شدہ رقم</span> ( <span class="urdu_Font">پاکستانی روپے میں</span> <span class="danger">*</span></label>
-                                                        <input name="ctl00$ContentPlaceHolder1$txtAmount" type="text" maxlength="5" id="ContentPlaceHolder1_txtAmount" class="form-control border-primary" />
-                                                        
+                                                        <input name="amount" type="text" maxlength="5" id="ContentPlaceHolder1_txtAmount" class="form-control border-primary" />
+                                                        @error('amount')
+                                                        <div style="color: red;">{{ $message }}</div>
+                                                        @enderror
                                                         
                                                     </div>
                                                 </div>
@@ -897,11 +967,13 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                     <div class="form-group">
 
                                                         <label class="label-control">Selected Category Fee ( <span class="urdu_Font">منتخب شدہ کیٹیگری کی فیس </span>&nbsp;) <span class="danger">*</span></label>
-                                                        <input name="ctl00$ContentPlaceHolder1$txtSystemAmount" type="text" maxlength="10" id="ContentPlaceHolder1_txtSystemAmount" disabled="disabled" class="aspNetDisabled form-control border-primary" placeholder="PKR" />
+                                                        <input name="selected_category_fee" type="text" maxlength="10" id="ContentPlaceHolder1_txtSystemAmount" disabled="disabled" class="aspNetDisabled form-control border-primary" placeholder="PKR" />
+                                                        @error('selected_category_fee')
+                                                        <div style="color: red;">{{ $message }}</div>
+                                                        @enderror
                                                         
-                                                        
-                                                        <input type="hidden" name="ctl00$ContentPlaceHolder1$CategoryName" id="ContentPlaceHolder1_CategoryName" />
-                                                        <input type="hidden" name="ctl00$ContentPlaceHolder1$hfSystemAmount" id="ContentPlaceHolder1_hfSystemAmount" />
+                                                        {{-- <input type="hidden" name="ctl00$ContentPlaceHolder1$CategoryName" id="ContentPlaceHolder1_CategoryName" />
+                                                        <input type="hidden" name="ctl00$ContentPlaceHolder1$hfSystemAmount" id="ContentPlaceHolder1_hfSystemAmount" /> --}}
                                                     </div>
                                                 </div>
                                             </div>
@@ -912,8 +984,10 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                             <span id="ContentPlaceHolder1_spanEngregdate">Date of depositing of Fee</span> ( <span id="ContentPlaceHolder1_spanUrduregdate" class="urdu_Font">فیس جمع کروانے کی تاریخ</span> )
                                                         </label>
                                                         <span class="danger">&nbsp;*</span>
-                                                        <input name="ctl00$ContentPlaceHolder1$txtRegistrationDate" type="text" id="ContentPlaceHolder1_txtRegistrationDate" class="form-control border-primary datepicker" />
-
+                                                        <input name="deposit_date" type="text" id="ContentPlaceHolder1_txtRegistrationDate" class="form-control border-primary datepicker" />
+                                                        @error('deposit_date')
+                                                        <div style="color: red;">{{ $message }}</div>
+                                                        @enderror
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
@@ -922,9 +996,12 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                     </label>
                                                     <span class="danger">&nbsp;*</span>
                                                     <div class="controls">
-                                                        <input type="file" name="ctl00$ContentPlaceHolder1$fuPaymentSlip" id="ContentPlaceHolder1_fuPaymentSlip" onchange="UploadFilePaymentSlip(this)" />
-                                                        <input type="hidden" name="ctl00$ContentPlaceHolder1$hfUploadPaymentSlip" id="ContentPlaceHolder1_hfUploadPaymentSlip" />
-                                                        <input type="hidden" name="ctl00$ContentPlaceHolder1$hfUploadNewPaymentSlip" id="ContentPlaceHolder1_hfUploadNewPaymentSlip" />
+                                                        <input type="file" name="challan_fee_image" id="ContentPlaceHolder1_fuPaymentSlip" onchange="UploadFilePaymentSlip(this)" />
+                                                        @error('challan_fee_image')
+                                                        <div style="color: red;">{{ $message }}</div>
+                                                        @enderror
+                                                        {{-- <input type="hidden" name="ctl00$ContentPlaceHolder1$hfUploadPaymentSlip" id="ContentPlaceHolder1_hfUploadPaymentSlip" />
+                                                        <input type="hidden" name="ctl00$ContentPlaceHolder1$hfUploadNewPaymentSlip" id="ContentPlaceHolder1_hfUploadNewPaymentSlip" /> --}}
                                                         <span class="help-block float-left">(Maximum File Size: 1MB, File Format: JPG/ JPEG/ PNG/ PDF)</span>
                                                         <a id="ContentPlaceHolder1_hrefuploadPaymentSlip" title="Preview" class="float-left m-5" target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o margin-left-5"></i></a>
                                                         <progress class="progress progress-striped progress-light-green" id="fileProgress2" style="display: none"></progress>
@@ -939,12 +1016,15 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class="control-label text-justify">
-                                                        <input id="ContentPlaceHolder1_chkboxAgree" type="checkbox" name="ctl00$ContentPlaceHolder1$chkboxAgree" /><label for="ContentPlaceHolder1_chkboxAgree">  I, the above named applicant, </label>
+                                                        <input id="ContentPlaceHolder1_chkboxAgree" type="checkbox" name="accept" /><label for="ContentPlaceHolder1_chkboxAgree">  I, the above named applicant, </label>
                                                         do hereby solemnly, declare that the information provided in the above form is true and correct and nothing has been concealed or mis-stated. I acknowledge and understand that in case of any mis-statement / un-authorized access to any information system is punishable under <a href="DownloadFile/PECA_2016.pdf" target="_blank" class="text-info">Prevention of Electronic Crimes Act, 2016</a> with either description of term not exceeding three years, or fine which may extent to five million rupees, or with both.</label>
                                                 </div>
                                                 <p class="urdu_Font" dir="rtl">
                                                     میں، مسمی / مسماة حَلفِیَہ بیان/ اقرار کرتا /کرتی ہوں کہ مندرجہ بالا فارم میں فراہم کی گئی تمام معلومات بالکل سچ اور درست ہیں اور کسی بھی بات كو پوشیدہ یا غلط بیان نہیں کیا گیا ہے۔ میں تسلیم کرتا/کرتی ہوں اور سمجھتا/سمجھتی ہوں کہ کسی بھی معلوماتی نظام كو غلط بیان کرنے / تک غیر مجاز رسائی کی صورت میں پریوینشن آف الیکٹرانک کرائم ایکٹ ۲۰۱۶کے تحت سزا دی جاسکتی ہے جس میں اصطلاح کی توثیق تین سال سے زیادہ نہیں ہوسکتی ، یا جرمانہ جو کہ پچاس لاکھ روپے تک ہوسکتاہے یا دونوں ایک ساتھ۔
                                                 </p>
+                                                @error('accept')
+                                                        <div style="color: red;">{{ $message }}</div>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="row">
@@ -955,7 +1035,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                         </div>
                                     </div>
                                     <div class="form-actions right">
-                                        <a id="ContentPlaceHolder1_lbtnRegister" class="aspNetDisabled btn btn-icon-left btn-min-width btn-primary m-r-3"><i class="icon-check-square-o"></i>Sign Up ( <span class="urdu_Font">سائن اپ</span> ) </a>
+                                        <button type="submit" id="ContentPlaceHolder1_lbtnRegister" class="aspNetDisabled btn btn-icon-left btn-min-width btn-primary m-r-3"><i class="icon-check-square-o"></i>Sign Up ( <span class="urdu_Font">سائن اپ</span> ) </button>
                                         <a id="ContentPlaceHolder1_hrefBack" class="btn btn-icon-left btn-min-width btn-secondary m-r-3" href="UserLogin.html"><i class="icon-arrow-left"></i>Back ( <span class="urdu_Font">پیچھے</span> ) </a>
                                     </div>
                                 </div>

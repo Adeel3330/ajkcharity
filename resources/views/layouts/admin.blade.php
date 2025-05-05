@@ -99,7 +99,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                         <div class="card-header no-border">
                             
                             <div class="card-title text-xs-center">
-                                <h4 class="card-title">LOGIN</h4>
+                                <h4 class="card-title">ADMIN LOGIN</h4>
 
                             </div>
                         </div>
