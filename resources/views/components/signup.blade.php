@@ -21,7 +21,7 @@
     <script src="App_Themes/app-assets/js/core/libraries/jquery.min.js" type="text/javascript"></script>
     <link href="Styles/jquery.datetimepicker.min.css" rel="stylesheet" />
     <!-- END Custom CSS-->
-    
+
     <script type="text/javascript">
 
         function pageLoad() {
@@ -498,7 +498,7 @@
                         <li class="nav-item"><a href="javascript:void(0);" class="navbar-brand nav-link">
 <li>
   <a href="/">
-    <img 
+    <img
       alt="AJK Charity Commission"
       src="Images/logo-charity.png"
       class="brand-logo ps-2"
@@ -512,18 +512,18 @@
             </div>
         </nav>
         <div class="app-content container center-layout">
-            
+
     <div id="ContentPlaceHolder1_ModalUpdateProgress1" style="display:none;">
-	
+
             <div class="row">
                 <div class="col-md-12">
                     <img src="Images/loader-01.svg" alt="Loading..." />
                 </div>
             </div>
-        
+
 </div>
     <div id="ContentPlaceHolder1_UpdatePanel1">
-	
+
             <div class="content-wrapper">
                 <div class="content-header row">
                 </div>
@@ -536,12 +536,12 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="card-block">
-                                        
+
                                         {{-- <div class="row">
                                             <div class="col-md-12">
                                                 <fieldset class="position-relative">
                                                     <!--*******************************Start Hidden Field & Message Alert**********************************-->
-                                                    
+
                                                     <!--*******************************END Hidden Field & Message Alert**********************************-->
                                                     <input type="hidden" name="ctl00$ContentPlaceHolder1$hfEmailAddressVerifyCodeRequest_ID" id="ContentPlaceHolder1_hfEmailAddressVerifyCodeRequest_ID" />
                                                     <input type="hidden" name="ctl00$ContentPlaceHolder1$hfEmailAddressVerifyCode" id="ContentPlaceHolder1_hfEmailAddressVerifyCode" />
@@ -552,7 +552,22 @@
                                                 </fieldset>
                                             </div>
                                         </div> --}}
-                                        
+                                        @if(Session::has('error'))
+                                        <div class="alert alert-danger alert-block">
+                                          <button type="button" class="close" data-dismiss="alert">×</button>
+                                              <strong>{{ Session::get('error')}}</strong>
+                                        </div>
+                                    @endif
+
+                                    @if(Session::has('success'))
+                                          <div class="alert alert-success alert-block">
+                                              <button type="button" class="close" data-dismiss="alert">×</button>
+                                                  <strong>{{ Session::get('success')}}</strong>
+                                          </div>
+                                    @endif
+                                        <div class="row">
+
+                                        </div>
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
@@ -614,8 +629,8 @@
                                                    @enderror
                                                 </div>
                                             </div>
-                                             
-                                            
+
+
                                         </div>
 
                                         <div class="row">
@@ -636,11 +651,11 @@
                                                 @enderror
                                                 </div>
                                             </div>
-                                           
-                                            
+
+
                                         </div>
 
-                                        
+
 
 
 
@@ -689,8 +704,8 @@
                                                                 <i class="icon-head"></i>
                                                             </div>
                                                         </fieldset>
-                                                        
-                                                        
+
+
 
                                                     </div>
                                                 </div>
@@ -759,7 +774,7 @@
                                                                 </span></label>
                                                         <fieldset class="position-relative has-icon-left">
                                                             <span id="ctl00_ContentPlaceHolder1_txtMobileNo_wrapper" class="riSingle RadInput RadInput_Default" style="width:160px;">
-                                                                
+
                                                                 <input id="ctl00_ContentPlaceHolder1_txtMobileNo" name="mobile_no" type="text" size="20" class="riTextBox riEnabled form-control" value="____-_______" />
                                                                 @error('mobile_no')
                                                                     <div style="color: red;">{{ $message }}</div>
@@ -778,10 +793,10 @@
                                                     </div>
 
                                                 </div>
-                                                
-                                                
+
+
                                             </div>
-                                            
+
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
@@ -806,10 +821,10 @@
                                                     </div>
 
                                                 </div>
-                                                
-                                                
+
+
                                             </div>
-                                            
+
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="alert alert-info alert-dismissable">
@@ -899,7 +914,7 @@
                                                         @error('challan_no')
                                                         <div style="color: red;">{{ $message }}</div>
                                                         @enderror
-                                                        
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -956,7 +971,7 @@
                                                         @error('bank_branch_code')
                                                         <div style="color: red;">{{ $message }}</div>
                                                         @enderror
-                                                        
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -965,11 +980,11 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label class="label-control">Paid Amount (PKR) ( <span class="urdu_Font">ادا شدہ رقم</span> ( <span class="urdu_Font">پاکستانی روپے میں</span> <span class="danger">*</span></label>
-                                                        <input name="amount" type="text" maxlength="5" id="ContentPlaceHolder1_txtAmount" class="form-control border-primary" />
+                                                        <input name="amount" type="number" maxlength="5" id="ContentPlaceHolder1_txtAmount" class="form-control border-primary" />
                                                         @error('amount')
                                                         <div style="color: red;">{{ $message }}</div>
                                                         @enderror
-                                                        
+
                                                     </div>
                                                 </div>
 
@@ -981,7 +996,7 @@
                                                         @error('selected_category_fee')
                                                         <div style="color: red;">{{ $message }}</div>
                                                         @enderror
-                                                        
+
                                                         {{-- <input type="hidden" name="ctl00$ContentPlaceHolder1$CategoryName" id="ContentPlaceHolder1_CategoryName" />
                                                         <input type="hidden" name="ctl00$ContentPlaceHolder1$hfSystemAmount" id="ContentPlaceHolder1_hfSystemAmount" /> --}}
                                                     </div>
@@ -994,7 +1009,7 @@
                                                             <span id="ContentPlaceHolder1_spanEngregdate">Date of depositing of Fee</span> ( <span id="ContentPlaceHolder1_spanUrduregdate" class="urdu_Font">فیس جمع کروانے کی تاریخ</span> )
                                                         </label>
                                                         <span class="danger">&nbsp;*</span>
-                                                        <input name="deposit_date" type="text" id="ContentPlaceHolder1_txtRegistrationDate" class="form-control border-primary datepicker" />
+                                                        <input name="deposit_date" type="date" id="ContentPlaceHolder1_txtRegistrationDate" class="form-control border-primary datepicker" />
                                                         @error('deposit_date')
                                                         <div style="color: red;">{{ $message }}</div>
                                                         @enderror
@@ -1054,7 +1069,7 @@
                     </section>
                 </div>
             </div>
-        
+
 </div>
     <div class="modal text-xs-left" id="dvPaymentDetail" tabindex="-1" data-backdrop="static" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -1069,16 +1084,16 @@
                     </h5>
                 </div>
                 <div id="ContentPlaceHolder1_ModalUpdateProgress2" style="display:none;">
-	
+
                         <div class="row">
                             <div class="col-md-12">
                                 <img src="Images/loader-01.svg" alt="Loading..." />
                             </div>
                         </div>
-                    
+
 </div>
                 <div id="ContentPlaceHolder1_UpdatePanel2">
-	
+
                         <div class="modal-body">
 
                             <div class="row">
@@ -1106,7 +1121,7 @@
                                                         <br>
                                                         ( <span class="urdu_Font">پاکستانی روپے میں</span> ) <span class="urdu_Font">رجسٹریشن فیس</span>
                                                     </th>
-                                                    
+
                                                 </tr>
 
                                             </thead>
@@ -1123,7 +1138,7 @@
                                                         ( <span class="urdu_Font" dir="rtl"><a href="DownloadFile/Category_A_Challan_Form_32.pdf" class="card-link" target="_blank"><span dir="ltr">32-A</span>چالان فارم</a> ڈاؤن لوڈ کریں</span> )
 
                                                     </td>
-                                                    
+
                                                 </tr>
 
 
@@ -1138,7 +1153,7 @@
                                                         ( <span class="urdu_Font" dir="rtl"><a href="DownloadFile/Category_B_Challan_Form_32.pdf" class="card-link" target="_blank"><span dir="ltr">32-A</span>چالان فارم</a> ڈاؤن لوڈ کریں</span> )
 
                                                     </td>
-                                                    
+
                                                 </tr>
 
                                                 <tr>
@@ -1153,7 +1168,7 @@
                                                         ( <span class="urdu_Font" dir="rtl"><a href="DownloadFile/Category_C_Challan_Form_32.pdf" class="card-link" target="_blank"><span dir="ltr">32-A</span>چالان فارم</a> ڈاؤن لوڈ کریں</span> )
 
                                                     </td>
-                                                    
+
                                                 </tr>
 
                                             </tbody>
@@ -1163,16 +1178,16 @@
                             </div>
 
                             <div class="row">
-                                
+
                                 <div class="col-md-12">
 
                                     <p class="label-control font-16 text-justify mt-3">
                                         <i id="ContentPlaceHolder1_iLocalGovernment" class="icon_Button icon-circle-check green"></i>
-                                        The applicable registration fee shall be paid on 32-A Challan Form</a>. 
+                                        The applicable registration fee shall be paid on 32-A Challan Form</a>.
                                     </p>
                                     <p class="label-control font-16 text-justify urdu_Font mb-1" dir="rtl">
                                         <i id="ContentPlaceHolder1_i4" class="icon_Button icon-circle-check green"></i>
-                                        قابل اطلاق رجسٹریشن کی فیس 
+                                        قابل اطلاق رجسٹریشن کی فیس
                                       <span dir="ltr">32-A</span>چالان فارم پر ادا کی جائے گی۔ </span>
                                     </p>
                                     <p class="label-control font-16 text-justify">
@@ -1194,11 +1209,11 @@
                                     <p class="label-control font-16 text-justify">
                                         <i id="ContentPlaceHolder1_i3" class="icon_Button icon-circle-check green"></i>
                                         The applicant is required to fill in following information on the portal after paying the registration Fee.
-                                        
+
                                     </p>
                                     <p class="label-control font-16 text-justify urdu_Font mb-1" dir="rtl">
                                         <i id="ContentPlaceHolder1_i7" class="icon_Button icon-circle-check green"></i>
-                                        درخواست دہندہ کو رجسٹریشن فیس ادا کرنے کے بعد پورٹل پر درج ذیل معلومات کا اندراج کرنا ہوگا۔ 
+                                        درخواست دہندہ کو رجسٹریشن فیس ادا کرنے کے بعد پورٹل پر درج ذیل معلومات کا اندراج کرنا ہوگا۔
                                        <ul>
                                            <li>Name of the Tenderer (Applicant) ( <span class="urdu_Font">صارف کا نام</span> ( <span class="urdu_Font">درخواست دہندہ</span></li>
                                            <li>Amount (PKR)    ( <span class="urdu_Font">پاکستانی روپے میں</span> ) <span class="urdu_Font">رقم</span></li>
@@ -1222,7 +1237,7 @@
                             </div>
                         </div>
 
-                    
+
 </div>
             </div>
         </div>
@@ -1239,7 +1254,7 @@
         <script src="App_Themes/app-assets/js/core/libraries/bootstrap.min.js" type="text/javascript"></script>
         <script src="App_Themes/app-assets/vendors/js/forms/select/select2.full.min.js" type="text/javascript"></script>
         <script src="Styles/jquery.datetimepicker.full.js" type="text/javascript"></script>
-    
+
 
 <script type="text/javascript">
 //<![CDATA[
