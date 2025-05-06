@@ -33,6 +33,7 @@ class CharityRegistrationRequest extends FormRequest
             'nature_of_authorization' => 'required',
             'network' => 'required|string|max:255',
             'mobile_no' => 'required',
+            'selected_category_fee'=>'required|integer',
             'email' => 'required|email',
             'authorization_document' => 'required',
             'applicant_name' => 'required|string|max:255',

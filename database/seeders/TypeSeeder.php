@@ -22,6 +22,7 @@ class TypeSeeder extends Seeder
         Type::truncate();
         Schema::disableForeignKeyConstraints();
         $groups = [
+            'provinces',
             'law_under_registered',
             'category_area_operations',
             'nature_authorization',
