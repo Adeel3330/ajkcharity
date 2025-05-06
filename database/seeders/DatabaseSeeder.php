@@ -5,6 +5,10 @@ namespace Database\Seeders;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Type;
+use Illuminate\Support\Facades\Schema;
+use App\Services\AccountService;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class DatabaseSeeder extends Seeder
 {
@@ -23,6 +27,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             DemographySeeder::class,
             TypeSeeder::class,
+            TypeItemSeeder::class,
         ]);
     }
 }
