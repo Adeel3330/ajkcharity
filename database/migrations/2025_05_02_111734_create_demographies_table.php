@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('parent_id')->nullable()->constrained('demographies', 'id')->onDelete('cascade');
             $table->string('name', 50);
             $table->string('code', 50)->nullable();
-            $table->enum('type', ['VILLAGE', 'CITY', 'TOWN', 'DISTRICT', 'CONSTITUENCY', 'TEHSIL', 'UNIONCOUNCIL', 'DIVISION', 'SUB-VILLAGE', 'MC', 'TC', 'PC', 'QH', 'CHARGE', 'CIRCLE'])->nullable();
+            $table->enum('type', ['VILLAGE', 'CITY', 'TOWN', 'DISTRICT', 'CONSTITUENCY', 'TEHSIL', 'UNIONCOUNCIL','PROVINCE', 'DIVISION', 'SUB-VILLAGE', 'MC', 'TC', 'PC', 'QH', 'CHARGE', 'CIRCLE'])->nullable();
             $table->integer('house_holds')->nullable();
             $table->integer('population')->nullable();
             $table->string('town_type')->nullable();

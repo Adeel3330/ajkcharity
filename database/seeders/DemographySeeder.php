@@ -33,29 +33,29 @@ class DemographySeeder extends Seeder
         Demography::truncate();
         Schema::enableForeignKeyConstraints();
 
-        $DIVISIONs = [
-
-            ["name" => "Muzaffarabad", "type" => "DIVISION"],
-            ["name" => "Poonch", "type" => "DIVISION"],
-            ["name" => "Mirpur", "type" => "DIVISION"]
+        $provinces = [
+            ["name" => "PUNJAB", "type" => "PROVINCE"],
+            ["name" => "SINDH", "type" => "PROVINCE"],
+            ["name" => "Islamabad Capital Territory", "type" => "PROVINCE"],
+            ["name" => "KPK", "type" => "PROVINCE"],
+            ["name" => "Balochistan", "type" => "PROVINCE"],
+            ["name" => "Gilgit Baltistan", "type" => "PROVINCE"],
+            ["name" => "Azad Jammu & Kashmir", "type" => "PROVINCE"],
         ];
 
-        Demography::insert($DIVISIONs);
+        Demography::insert($provinces);
 
         $districts = [
-
-            ["code" => "MZD", "name" => "Muzaffarabad", "type" => "DISTRICT", "parent_id" => 1],
-            ["code" => "BBR", "name" => "Bhimber", "type" => "DISTRICT", "parent_id" => 3],
-            ["code" => "BGH", "name" => "Bagh", "type" => "DISTRICT", "parent_id" => 2],
-            ["code" => "HVI", "name" => "Haveli", "type" => "DISTRICT", "parent_id" => 2],
-            ["code" => "KTI", "name" => "Kotli", "type" => "DISTRICT", "parent_id" => 3],
-            ["code" => "MPR", "name" => "Mirpur", "type" => "DISTRICT", "parent_id" => 3],
-            ["code" => "NLM", "name" => "Neelum", "type" => "DISTRICT", "parent_id" => 1],
-            ["code" => "PCH", "name" => "Poonch", "type" => "DISTRICT", "parent_id" => 2],
-            ["code" => "SDI", "name" => "Sudhnoti", "type" => "DISTRICT", "parent_id" => 2],
-            ["code" => "HTN", "name" => "Hattian", "type" => "DISTRICT", "parent_id" => 1],
-
-
+            ["code" => "MZD", "name" => "Muzaffarabad", "type" => "DISTRICT", "parent_id" => 7],
+            ["code" => "BBR", "name" => "Bhimber", "type" => "DISTRICT", "parent_id" => 7],
+            ["code" => "BGH", "name" => "Bagh", "type" => "DISTRICT", "parent_id" => 7],
+            ["code" => "HVI", "name" => "Haveli", "type" => "DISTRICT", "parent_id" => 7],
+            ["code" => "KTI", "name" => "Kotli", "type" => "DISTRICT", "parent_id" => 7],
+            ["code" => "MPR", "name" => "Mirpur", "type" => "DISTRICT", "parent_id" => 7],
+            ["code" => "NLM", "name" => "Neelum", "type" => "DISTRICT", "parent_id" => 7],
+            ["code" => "PCH", "name" => "Poonch", "type" => "DISTRICT", "parent_id" => 7],
+            ["code" => "SDI", "name" => "Sudhnoti", "type" => "DISTRICT", "parent_id" => 7],
+            ["code" => "HTN", "name" => "Hattian", "type" => "DISTRICT", "parent_id" => 7],
         ];
 
         Demography::insert($districts);
