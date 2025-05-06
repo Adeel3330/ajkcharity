@@ -8,10 +8,8 @@ use App\Http\Controllers\{
 };
 //admin
 use App\Http\Controllers\admin\{
-    HomeControoler,
+    HomeController,
 };
-
-
 
 Route::get('/',[RegisterController::class,'index'])->name('signup');
 Route::post('register-charity',[RegisterController::class,'store'])->name('charity.store');
@@ -24,7 +22,7 @@ Route::get('/login', function () {
 })->name('login');
 // Admin Authenticated Routes
 Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
-    Route::get('/dashboard',[HomeControoler::class, 'index'])->name('dashboard');
+    Route::get('/dashboard',[HomeController::class, 'index'])->name('dashboard');
 });
 require __DIR__.'/auth.php';
 
