@@ -11,6 +11,20 @@ namespace App\Services;
 
 class DropdownItemService
 {
+    public static function provinces()
+    {
+        return [
+            ['value' => 'Punjab', 'type' => 'provinces'],
+            ['value' => 'Sindh', 'type' => 'provinces'],
+            ['value' => 'Islamabad Capital Territory', 'type' => 'provinces'],
+            ['value' => 'Khyber Pakhtunkhwa', 'type' => 'provinces'],
+            ['value' => 'Balochistan', 'type' => 'provinces'],
+            ['value' => 'Azad Jammu and Kashmir', 'type' => 'provinces'],
+            ['value' => 'Federally Administered Tribal Areas', 'type' => 'provinces'],
+            ['value' => 'Gilgit Baltistan', 'type' => 'provinces'],
+        ];
+    }
+
     public static function law_under_registered()
     {
         return [

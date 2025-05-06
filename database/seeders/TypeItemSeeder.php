@@ -19,7 +19,8 @@ class TypeItemSeeder extends Seeder
     {
         Schema::disableForeignKeyConstraints();
 
-        $items = array_merge(
+        $items = array_merge( 
+            DropdownItemService::provinces(),
             DropdownItemService::law_under_registered(),
             DropdownItemService::category_area_operations(),
             DropdownItemService::nature_authorization(),
