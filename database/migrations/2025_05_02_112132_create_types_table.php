@@ -13,10 +13,11 @@ return new class extends Migration
     {
         Schema::create('types', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('parent_id')->nullable()->constrained('types','id')->cascadeOnDelete();
             $table->string('name');
             $table->longText('description')->nullable();
-            $table->bigInteger('fee')->nullable()->default(0);
-            $table->string('document')->nullable();
+            $table->string('status')->default('active');
+            $table->integer('order')->nullable();
             $table->foreignId('created_by')->nullable()->constrained('users', 'id');
             $table->foreignId('updated_by')->nullable()->constrained('users', 'id');
             $table->softDeletes();

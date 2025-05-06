@@ -7,7 +7,8 @@ use Illuminate\Database\Seeder;
 use App\Models\Type;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Schema;
 
 class TypeSeeder extends Seeder
 {
@@ -16,20 +17,22 @@ class TypeSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::beginTransaction();
-        $type1 = Type::create([
-            'name' => 'Type1',
-            'description' => 'lorem ipsum lorem ipsum lorem ipsum',
-            'fee' => 1000,
-        ]);
-        
-        $type2 = Type::create([
-            'name' => 'Company Admin',
-            'name' => 'Type1',
-            'description' => 'lorem ipsum lorem ipsum lorem ipsum',
-            'fee' => 1000,
-        ]);
+        //
+        Schema::disableForeignKeyConstraints();
+        Type::truncate();
+        Schema::disableForeignKeyConstraints();
+        $groups = [
+            'law_under_registered',
+            'category_area_operations',
+            'nature_authorization',
+            'networks',
+            'auth_document_type',
+            'banks',
+        ];
+        $mapped_groups = array_map(function ($group) {
+            return ['name' => $group];
+        }, $groups);
 
-        DB::commit();
+        Type::insert($mapped_groups);
     }
 }
