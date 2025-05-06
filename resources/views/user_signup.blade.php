@@ -20,6 +20,11 @@
     <link href="Styles/jquery.datetimepicker.min.css" rel="stylesheet" />
     <!-- END Custom CSS-->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.7/inputmask.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+   
     <script type="text/javascript">
 
         function pageLoad() {
@@ -434,60 +439,12 @@
 <link href="WebResource7cac.css?d=bZQu9IErOfGRZdP9C3BB5QgjSbKqeaV4Bxcma6dBpba8Uc6m76SBoJQy21V3oSMhSjnPTGCp11qqY6mxYrHfJLeQx7xhJrcHHeKIrygk1zgsza4nYcGxCLIXcX19-_Js0&amp;t=635760710720000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="WebResourcef4a2.css?d=EkHr37SACCjvnXcRDMYA5UEZCGBQ7RkTani35bwNMNgmXQ83llRhD8UmOVL06i2S9p1bHMdw3jkUWalrZo_oPphobiirB8r7HOqyqV15PvczesT-ZHU5JgIVWJU49k5X7iXCdNbhnl0oij98CulLog2&amp;t=635760710720000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /></head>
 <body data-open="hover" data-menu="horizontal-menu" data-col="1-column" class="horizontal-layout horizontal-menu 1-column bg-full-screen-image blank-page blank-page">
     <form action="{{ route('charity.store') }}" method="POST" enctype="multipart/form-data">@csrf
-        {{-- <div class="aspNetHidden">
+        <div class="aspNetHidden">
             <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
             <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
             <input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
             <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="oWznYeO8tJybSqtKN3xHQVvtHWtPj0LP1DFXbWMCtzxUTQ27OYpWA4mXTjV8N6wJN/xb6jjcK0UFM8+yXtk61+woktcpsuujr7Uso1aKu20Jtuy+FAlMOZXsOzOjrSzvBlU2oFzvraAEJNSRv8ye/cZbP/Sri6S7kuMakl5r48YlxjMcte49shsyq90NXEuTyuXhxfmE5+xaR59e/LbJfiSG3qorks9B6PGGL2limfj5XaemuGyxYtVfvG75sZeQZmPNjEfStigWaqMi3x9vKWlYQbPiw0E7smkBpaGctjSYPtH2Tw8YMSC83WN6Lf5tT/gJ+aRJscwr2zzdz82QvSwHSvXMp5NDojI5eMI9HqquFehFljpomLrLUtrByp5EDYPN/IFQyKzQyB5gp2tYPhEvmGjF3yrUkGRYf/u9WRXuZ1rT0rQydW18qi60Q5ZPQXFGM37PFUrJFx+CpEO+niVSjB0cIS6yPg+qkgW3UDubpvAnyS1d8YI1qBmtzLxPtkfdLKkEcIU0Q9cGNbXw9vEqH4X3Ktbkg4OZ5PdIVzg3csgYZX23ZBAhkhXMyqmin9I2PMAk02r3uI3Fbfkfaa3q4ypQZAEV6b7YZksfBCU3CG/29PAnvk/uYwHTsj2fYaViFSutH/vzZGyQJbEU+1WSXHFZVr72YX/tywFzI8CDUSJMnRJMYNTKvx69GPIqZjN2qKdz5OFM+yJs1qgb8WdNChi56kueDMhv1Ads8aLR+EtVcMuE6yN2ajYtAZiY1RZR7K5gN3agEk6EhnuMXvPm3MLR7b/kTScVHsSKx9tjUlWrgCE/GO4Fgb3l28kLm9o903QdlxroHFjq+9RagfD2ZP4ZbzNQPF7yv+qBwYY+FB/BbjnVkZB3dLhBWJBXLnxaObmweu2amx5URQrV8ke1usGsYnZmcGLc4K7GzXLFXe3RqFN/JYDedahRY4tX7DQKdHbEd1hUuj2B1cDuOU69KwdLAvfBJ2uvqfUOj2hQ1KLtChXQpzNeRVse2XrZQ7QOHs1lVRL+F/xv15LadPsMvuBT3huxRPRr61/Xp+NPK+2d5K0aW/Rlf5yf/bxKka4Wbcv2eVMhTv+dNHJW68xB6zR7Y1mwGscK4GCgVZ6cqVzhDSV0h8YPgLLjg2JCJGpJSBHmyEWXN4M3tdDuTFlmYBe/D1uviMSgCvM3xLnNl0QquQiyHoG4Bpwf4q7F/fkelcc44xz5KuW/o3v5V0zY4frSnCDMzb06kaaHlcTVIEDvT+0eV2g1bTmN+xvHjHUNQenstcIh9OYD/sqRj8OjbwAhA57SJfv3u/Yz9h5C3RPjCOcwGTimzaJ9gPpXZAD78B2aPY5yQ42uNTIc3tmNs2LKB1TN4Q5MjcVuKk3sRNAq0JDUZvTCHMLMMbbYxUhqKRzv0MRtT/d+123HsJ6jStz+FQgr73HScMRZ4QHYX+t9WGI1INH28f1glc/uJZbhblwjNiJfzayjwe9GbCeF3rCO84J0yN+aJa8mUHd9owYvEmezX9TQz0fHw/Vdd92DPuOBY/pqlV1OBLmRKoX6KtDwZLuPtvK06GHf8+g1Iio8b3zdWlZ72EIIVirIVBgTt6e81p8bqrwoSvaEK38XWQXsSczaYeuFADl025QMH8hsg9SOpx80NBinKdvsN7LeX3WLPbeEuxY4MpnsTlV+0QKOnYn1Uz++dpb2whxreaTZpIgIG0OQjXF2apTiHjdks7Pk0JbtxD1poyrxetrDPN5hlmP5eUtou13Qi3aLxCUGZvw5ypAeyNQG1QyM512Ffd2fdDQI3oUvROLhIZzoK/M1TZxgqzB5XLxTkd8Lvhw40gqZcYD3345mjXsgbiujBGGYXcNmZ7hV/GmSnbBQ7SsenwbGbURLthsMi5bXVM1GF+4PS2qKFtyLkxstDTeZRU/y1XSprhBFs/BXChzKc/I8kpS6vYD9y8zC7gY/bFeS4pE5bXurnP5PIt033P4zndBkz54q8Uib9ZT05hy9OqYzCQQsVmcD6+kUyz2AVNnt2YWQWU47Q72SGfuZvqGrAtvEJhB6getftqlw+piBQfvA60esF+kNqNcA1O/FTQ2vtIghHUurUa9UDu7hYCij4FCsNsF2YMAija/rn6v7kVMDBpOCgNEeqs9Q9xvU7sdciE+qGeRK4XdYk3E2CGDr/zGXlFKO0YReWQLbU0j0fPnDROaQBRkm7IUm/KXM/hYpcBrbiYQm1nkzbjh2drHL7QovXGgxZEFDm/RrU/tpyw9MhLgSmokSEAEWKw5hGcAs2S2AhQh7hoGi0gb2Am2m/OAuUW/bFXSXY4W6UGSVSqPiwzN/u1w6fUq6+XAhCasw416RdZxqusKlFiTOI67wKpP5MFjawP5MaL3iDbT6zTeQrDtEnOP5kCrG4ETQdX+2OfHrJvHLEfGuXHod4HroC0uQQramu8TwvPRzybNrVJAFEXWmFnb7gJZcKt10nms0x+JXr4UKuuJiLJl5lOyyYYmU+d93fIXF4phz5x4mf81o97p05umiXtyyBFgDHfFvqW8rfRKf/l8mIB+t+R1Njtx6sikzAmgUUVAFNkbYfHjhZZUop2pcuq5IbTquBrBlGTLh3C5WdG/ND4fEuavCw8eYWagy7xlmSY49hwCD4DQ/4oTbtsrOdDKlxP7bVr9kWZZMixHzZ8/cJgzGEk4UdfF3/9eWH1ZdXaIJY9+cE5bK4ZIjB/FYzyPNM3gx3nTfkTwDtluYhVhqbh1gpArM1m3CWJHeYLl58FMV7hvpoVPu57w4kKPdPXQN3PAV+i/ze+mBvJN8Q+BBKpllV+9bxpLTIZD+Aht5WSeBeKDG5r2cujexxDw9skhUpZ4KiIaSyJ1n5bEcoywNtppsJvXsc+a49F00EqI3KFGWMlj493P4pLY4furzsmfj5fC1xBjDDQiO2zZzxNn7+86pQv8zyqMcrDJHqk4f1QmawNnlXCm5t42v+gHfN6xM4gSdzU148LXIrJnhQx7Mg5jSIos6n1gsMKnrTUgTo5bxiYa2XQypeHjrlULdlQm/Fh/sxsxzTsiaCIYjL0KQ/dWWpWxBG6GUBeaARDDs5i9vFK7az8Z1ZvDtgwwILnC6mSJBmGVw2wygOI/kBEpeiqOI9OM355G+X6SXONOScZy+R1poha98ZsejkeE11/0dFnGGLVk2M9d1gYN7k7SauuDfXeJM6Qr3hxbMVqUC6xOZO/wVezHJF0t8oZk0JADI1ksFvRwW3Lc8HUFgg4i6B9ppDHRLdssLfG1Kx9vcbvVvkB/64wdR574WXX9eWnriaEVymV88+HNUTyMCOELHHOLR56L6pvcQq42pKt7eKU7pMUKb+JeX2loiX3Oiw2eWe/ps4LvUAMTkrRHE4UwkIXe4zgAMGR0MbTbVd4RXUN5bdLyCvRqsPqjGoiM799Bo7IJ0rvaNTxrDIIylh93MJ5Go5D+9XF5pPILuwlO2CemnIPUDrvUkQRHc/5ccJMlUz5Sm+zyZWtgPXQ+8rPqE9EQBl6z2WSFOMVAr1LMnzYANAU4WI3D20qiQldieyRcaX/jgINnUcBqp/2FowrOEaOBet781i6pPCznCpr26SNUnf4gyPPFDfdSkk6V2Z1YFGK1OHDMaq8urYzphFMVYkr+JyqUG/39yYK8M2nPLTrWx4eNE5a1TBsfJon78WiTM45ORqJknFhFwcQfj6r+1kgtqYOg1px0sjWSyQ/CL89BXmjzVWAKXrZW+Ux0Usw81fzufEdgjpDtQuZ1jRHjTsVbrXal2OP+N5P2p0nRGpBeZ5ttwftigVzysOt5mBYG/E7ZvHQc7sdQRQDKsQkkIU2hjLrjO2UbITwWCuc2EFRiKwsM4tLz5Okncp9JzsRT3fDH5r6SqobUKJTVw1Fv6njKX1ZrbHLzjLEW+SgvoEtzhZc7X3Gg0YDbcgDmF+lFbz+bPzLRzz/y002jXgHlWv7Rz87hQFADVe9j3IWANDqy9bVaXkjZPOrzfboCuZDAp/jP3S8vKII6qFpjnlGoAnLwtIjWzGunC0YIWqIiIKWAfIeNM6WkhGxG+2g2cD0W/0FKITEVbZ+D5QGsO7m47XYbgy6q8gqx9z+5OmEG12HSOvfsoALI0QsBApFXnGBOdj9TpK/UoblvDMY1HY3SHINlAqjJ6hls445hUXGZYid7gO71O4OvkzjzlVmJruC+kDrP9rHzXQXKHnp/lLocGgp4vTw8rRRsQE5qMX89ThafCbXo1TV9TCWrgecH3H/zuNmgIE6Id0H7Qog89a32dTw8eJ9KmdAz+mDgxfWUNW4Yc+gxYOHkVULap1A6TUHdJEVn+O/j9n4ERFDcem2PDPNZxOCnAP+nIRLB20KILMeWulv8FBcg6oW1En+wFk+6GleB41GLbKEDyYlz4sFSwq814t78FFlv2ZFgA4t0ZfN8puAZaqx6eo997GcD8EhVcKCFGQKyWqKGQ948lbB0Z7Ylz+l7n2IZtlna0qWDq1kQGGnK8zkxIjeuY5E4K77DJAME4d5yIYWnn7Iz5oSad91qGU/5XF0eSDYGhFpLFgjb3EMSdc0GUUGnl+PPXr5xuZaWUYi1YItIsbqIPMsrG7Lg4VxxWSPYMluLrhIewYq3nmf9M0e9XdzuIEblpbz93+P13plltYPdUejexqSQcJBKFbSXkSRH6W+opcB2ifhL2THpFTnjBh0N1r89SIs5RTpIbq38hVOLbqCFs/tdGz7W1wSnt/y0FAPCu1uUJYpSj2MtJZBPxWPuNDFKUc3sTFmKCczaVefFW0I0YnDLcwLAD6EBCAOiSMP57IVwSzsAbmNWvUkqZNicGvRD+15bnU46AWDoNGLqdtsT5jNcRCAr4Og/e+jMq/3fA5kEbQVDUEg==" />
-        </div> --}}
-
-
-
-        {{-- <script type="text/javascript">
-                //<![CDATA[
-                var theForm = document.forms['form1'];
-                if (!theForm) {
-                    theForm = document.form1;
-                }
-                function __doPostBack(eventTarget, eventArgument) {
-                    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-                        theForm.__EVENTTARGET.value = eventTarget;
-                        theForm.__EVENTARGUMENT.value = eventArgument;
-                        theForm.submit();
-                    }
-                }
-                //]]>
-        </script> --}}
-
-
-        {{-- <script src="WebResourcef5b2.js?d=pynGkmcFUV13He1Qd6_TZLqI86qciVwo1588Ueb8h3-yJKFhar5h_uACf8O1LzasUqqgTeLQjKked9CQS8EZcw2&amp;t=638744898302013759" type="text/javascript"></script>
-
-
-        <script src="Scripts/WebForms/MsAjax/MicrosoftAjax.js" type="text/javascript"></script>
-        <script type="text/javascript">
-        //<![CDATA[
-        if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
-        //]]>
-        </script> --}}
-
-        {{-- <script src="Scripts/WebForms/MsAjax/MicrosoftAjaxWebForms.js" type="text/javascript"></script>
-        <script src="ScriptResourced06f.axd?d=ncOnHn38dHLLzUF7WgPYMWuRRitvz3MKUUP3Xq0StldztQfSFYbgC9121qWCGNoj8ss7317vqoZOStHCxZ9c70ckJKCW5T8pnoKA-VDuF2f65JYnJw2v1erEPl69Zp7AKmZWTgoITIg_HMLec2C7-g2&amp;t=ffffffff8f9c0479" type="text/javascript"></script>
-        <script src="ScriptResourceb893.axd?d=TDVjdgRbdvNAY3tnbizUcIzYkiQQVgRq6vv0DsBQK-9q1geZNGP8e8PLi0ik8HCBaDKITdUodf70j61Dw0xEyr4OwkmoyX1fiQj2fEAN5YclY8bxPSRW2wedOldzjB8V0&amp;t=5606f732" type="text/javascript"></script>
-        <script src="ScriptResourced0de.axd?d=CKWp3hTbfUbZoJvrOz6P-4mAAqBcH44t6NXy3FQx0vCTTTkzY_AUlm9vJbFT3bZ6pchUkwgG4sv6gTHb61cG94-F9kXscUvCX9h191ba7GJK6V4vT8lqoF7Hhamr864qP1clfFsl8q1dOj36x9Nnyw2&amp;t=5606f732" type="text/javascript"></script>
-        <script src="ScriptResource6163.axd?d=uxk4EFsjul2cezmp9vKGFPx_sIImjqO10bUpzRj-Lx8d-uWXYfSWmTQzJramkxYMu0KSIYSqNmuww0SOr5Gvot4HyBy1aydqTOQ7iKW6QYj-7LV6wE7UjLcV2YtqEDRUdm-MaXQ3lAtJPCays2K5-FuCcVQQjixOmI38PWnUYvI1&amp;t=5606f732" type="text/javascript"></script>
-        <script src="ScriptResourcef7ac.axd?d=8CjII1v0OLoMNKf5zGXmeq5K9Drhfbcqn4y817S79k6Oa-5oTA826Kc_fM7YDUR3G0bOyjn5ETUjDkl7P2jrBgsRFwBCFbzRY5SqYwl6ra8_TjGaauUqH9N3h7aEClk9XUthV_e7P4URXuuLZrIUEVZghhXyA4MgEoEzO8NeJ5w1&amp;t=ffffffff9fdaf3c6" type="text/javascript"></script>
-        <script src="ScriptResource81e5.axd?d=qiCbui8_q4m0BAPh1b3lI1_xFM3tBIAzmH7nkymCkXtK3Q1VlrjC0EqlWrv9cSsgVUJm13VFSYVQYCSKVsT5XwJ9ItcuixszdQmehkGjmPqMjAM31bx_dwGSBFNoapz3Nqmbw52s_T5ZB7COnN8Ar5l-H02zIYtjamrihPlj4mBK4UsN8aEMSscw9Ew-xR390&amp;t=ffffffff9fdaf3c6" type="text/javascript"></script> --}}
-        {{-- <div class="aspNetHidden">
-
-            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="095AD3EC" />
-            <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="WeXE8lo5jL+OiMD7lqemrdLY1PYBnpKSbdx2rE8huHid8fjwx34KKSCEpsVG8D2kQ7OAsmwea7hIfNlw9hX3U/wRL1pdsd0hoTvGNpVYevn4WxaHADDGXNuxMMZJc8aBqDtavFEonjJAb193u/tLliAujicOtZQZSiDgnFu3aTYTvkPr1rPPHpf01KtjururrL2LXujQ+lu2unxG6MSILsx1GypuXvRLYMeWPjeyRIMkQsKJb1BUA570qT7SJ+A9TYtl4hgHVk+DI1ch7e+CKvOlMlqAsKQ7nrX4/w/T7QYkhDWS3ZCs6TRd3t5anf+nnLNvUAUUdN3eQM8VMUDEng336+TKiuPQtxNgedGF6s3SdPC81Qg6l34WJ5G3NWn2mVnORItBNkMKjXsg/27W0D8YgwVPlrrH+kCnDmMDFoNr3kZxKLgwtcGrmoDmo1cjzr2rKouwdpwi6oOGPsdI1Hze5SgcyE0T4xk5bvjv079zZo4tYLRxVILnxcPEDRaHs62VBt1pujBSOBycFsi2lojP0Oxdn7N326KEg/Ee0jd9AoPV9LJVYClgheXMJ60obJB/6Syb1OYk2EDB1LQ/J0uR3zwR6WxA79FKbBayMX9LtMgt/axUIRu+a/VSqh6yUeJLfquyb2gqIHKMKXQShOWtinX88D32q5t1uMGZ19SiAcFGsHlwFzszLa+kTy6+K3MhdNeClf/o56WX9ai2URibzWZ14GKQ6fx56mM4KcXcmUssVK3EEgNVDhLBoSjYx3Smpf4hrnvu5lMbXCqxhoepS0zFQrY3+BxL0bnNonNfDKAKL5k0pKhfUoCzWSDsYImHhwu4sPjoVLDri8vNMoyqTDTYv7kYSKYFUo4M+pyERG3Cns+igU9SFDd9xRWczOnSdYFrF9xryg8DQsEiiIqeDdDrbcu/bVUVo8D6u3b1rJGghBzZM7fuc5UQ96l7AAJOXIaZFfEVv/nn+VkBm+2hWow/01RL++r+sqyJqC9url8x/3a1is+diRZwwbhtSR0+/5Di0UDNfmz4T/ppacX9sdFGb9ku9Ao+fJBVuD1x6/WDvTMpCGPlQu/JiCgKBidHbQ13iWlQxmSxI3kkOBoVugdN3xXgISd1WLkOpVP1J+OFlElM/SzU/op8ZB0s8Ps0RqCYiqWdIjMNxdTFOaJK2G3lV+BIEUNmdc0YdSDvsusoJaAOAQngW/LTF8sGkB7GeIHKCo9+Y1V/pndh9Djug6o/mJUkydEjLwiMYAQMBI7o49CT4Uvh5/Em3zqNWMyrBwIscpOEsLVt1kVUzGojkA52fbBN1C15yBUotIkRjE+ymjt6vf8BLvM9r9LLZ1bToVAIe8FyS6Wc0EetRxMDVCi1xm9z40yVReBCNngYaCR3cRxBrElZH8/5z/1Mpofale9Jo2oe2UsnTj5uyqviVoNVf+TinP55hy6RNQKphwuULOenho6THueupq5VV2fEXZ6L+0JvZWUlaS74zFldKhm/DLoyo2pk11lPciCuLzoP9G5NnZ+ILH6Tly9cDQEg7kCN75ET0ZfyqSwF+4ECWgq9q8xhIeaF26gSqgdNQvgIBnJMD+u7AVGIDrH5yeM2CLB4SCk/Ktjtr85hdWWKir2XttU8lJnuuKHmySUP5RnYSJappZUD6Adog7HuoWj3vAOygLi3sk+tewBM/86POR4+aNW4PVSwVe8pZso=" />
         </div>
-        <script type="text/javascript">
-        //<![CDATA[
-        Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['tctl00$ContentPlaceHolder1$UpdatePanel1','ContentPlaceHolder1_UpdatePanel1','tctl00$ContentPlaceHolder1$UpdatePanel2','ContentPlaceHolder1_UpdatePanel2'], ['ctl00$ContentPlaceHolder1$lbtnClose','ContentPlaceHolder1_lbtnClose'], [], 90, 'ctl00');
-        //]]>
-        </script> --}}
-
         <nav class="header-navbar navbar navbar-with-menu navbar-fixed-top navbar-dark navbar-border header_BackgroundImage">
             <div class="navbar-wrapper">
                 <div class="navbar-header">
@@ -517,8 +474,7 @@
                     <img src="Images/loader-01.svg" alt="Loading..." />
                 </div>
             </div>
-
-</div>
+    </div>
     <div id="ContentPlaceHolder1_UpdatePanel1">
 
             <div class="content-wrapper">
@@ -529,7 +485,8 @@
                         <div class="col-md-8 offset-md-4 col-xs-10 offset-xs-1 box-shadow-2 p-0">
                             <div class="card border-darkgreen">
                                 <div class="card-header bg-darkgreen">
-                                    <h4 class="card-title">Authorization to Register ( <span class="urdu_Title_Font">رجسٹر کرنے کا اختیار</span> )</h4>
+                                    <h4 class="card-title" style="color:white;">
+                                        Authorization to Register ( <span class="urdu_Title_Font">رجسٹر کرنے کا اختیار</span> )</h4>
                                 </div>
                                 <div class="card-body">
                                     <div class="card-block">
@@ -597,7 +554,7 @@
                                                 <div class="form-group">
                                                     <label class="label-control">
                                                         Province ( <span class="urdu_Font">صوبہ</span> ) <span class="danger">&nbsp;*</span></label>
-                                                    <select name="province" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlProvince\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_ddlProvince" class="form-control select2">
+                                                    <select name="province" id="province_id" class="form-control select2">
                                                     <option selected="selected" value="0">--- Please Select ---</option>
                                                     @foreach ($provinces as $item)   
                                                     <option value="{{ $item->id }}">
@@ -726,8 +683,8 @@
                                                         </label>
                                                         <fieldset class="position-relative has-icon-left">
                                                             <!-- 2015.2.826.45 --><span id="ctl00_ContentPlaceHolder1_txtCNICNo_wrapper" class="riSingle RadInput RadInput_Default" style="width:160px;">
-                                                                <input id="ctl00_ContentPlaceHolder1_txtCNICNo" name="cnic" type="text" size="20" class="riTextBox riEnabled form-control" 
-                                                                placeholder="_____-_______-_" />
+                                                                <input type="text" id="cnic" name="cnic" class="form-control" value="{{ old('cnic') }}"  class="riTextBox riEnabled form-control cnic" 
+                                                                 />
                                                                 @error('cnic')
                                                                 <div style="color: red;">{{ $message }}</div>
                                                                 @enderror
@@ -787,11 +744,11 @@
                                                         <fieldset class="position-relative has-icon-left">
                                                             <span id="ctl00_ContentPlaceHolder1_txtMobileNo_wrapper" class="riSingle RadInput RadInput_Default" style="width:160px;">
 
-                                                                <input id="ctl00_ContentPlaceHolder1_txtMobileNo" name="mobile_no" type="text" size="20" class="riTextBox riEnabled form-control"  placeholder="____-_______" />
+                                                                <input id="mobile_no" name="mobile_no" type="text" size="12" class="riTextBox riEnabled form-control"  placeholder="____-_______" />
                                                                 @error('mobile_no')
                                                                     <div style="color: red;">{{ $message }}</div>
                                                                 @enderror
-                                                            {{-- <input id="ctl00_ContentPlaceHolder1_txtMobileNo_ClientState" name="ctl00_ContentPlaceHolder1_txtMobileNo_ClientState" type="hidden" /> --}}
+                                                           
                                                         </span>
                                                             <div class="form-control-position">
                                                                 <i class="icon-phone2"></i>
@@ -1271,6 +1228,16 @@
         <script src="Styles/jquery.datetimepicker.full.js" type="text/javascript"></script>
 
 
+        <script>
+            $(document).ready(function(){
+                $('#cnic').mask('00000-0000000-0');
+            });
+        </script>
+        <script>
+            $(document).ready(function(){
+                $('#mobile_no').mask('0000-0000000'); // Format: XXXX-XXXXXXX
+            });
+        </script>
 <script type="text/javascript">
 //<![CDATA[
 $('#dvPaymentDetail').modal();$('#dvPaymentDetail').removeAttr('tabindex');Sys.Application.add_init(function() {
@@ -1296,6 +1263,30 @@ Sys.Application.add_init(function() {
 });
 //]]>
 </script>
+<script>
+    $(document).ready(function() {
+        $('#province_id').on('change', function() {
+            var provinceId = $(this).val();
+            // alert(provinceId);
+            if (provinceId) {
+                $.ajax({
+                    url: '/api/get-provincesRecord/' + provinceId, // Adjust to your route
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function(response) {
+                        
+                        console.table(response);
+
+                    },
+                    error: function(xhr) {
+                        console.log(xhr.responseText);
+                    }
+                });
+            }
+        });
+    });
+</script>
+
 </form>
 
 </body>

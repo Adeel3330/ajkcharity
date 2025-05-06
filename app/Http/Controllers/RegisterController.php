@@ -12,8 +12,8 @@ use Session;
 class RegisterController extends Controller
 {
     public function index(){
-        // $provinces = Demography::get();
-        $provinces = $this->getChildType('provinces');
+        $provinces = Demography::where('type','PROVINCE')->get();
+        // dd($provinces);
         $law_under_registerations = $this->getChildType('law_under_registered');
         $category_area_operations = $this->getChildType('category_area_operations');
         $nature_authorization = $this->getChildType('nature_authorization');
