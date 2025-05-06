@@ -9,6 +9,8 @@ use App\Http\Controllers\{
 //admin
 use App\Http\Controllers\admin\{
     HomeController,
+    TypeController,
+    UserController,
 };
 
 Route::get('/',[RegisterController::class,'index'])->name('signup');
@@ -23,6 +25,12 @@ Route::get('/login', function () {
 // Admin Authenticated Routes
 Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard',[HomeController::class, 'index'])->name('dashboard');
+    Route::get('/users',[UserController::class,'index'])->name('users');
+    Route::get('/types',[TypeController::class,'index'])->name('types');
+    Route::get('/items', [TypeController::class, 'items'])->name('items');
+    Route::post('/create', [TypeController::class, 'create'])->name('create');
+    Route::put('/update',[TypeController::class, 'update'])->name('update');
+    Route::delete('/delete',[TypeController::class,'destroy'])->name('delete');
 });
 require __DIR__.'/auth.php';
 

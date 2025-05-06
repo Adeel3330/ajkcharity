@@ -7,7 +7,7 @@
           <script>
             document.write(new Date().getFullYear());
           </script>
-          , made with ❤️ by
+          , made with ❤️🖤 by
           <a href="https://themeselection.com" target="_blank" class="footer-link">ThemeSelection</a>
         </div>
         <div class="d-none d-lg-inline-block">
@@ -17,7 +17,6 @@
             class="footer-link me-4"
             >Admin Templates</a
           >
-
           <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
           <a
             href="https://themeselection.com/item/category/bootstrap-admin-templates/"
@@ -25,7 +24,6 @@
             class="footer-link me-4"
             >Bootstrap Dashboard</a
           >
-
           <a
             href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/documentation/"
             target="_blank"

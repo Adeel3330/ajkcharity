@@ -6,7 +6,7 @@
 <!-- Mirrored from mis.charitycommission.punjab.gov.pk/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 Apr 2025 06:15:08 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head><title>
-	Login :: Punjab Charity Commission
+	Login :: AJK Charity Commission
 </title><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" /><meta name="description" /><meta name="keywords" /><meta name="author" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-touch-fullscreen" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <!-- BEGIN VENDOR CSS-->
     <link rel="stylesheet" type="text/css" href="App_Themes/app-assets/css/bootstrap.min.css" />
@@ -84,7 +84,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                 <div class="navbar-header">
                     <ul class="nav navbar-nav">
                         <li class="nav-item"><a href="javascript:void(0);" class="navbar-brand nav-link">
-                            <img alt="Punjab Charity Commission" src="Images/logo-charity-header.png" data-expand="Images/logo-charity-header.png" data-collapse="Images/logo-charity-header.png" class="brand-logo" /></a></li>
+                            <img alt="AJK Charity Commission" src="Images/logo-charity.png" data-expand="Images/logo-charity-header.png" data-collapse="Images/logo-charity-header.png" class="brand-logo" /></a></li>
                     </ul>
                 </div>
             </div>
@@ -234,8 +234,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
         </div>
         <footer class="footer navbar-fixed-bottom footer-dark navbar-shadow" style="position: unset !important; background: #006837 !important; color: #ffffff !important; padding: 1em !important;">
             <p class="clearfix text-sm-center mb-0 px-2">
-                <span class="float-md-left d-xs-block d-md-inline-block" style="color: #ffffff !important;">&#169; Punjab Charity Commission, <a href="https://www.punjab.gov.pk/" target="_blank" style="color: #ffffff !important;">Government of the Punjab</a></span>
-                <span class="float-md-right d-xs-block d-md-inline-block" style="color: #ffffff !important;">Powered by: <a href="https://www.pitb.gov.pk/" target="_blank" style="color: #ffffff !important;">Punjab Information Technology Board</a></span>
+                <span class="float-md-left d-xs-block d-md-inline-block" style="color: #ffffff !important;">&#169; AJK Charity Commission, <a href="https://www.punjab.gov.pk/" target="_blank" style="color: #ffffff !important;">Government of the AJK</a></span>
+                <span class="float-md-right d-xs-block d-md-inline-block" style="color: #ffffff !important;">Powered by: <a href="https://www.pitb.gov.pk/" target="_blank" style="color: #ffffff !important;">AJK Information Technology Board</a></span>
             </p>
         </footer>
         <script src="App_Themes/app-assets/vendors/js/ui/tether.min.js" type="text/javascript"></script>
