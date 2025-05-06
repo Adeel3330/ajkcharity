@@ -9,4 +9,7 @@ class Type extends Model
 {
     use softDeletes;
     protected $guarded=[];
+    public function parent(){
+        return $this->belongsTo(Type::class,'parent_id','id');
+    }
 }

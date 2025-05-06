@@ -84,8 +84,13 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                 <div class="navbar-header">
                     <ul class="nav navbar-nav">
                         <li class="nav-item"><a href="javascript:void(0);" class="navbar-brand nav-link">
-                            <img alt="AJK Charity Commission" src="Images/logo-charity.png" data-expand="Images/logo-charity.png" data-collapse="Images/logo-charity.png" class="brand-logo" /></a></li>
-                    </ul>
+<img
+      alt="AJK Charity Commission"
+      src="Images/logo-charity.png"
+      class="brand-logo ps-2"
+      data-expand="Images/logo-charity.png"
+      data-collapse="Images/logo-charity.png"
+    />                    </ul>
                 </div>
             </div>
         </nav>
@@ -233,8 +238,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
         </div>
         <footer class="footer navbar-fixed-bottom footer-dark navbar-shadow" style="position: unset !important; background: #006837 !important; color: #ffffff !important; padding: 1em !important;">
             <p class="clearfix text-sm-center mb-0 px-2">
-                <span class="float-md-left d-xs-block d-md-inline-block" style="color: #ffffff !important;">&#169; Punjab Charity Commission, <a href="https://www.punjab.gov.pk/" target="_blank" style="color: #ffffff !important;">Government of the Punjab</a></span>
-                <span class="float-md-right d-xs-block d-md-inline-block" style="color: #ffffff !important;">Powered by: <a href="https://www.pitb.gov.pk/" target="_blank" style="color: #ffffff !important;">Punjab Information Technology Board</a></span>
+                <span class="float-md-left d-xs-block d-md-inline-block" style="color: #ffffff !important;">&#169; AJK Charity Commission, <a href="https://www.punjab.gov.pk/" target="_blank" style="color: #ffffff !important;">Government of the AJK</a></span>
+                <span class="float-md-right d-xs-block d-md-inline-block" style="color: #ffffff !important;">Powered by: <a href="https://www.pitb.gov.pk/" target="_blank" style="color: #ffffff !important;">AJK Information Technology Board</a></span>
             </p>
         </footer>
         <script src="App_Themes/app-assets/vendors/js/ui/tether.min.js" type="text/javascript"></script>
