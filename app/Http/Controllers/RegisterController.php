@@ -48,10 +48,10 @@ class RegisterController extends Controller
             DB::beginTransaction();
             $authorization = CharityRegistration::create([
             'charity_name' => $request->charity_name,
-            // 'province' =>  $request->province,
-            'law_under_which_registered' =>  $request->law_under_which_registered,
-            'category_area_operations' =>  $request->charity_name,
+            'law_under_which_registered' =>  $request->law_registered,
+            'category_area_operations' =>  $request->category_area_operations,
             'fullname' =>  $request->fullname,
+            'guardian'=>  $request->guardian,
             'guardian_name' =>  $request->guardian_name,
             'cnic' =>  $request->cnic,
             'nature_of_authorization' =>  $request->nature_of_authorization,

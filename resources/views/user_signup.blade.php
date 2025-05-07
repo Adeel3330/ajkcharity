@@ -497,22 +497,6 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="card-block">
-
-                                        {{-- <div class="row">
-                                            <div class="col-md-12">
-                                                <fieldset class="position-relative">
-                                                    <!--*******************************Start Hidden Field & Message Alert**********************************-->
-
-                                                    <!--*******************************END Hidden Field & Message Alert**********************************-->
-                                                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hfEmailAddressVerifyCodeRequest_ID" id="ContentPlaceHolder1_hfEmailAddressVerifyCodeRequest_ID" />
-                                                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hfEmailAddressVerifyCode" id="ContentPlaceHolder1_hfEmailAddressVerifyCode" />
-                                                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hfEmailAddressVerified" id="ContentPlaceHolder1_hfEmailAddressVerified" />
-                                                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hfMobileNoVerifyCodeRequest_ID" id="ContentPlaceHolder1_hfMobileNoVerifyCodeRequest_ID" />
-                                                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hfMobileNoVerifyCode" id="ContentPlaceHolder1_hfMobileNoVerifyCode" />
-                                                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hfMobileNoVerified" id="ContentPlaceHolder1_hfMobileNoVerified" />
-                                                </fieldset>
-                                            </div>
-                                        </div> --}}
                                         <div class="row">
                                             @if(Session::has('error'))
                                                 <div class="alert alert-danger alert-block">
@@ -555,18 +539,16 @@
                                                         Province ( <span class="urdu_Font">صوبہ</span> ) <span class="danger">&nbsp;*</span></label>
                                                     <select name="province" id="province_id" class="form-control select2">
                                                     >
-                                                        <option selected="selected" value="0">--- Please Select ---</option>
+                                                        <option selected disabled>--- Please Select ---</option>
                                                         @foreach ($provinces as $item)
                                                         <option value="{{ $item->id }}">
                                                             {{ $item->name }}
                                                         </option>
                                                         @endforeach
-
-
 	                                                </select>
                                                 </div>
                                                 @error('province')
-                                                <div style="color: red;">{{ $message }}</div>
+                                                            <div style="color: red;">{{ $message }}</div>
                                                 @enderror
                                             </div>
                                             <div class="col-md-6">
@@ -574,8 +556,8 @@
                                                 <div class="form-group">
                                                     <label class="label-control">
                                                         Law under which registered ( <span class="urdu_Font">قانون جس کے تحت رجسٹرڈ ہے</span> ) <span class="danger">&nbsp;*</span></label>
-                                                    <select name="law_under_which_registered" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlNatureofEntity\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_ddlNatureofEntity" class="form-control select2">
-                                                    <option selected="selected" value="0">--- Please Select ---</option>
+                                                    <select name="law_registered"  class="form-control select2">
+                                                    <option selected disabled>--- Please Select ---</option>
                                                     @foreach ($law_under_registerations as $item)
                                                     <option value="{{ $item->id }}">
                                                         {{ $item->name }}
@@ -584,8 +566,8 @@
 	                                               </select>
 
                                                 </div>
-                                                @error('law_under_which_registered')
-                                                <div style="color: red;">{{ $message }}</div>
+                                                @error('law_registered')
+                                                    <div style="color: red;">{{ $message }}</div>
                                                 @enderror
                                             </div>
 
@@ -599,7 +581,7 @@
                                                     <label class="label-control">
                                                         Category: Area of Operations ( <span class="urdu_Font">کیٹیگری: آپریشنز کا علاقہ</span> ) <span class="danger">&nbsp;*</span></label>
                                                     <select name="category_area_operations"  id="category_area_operations" class="form-control select2">
-                                                    <option selected="selected" value="0">--- Please Select ---</option>
+                                                    <option selected disabled>--- Please Select ---</option>
 
                                                     @foreach ($category_area_operations as $item)
                                                     <option value="{{ $item->id }}">
@@ -611,7 +593,7 @@
                                                 </select>
                                             </div>
                                             @error('category_area_operations')
-                                            <div style="color: red;">{{ $message }}</div>
+                                                            <div style="color: red;">{{ $message }}</div>
                                             @enderror
                                             </div>
 
@@ -725,7 +707,6 @@
                                                                 @error('cnic')
                                                                 <div style="color: red;">{{ $message }}</div>
                                                                 @enderror
-                                                            {{-- <input id="ctl00_ContentPlaceHolder1_txtCNICNo_ClientState" name="ctl00_ContentPlaceHolder1_txtCNICNo_ClientState" type="hidden" /> --}}
                                                         </span>
                                                             <div class="form-control-position">
                                                                 <i class="icon-file-empty"></i>
@@ -738,7 +719,7 @@
                                                         <label class="label-control">
                                                             Nature of Authorization ( <span class="urdu_Font">اختیار کی نوعیت</span> ) <span class="danger">&nbsp;*</span></label>
                                                         <select name="nature_of_authorization" id="ContentPlaceHolder1_ddlNatureofAuthorization" class="form-control select2">
-                                                        <option value="0">--- Please Select ---</option>
+                                                        <option selected disabled>--- Please Select ---</option>
                                                         @foreach ($nature_authorization as $item)
                                                         <option value="{{ $item->id }}">
                                                             {{ $item->name }}
@@ -748,8 +729,8 @@
 
                                                     </select>
                                                     @error('nature_of_authorization')
-                                                        <div style="color: red;">{{ $message }}</div>
-                                                    @enderror
+                                                            <div style="color: red;">{{ $message }}</div>
+                                                        @enderror
                                                     </div>
                                                 </div>
                                             </div>
@@ -759,8 +740,8 @@
                                                     <div class="form-group">
                                                         <label class="label-control">
                                                             Network ( <span class="urdu_Font">نیٹ ورک</span> ) <span class="danger">&nbsp;*</span></label>
-                                                        <select name="network" id="ContentPlaceHolder1_ddlTelcoService" class="form-control select2">
-                                                        <option value="0">--- Select ---</option>
+                                                        <select name="network" class="form-control select2">
+                                                        <option selected disabled>--- Select ---</option>
                                                         @foreach ($networks as $item)
                                                         <option value="{{ $item->id }}">
                                                             {{ $item->name }}
@@ -769,7 +750,7 @@
 
                                                     </select>
                                                     @error('network')
-                                                        <div style="color: red;">{{ $message }}</div>
+                                                            <div style="color: red;">{{ $message }}</div>
                                                     @enderror
                                                     </div>
                                                 </div>
@@ -793,14 +774,33 @@
                                                         </fieldset>
                                                     </div>
                                                 </div>
-                                                <div id="ContentPlaceHolder1_dvMobileSendCode" class="col-md-6">
+                                                {{-- <div id="ContentPlaceHolder1_dvMobileSendCode" class="col-md-6">
                                                     <div class="form-group m-t-25">
                                                         <a id="ContentPlaceHolder1_lbtnMobileSendCode" class="lbtn btn-primary btn-min-width" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$lbtnMobileSendCode&quot;, &quot;&quot;, true, &quot;rfvMobileCodeSend&quot;, &quot;&quot;, false, true))">Get Verification Code ( <span class="urdu_Font">تصدیقی کوڈ حاصل کریں</span> ) </a>
+                                                    </div>
+                                                </div> --}}
+
+                                                {{-- For Email --}}
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label-control">
+                                                            Email Address ( <span class="urdu_Font">ای میل اڈریس</span> ) <span class="danger">&nbsp;*
+                                                                </span>
+                                                        </label>
+                                                        <fieldset class="position-relative has-icon-left">
+                                                            <input name="email" type="text" maxlength="75" id="ContentPlaceHolder1_txtEmailAddress" class="form-control" placeholder="Email Address" />
+                                                            @error('email')
+                                                            <div style="color: red;">{{ $message }}</div>
+                                                            @enderror
+                                                            <div class="form-control-position">
+                                                                <i class="icon-mail6"></i>
+                                                            </div>
+                                                        </fieldset>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <div class="row">
+                                            {{-- <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label class="label-control">
@@ -826,7 +826,7 @@
                                                 </div>
 
 
-                                            </div>
+                                            </div> --}}
 
                                             <div class="row">
                                                 <div class="col-md-12">
@@ -846,7 +846,7 @@
                                                         <label class="label-control">
                                                             Authorization Document ( <span class="urdu_Font">اجازتی دستاویز</span> ) <span class="danger">&nbsp;*</span></label>
                                                         <select name="authorization_document" id="ContentPlaceHolder1_ddlAuthorizationDocument" class="form-control select2">
-                                                        <option value="0">--- Please Select ---</option>
+                                                        <option selected disabled>--- Please Select ---</option>
                                                         @foreach ($auth_document_type as $item)
                                                         <option value="{{ $item->id }}">
                                                             {{ $item->name }}
@@ -855,7 +855,7 @@
 
                                                     </select>
                                                     @error('authorization_document')
-                                                    <div style="color: red;">{{ $message }}</div>
+                                                            <div style="color: red;">{{ $message }}</div>
                                                     @enderror
                                                         <span class="float-left">Download <a href="DownloadFile/PCC-CRP_Authorization_Document_Format_v1_26062020.docx" target="_blank">Authorization Letter Format</a></span>  <span class="float-right" dir="rtl">( <span class="urdu_Font"><a href="DownloadFile/PCC-CRP_Authorization_Document_Format_v1_26062020.docx" class="card-link" target="_blank">اجازت نامے کا فارمیٹ</a> ڈاؤن لوڈ کریں</span> ) </span>
                                                     </div>
@@ -870,7 +870,7 @@
                                                         id="document_file"
                                                         class="form-control border-primary"  />
                                                         @error('document_file')
-                                                        <div style="color: red;">{{ $message }}</div>
+                                                            <div style="color: red;">{{ $message }}</div>
                                                         @enderror
                                                         <span class="help-block float-left">(Maximum File Size: 1MB, File Format: JPG/ JPEG/ PNG/ PDF)</span>
                                                         <div id="document_preview" style="margin-top: 10px;"></div>
@@ -942,8 +942,8 @@
                                                             Bank Name ( <span class="urdu_Font">بینک کا نام</span> )<span class="danger">&nbsp;*
                                                         </span></label>
 
-                                                        <select name="bank_name" id="ContentPlaceHolder1_ddlBankName" class="form-control select2 border-primary">
-                                                        <option value="0">--- Please Select ---</option>
+                                                    <select name="bank_name"  class="form-control select2">
+                                                        <option selected disabled>--- Please Select ---</option>
                                                         @foreach ($banks as $item)
                                                         <option value="{{ $item->id }}">
                                                             {{ $item->name }}
@@ -952,7 +952,7 @@
 
                                                     </select>
                                                     @error('bank_name')
-                                                        <div style="color: red;">{{ $message }}</div>
+                                                            <div style="color: red;">{{ $message }}</div>
                                                     @enderror
 
 
@@ -1035,7 +1035,7 @@
                                                         name="challan_fee_image" class="form-control border-primary"  />
                                                         @error('challan_fee_image')
                                                         <div style="color: red;">{{ $message }}</div>
-                                                        @enderror
+                                                    @enderror
                                                         <span class="help-block float-left">(Maximum File Size: 1MB, File Format: JPG/ JPEG/ PNG/ PDF)</span>
                                                         <div id="challan_preview" style="margin-top: 10px;"></div>
                                                         <progress class="progress progress-striped progress-light-green" id="fileProgress2" style="display: none"></progress>
@@ -1050,7 +1050,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class="control-label text-justify">
-                                                        <input id="ContentPlaceHolder1_chkboxAgree" type="checkbox" name="accept" /><label for="ContentPlaceHolder1_chkboxAgree">  I, the above named applicant, </label>
+                                                        <input id="ContentPlaceHolder1_chkboxAgree" type="checkbox" name="accept" required /><label for="ContentPlaceHolder1_chkboxAgree">  I, the above named applicant, </label>
                                                         do hereby solemnly, declare that the information provided in the above form is true and correct and nothing has been concealed or mis-stated. I acknowledge and understand that in case of any mis-statement / un-authorized access to any information system is punishable under <a href="DownloadFile/PECA_2016.pdf" target="_blank" class="text-info">Prevention of Electronic Crimes Act, 2016</a> with either description of term not exceeding three years, or fine which may extent to five million rupees, or with both.</label>
                                                 </div>
                                                 <p class="urdu_Font" dir="rtl">
@@ -1080,7 +1080,12 @@
             </div>
 
 </div>
-    <div class="modal text-xs-left" id="dvPaymentDetail" tabindex="-1" data-backdrop="static" aria-hidden="true">
+{{-- Modal Start --}}
+    <div class="modal text-xs-left"
+    @if(!Session::has('error') || !Session::has('error'))
+     id="dvPaymentDetail"
+    @endif
+     tabindex="-1" data-backdrop="static" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -1251,7 +1256,7 @@
             </div>
         </div>
     </div>
-
+{{-- Modal end --}}
         </div>
     <footer class="footer navbar-fixed-bottom footer-dark navbar-shadow" style="position: unset !important; background: #006837 !important; color: #ffffff !important; padding: 1em !important;">
             <p class="clearfix text-sm-center mb-0 px-2">
