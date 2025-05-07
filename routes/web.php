@@ -28,9 +28,16 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/users',[UserController::class,'index'])->name('users');
     Route::get('/types',[TypeController::class,'index'])->name('types');
     Route::get('/items', [TypeController::class, 'items'])->name('items');
-    Route::post('/create', [TypeController::class, 'create'])->name('create');
-    Route::put('/update',[TypeController::class, 'update'])->name('update');
+    Route::get('/group-create', [TypeController::class, 'create'])->name('group.create');
+    // Route::get('/item-create', [TypeController::class, 'createItem'])->name('item.create');
+    Route::put('/group-update',[TypeController::class, 'update'])->name('update');
+    Route::post('/group-create',[TypeController::class,'store'])->name('group.store');
+    Route::get('/group-edit/{type}', [TypeController::class, 'edit'])->name('group.edit');
+    Route::put('/group-edit/{type}', [TypeController::class, 'update'])->name('group.update');
+
     Route::delete('/delete',[TypeController::class,'destroy'])->name('delete');
+    
 });
+
 require __DIR__.'/auth.php';
 

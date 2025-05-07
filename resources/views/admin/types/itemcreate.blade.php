@@ -2,12 +2,8 @@
 
 @section('content')
     <div class="container mt-5">
-        <div class="d-flex justify-content-between align-items-center mb-4">
-        <h3 class="mb-4">Create New Group</h3>
-        <a href="{{ route('admin.group.create') }}" class="btn btn-primary">
-               <i class="bi bi-arrow-left"></i> Back
-            </a>
-            </div>
+        <h3 class="mb-4">Create New Item</h3>
+
         <!-- Display Validation Errors -->
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -21,9 +17,12 @@
 
         <div class="card">
             <div class="card-body">
-                <form action="{{ route('admin.group.store') }}" method="POST">
+                <form action="" method="POST">
                     @csrf
-
+                    <div class="mb-3">
+                        <label for="parent-name" class="form-label">Group Parent Name</label>
+                        <input type="text" name="name" class="form-control" value="{{ old('parent-name') }}" required>
+                    </div>
                     <div class="mb-3">
                         <label for="name" class="form-label">Group Name</label>
                         <input type="text" name="name" class="form-control" value="{{ old('name') }}" required>

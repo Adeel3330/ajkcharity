@@ -120,7 +120,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                             </label>
                                             <fieldset class="position-relative has-icon-left">
                                                 <!-- 2015.2.826.45 --><span id="ctl00_ContentPlaceHolder1_txtUsername_wrapper" class="riSingle RadInput RadInput_Default" style="width:160px;">
-                                                    <input name="email" type="text" size="20" class="riTextBox riEnabled form-control" value="_____-_______-_" /><input id="ctl00_ContentPlaceHolder1_txtUsername_ClientState" name="ctl00_ContentPlaceHolder1_txtUsername_ClientState" type="hidden" /></span>
+                                                    <input name="email" type="text" size="20" class="riTextBox riEnabled form-control"  /><input id="ctl00_ContentPlaceHolder1_txtUsername_ClientState" name="ctl00_ContentPlaceHolder1_txtUsername_ClientState" type="hidden" /></span>
                                                 <div class="form-control-position">
                                                     <i class="icon-head"></i>
                                                 </div>
