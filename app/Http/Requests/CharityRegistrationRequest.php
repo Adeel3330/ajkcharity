@@ -24,7 +24,9 @@ class CharityRegistrationRequest extends FormRequest
     {
         return [
             'charity_name' => 'required|string|max:255',
-            'province' => 'required|string|max:255',
+            'province' => 'required|integer',
+            'district_id' => 'nullable|integer',
+            // 'tehsil_id' => 'nullable',
             'law_under_which_registered' => 'required',
             'category_area_operations' => 'required',
             'fullname' => 'required|string|max:255',

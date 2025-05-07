@@ -7,7 +7,10 @@ use App\Http\Requests\CharityRegistrationRequest;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\CharityRegistration;
 use App\Models\Type;
+use App\Models\Image;
 use App\Models\Demography;
+use App\Models\AuthorizationDemography;
+use Illuminate\Support\Facades\DB;
 use Session;
 class RegisterController extends Controller
 {
@@ -35,9 +38,10 @@ class RegisterController extends Controller
     public function store(CharityRegistrationRequest $request){
         // dd($request->all());
         try {
-            CharityRegistration::create([
+            DB::beginTransaction();
+            $authorization = CharityRegistration::create([
             'charity_name' => $request->charity_name,
-            'province' =>  $request->province,
+            // 'province' =>  $request->province,
             'law_under_which_registered' =>  $request->law_under_which_registered,
             'category_area_operations' =>  $request->charity_name,
             'fullname' =>  $request->fullname,
@@ -59,9 +63,72 @@ class RegisterController extends Controller
             'deposit_date' =>  $request->deposit_date,
             'accept'=> isset($request->accept)?1:0,
             ]);
+            // create province if available
+            if(isset($request->province)){
+                AuthorizationDemography::create([
+                    'auth_demo_id'=>  $authorization->id,
+                    'demography_id'=>  $request->province,
+                    'type'=>  'PROVINCE',
+                ]);
+            }
+            if(isset( $request->district_id)){
+                AuthorizationDemography::create([
+                    'auth_demo_id'=>  $authorization->id,
+                    'demography_id'=>  $request->district_id,
+                    'type'=>  'DISTRICT',
+                ]);
+            }
+            if (isset($request->tehsil_id)) {
+                if (is_array($request->tehsil_id)) {
+            
+                    $items = []; // make sure to initialize before the loop
+            
+                    foreach ($request->tehsil_id as $item) {
+                        $items[] = [
+                            'auth_demo_id'   => $authorization->id,
+                            'demography_id'  => $item, 
+                            'type'           => 'TEHSIL',
+                        ];
+                    }
+            
+                    AuthorizationDemography::insert($items);
+            
+                } else {
+                    // Single value case
+                    AuthorizationDemography::create([
+                        'auth_demo_id'   => $authorization->id,
+                        'demography_id'  => $request->tehsil_id,
+                        'type'           => 'TEHSIL',
+                    ]);
+                }
+            }
+
+            // Document  document_file
+
+            if (isset($request->document_file) && !empty($request->document_file)) {
+                $image = $request->document_file->store('registrations/document', 'public');
+                $path = request()->getSchemeAndHttpHost() . '/storage/' . $image;
+                $authorization->document()->create([
+                    'name' => $image,
+                    'url' => $path,
+                    // 'type'=>'document',
+                ]);
+            }
+            // Challan Form   
+            if (isset($request->challan_fee_image) && !empty($request->challan_fee_image)) {
+                $image = $request->challan_fee_image->store('registrations/challan_forms', 'public');
+                $path = request()->getSchemeAndHttpHost() . '/storage/' . $image;
+                $authorization->challanForm()->create([
+                    'name' => $image,
+                    'url' => $path,
+                    // 'type'=>'challan',
+                ]);
+            }
+            DB::commit();
             Session::flash('success', 'You have successfully registered');
             return redirect()->back();
         } catch (\Throwable $th) {
+            DB::rollBack();
             throw $th;
         }
 

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('category_area_operations')->nullable();
             $table->string('fullname')->nullable();
             $table->string('guardian_name')->nullable();
-            $table->string('cnic')->nullable();
+            $table->string('cnic')->unique()->nullable();
             $table->bigInteger('nature_of_authorization')->nullable();
             $table->bigInteger('network')->nullable();
             $table->string('mobile_no')->nullable();

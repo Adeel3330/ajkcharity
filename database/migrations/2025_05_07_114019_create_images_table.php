@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('authorization_demographies', function (Blueprint $table) {
+        Schema::create('images', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('auth_demo_id')->nullable()->constrained('charity_registrations','id');
-            $table->foreignId('demography_id')->nullable()->constrained('demographies','id');
+            $table->string('name');
+            $table->string('url');
             $table->string('type')->nullable();
-            $table->foreignId('created_by')->nullable()->constrained('users', 'id');
-            $table->foreignId('updated_by')->nullable()->constrained('users', 'id');
+            $table->unsignedBigInteger('imageable_id');
+            $table->string('imageable_type');
             $table->softDeletes();
             $table->timestamps();
         });
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('authorization_demographies');
+        Schema::dropIfExists('images');
     }
 };

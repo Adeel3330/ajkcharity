@@ -8,7 +8,11 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 
-// Get provinces
-Route::get('get-provincesRecord/{provinceId}',[ApiController::class, 'getProvincesData']);
+// Get Districts
+Route::get('get-provincesRecord/{provinceId}',[ApiController::class, 'getDistricts']);
+// Get Tehsils   get-tehsils
+Route::get('get-tehsils/{districtId}',[ApiController::class, 'getTehsils']);
+
+
 
 

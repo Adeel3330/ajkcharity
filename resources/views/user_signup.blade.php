@@ -5,7 +5,7 @@
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head><title>
 	Authorization to Register :: AJK Charity Commission
-</title><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" /><meta name="description" /><meta name="keywords" /><meta name="author" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-touch-fullscreen" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    </title><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" /><meta name="description" /><meta name="keywords" /><meta name="author" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-touch-fullscreen" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <!-- BEGIN VENDOR CSS-->
     <link rel="stylesheet" type="text/css" href="App_Themes/app-assets/css/bootstrap.min.css" />
     <!-- font icons-->
@@ -213,8 +213,9 @@
         .select2-container--default .select2-selection--single {
             border: 1px solid #aaa !important;
             border-radius: 0px !important;
-            height: 35px !important;
+            height: 45px !important;
         }
+       
 
             .select2-container--default .select2-selection--single .select2-selection__rendered {
                 color: #000000 !important;
@@ -226,8 +227,8 @@
             }
 
         .select2-container--default .select2-results__option--highlighted[aria-selected] {
-            background-color: none !important;
-            color: #000000 !important;
+            background-color: green !important;
+            color:rgb(239, 228, 228) !important;
         }
 
         .select2-dropdown {
@@ -240,6 +241,9 @@
 
         .select2-container--classic .select2-results__options .select2-results__option[aria-selected="true"], .select2-container--default .select2-results__options .select2-results__option[aria-selected="true"] {
             background-color: #228B22 !important;
+        }
+        input:not([type="radio"]) {
+            height: 45px;
         }
 
         .btn-primary, .btn-secondary {
@@ -433,6 +437,7 @@
         .m-t-50 {
             margin-top: 50px;
         }
+        
     </style>
 
 
@@ -450,24 +455,24 @@
                 <div class="navbar-header">
                     <ul class="nav navbar-nav">
                         <li class="nav-item"><a href="javascript:void(0);" class="navbar-brand nav-link">
-<li>
-  <a href="/">
-    <img
-      alt="AJK Charity Commission"
-      src="Images/logo-charity.png"
-      class="brand-logo ps-2"
-      data-expand="Images/logo-charity.png"
-      data-collapse="Images/logo-charity.png"
-    />
-  </a>
-</li>
+                        <li>
+                        <a href="/">
+                            <img
+                            alt="AJK Charity Commission"
+                            src="Images/logo-charity.png"
+                            class="brand-logo ps-2"
+                            data-expand="Images/logo-charity.png"
+                            data-collapse="Images/logo-charity.png"
+                            />
+                        </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
         <div class="app-content container center-layout">
 
-    <div id="ContentPlaceHolder1_ModalUpdateProgress1" style="display:none;">
+    <div class="text-center" id="ContentPlaceHolder1_ModalUpdateProgress1" style="display:none; padding:300px;">
 
             <div class="row">
                 <div class="col-md-12">
@@ -482,7 +487,7 @@
                 </div>
                 <div class="content-body">
                     <section class="flexbox-container">
-                        <div class="col-md-8 offset-md-4 col-xs-10 offset-xs-1 box-shadow-2 p-0">
+                        <div class="col-md-10 offset-md-2 col-xs-12 offset-xs-1 box-shadow-2 p-0">
                             <div class="card border-darkgreen">
                                 <div class="card-header bg-darkgreen">
                                     <h4 class="card-title" style="color:white;">
@@ -519,15 +524,7 @@
                                                         <strong style="color:white;">{{ Session::get('success')}}</strong>
                                                 </div>
                                             @endif
-                                            @if ($errors->any())
-                                                <div class="alert alert-danger">
-                                                    <ul>
-                                                        @foreach ($errors->all() as $error)
-                                                            <li>{{ $error }}</li>
-                                                        @endforeach
-                                                    </ul>
-                                                </div>
-                                            @endif
+    
 
                                         </div>
                                         <div class="row">
@@ -555,12 +552,13 @@
                                                     <label class="label-control">
                                                         Province ( <span class="urdu_Font">صوبہ</span> ) <span class="danger">&nbsp;*</span></label>
                                                     <select name="province" id="province_id" class="form-control select2">
-                                                    <option selected="selected" value="0">--- Please Select ---</option>
-                                                    @foreach ($provinces as $item)   
-                                                    <option value="{{ $item->id }}">
-                                                        {{ $item->name }}
-                                                    </option>
-                                                    @endforeach
+                                                    >
+                                                        <option selected="selected" value="0">--- Please Select ---</option>
+                                                        @foreach ($provinces as $item)   
+                                                        <option value="{{ $item->id }}">
+                                                            {{ $item->name }}
+                                                        </option>
+                                                        @endforeach
                                                    
 
 	                                                </select>
@@ -598,7 +596,7 @@
                                                 <div class="form-group">
                                                     <label class="label-control">
                                                         Category: Area of Operations ( <span class="urdu_Font">کیٹیگری: آپریشنز کا علاقہ</span> ) <span class="danger">&nbsp;*</span></label>
-                                                    <select name="category_area_operations" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlCategory\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_ddlCategory" class="form-control select2">
+                                                    <select name="category_area_operations"  id="category_area_operations" class="form-control select2">
                                                     <option selected="selected" value="0">--- Please Select ---</option>
                                                    
                                                     @foreach ($category_area_operations as $item)   
@@ -616,6 +614,43 @@
                                             </div>
 
 
+                                        </div>
+                                        <div class="row categoryArea" style="display:none;">
+                                              <!-- SELECT DISTRICT -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        
+                                                        <label class="form-label custom-required-label">Districts</label>
+                                                        <div class="form-control-wrap">
+                                                            <select class="form-control select2" value="{{ old('district_id') }}"
+                                                                name="district_id" id="district_id"
+                                                                 disabled>
+                                                                <option value="default_option" disabled selected>Select Districts</option>
+                                                            </select>
+                                                        </div>
+                                                        @error('district_id')
+                                                            <span><small class="text-danger ms-1">{{ $message }}</small></span>
+                                                        @enderror
+                                                    </div>
+                                                </div>
+                                               
+
+                                                <!-- SELECT TEHSIL -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label custom-required-label">Tehsils</label>
+                                                        <div class="form-control-wrap">
+                                                            <select id="tehsil_id" class="form-control select2" value="{{ old('tehsil_id') }}"
+                                                                name="tehsil_id" disabled>
+                                                                <option value="default_option" disabled>Select Tehsil</option>
+                                                                
+                                                            </select>
+                                                        </div>
+                                                        @error('tehsil_id')
+                                                            <span><small class="text-danger ms-1">{{ $message }}</small></span>
+                                                        @enderror
+                                                    </div>
+                                                </div>
                                         </div>
 
 
@@ -829,7 +864,7 @@
                                                     </label>
                                                     <span class="danger">&nbsp;*</span>
                                                     <div class="controls">
-                                                        <input type="file" name="document_file" id="ContentPlaceHolder1_fuAuthorizationEvidence" class="form-control border-primary" onchange="UploadFileAuthorizationEvidence(this)" />
+                                                        <input type="file" name="document_file"  class="form-control border-primary"  />
                                                         @error('document_file')
                                                         <div style="color: red;">{{ $message }}</div>
                                                         @enderror
@@ -993,12 +1028,12 @@
                                                     </label>
                                                     <span class="danger">&nbsp;*</span>
                                                     <div class="controls">
-                                                        <input type="file" name="challan_fee_image" id="ContentPlaceHolder1_fuPaymentSlip" onchange="UploadFilePaymentSlip(this)" />
+                                                        <input type="file" name="challan_fee_image"  />
                                                         @error('challan_fee_image')
                                                         <div style="color: red;">{{ $message }}</div>
                                                         @enderror
-                                                        {{-- <input type="hidden" name="ctl00$ContentPlaceHolder1$hfUploadPaymentSlip" id="ContentPlaceHolder1_hfUploadPaymentSlip" />
-                                                        <input type="hidden" name="ctl00$ContentPlaceHolder1$hfUploadNewPaymentSlip" id="ContentPlaceHolder1_hfUploadNewPaymentSlip" /> --}}
+                                                        <input type="hidden" name="ctl00$ContentPlaceHolder1$hfUploadPaymentSlip" id="ContentPlaceHolder1_hfUploadPaymentSlip" />
+                                                        <input type="hidden" name="ctl00$ContentPlaceHolder1$hfUploadNewPaymentSlip" id="ContentPlaceHolder1_hfUploadNewPaymentSlip" />
                                                         <span class="help-block float-left">(Maximum File Size: 1MB, File Format: JPG/ JPEG/ PNG/ PDF)</span>
                                                         <a id="ContentPlaceHolder1_hrefuploadPaymentSlip" title="Preview" class="float-left m-5" target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o margin-left-5"></i></a>
                                                         <progress class="progress progress-striped progress-light-green" id="fileProgress2" style="display: none"></progress>
@@ -1216,75 +1251,146 @@
     </div>
 
         </div>
-        <footer class="footer navbar-fixed-bottom footer-dark navbar-shadow" style="position: unset !important; background: #006837 !important; color: #ffffff !important; padding: 1em !important;">
+    <footer class="footer navbar-fixed-bottom footer-dark navbar-shadow" style="position: unset !important; background: #006837 !important; color: #ffffff !important; padding: 1em !important;">
             <p class="clearfix text-sm-center mb-0 px-2">
                 <span class="float-md-left d-xs-block d-md-inline-block" style="color: #ffffff !important;">&#169; Punjab Charity Commission, <a href="https://www.punjab.gov.pk/" target="_blank" style="color: #ffffff !important;">Government of the Punjab</a></span>
                 <span class="float-md-right d-xs-block d-md-inline-block" style="color: #ffffff !important;">Powered by: <a href="https://www.pitb.gov.pk/" target="_blank" style="color: #ffffff !important;">Punjab Information Technology Board</a></span>
             </p>
-        </footer>
-        <script src="App_Themes/app-assets/vendors/js/ui/tether.min.js" type="text/javascript"></script>
-        <script src="App_Themes/app-assets/js/core/libraries/bootstrap.min.js" type="text/javascript"></script>
-        <script src="App_Themes/app-assets/vendors/js/forms/select/select2.full.min.js" type="text/javascript"></script>
-        <script src="Styles/jquery.datetimepicker.full.js" type="text/javascript"></script>
-
-
-        <script>
-            $(document).ready(function(){
-                $('#cnic').mask('00000-0000000-0');
-            });
-        </script>
-        <script>
-            $(document).ready(function(){
-                $('#mobile_no').mask('0000-0000000'); // Format: XXXX-XXXXXXX
-            });
-        </script>
+    </footer>
+<script src="App_Themes/app-assets/vendors/js/ui/tether.min.js" type="text/javascript"></script>
+<script src="App_Themes/app-assets/js/core/libraries/bootstrap.min.js" type="text/javascript"></script>
+<script src="App_Themes/app-assets/vendors/js/forms/select/select2.full.min.js" type="text/javascript"></script>
+<script src="Styles/jquery.datetimepicker.full.js" type="text/javascript"></script>
 <script type="text/javascript">
-//<![CDATA[
-$('#dvPaymentDetail').modal();$('#dvPaymentDetail').removeAttr('tabindex');Sys.Application.add_init(function() {
-    $create(Sys.UI._ModalUpdateProgress, {"associatedUpdatePanelId":"ContentPlaceHolder1_UpdatePanel1","backgroundCssClass":"modalProgressGreyBackground","cancelControlID":null,"displayAfter":0,"dynamicLayout":true}, null, null, $get("ContentPlaceHolder1_ModalUpdateProgress1"));
-});
-Sys.Application.add_init(function() {
-    $create(Telerik.Web.UI.RadMaskedTextBox, {"_displayText":"","_focused":false,"_initialMasks":[new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadLiteralMaskPart('-'),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadLiteralMaskPart('-'),new Telerik.Web.UI.RadDigitMaskPart()],"_initialValueAsText":"","_postBackEventReferenceScript":"setTimeout(\"__doPostBack(\\\u0027ctl00$ContentPlaceHolder1$txtCNICNo\\\u0027,\\\u0027\\\u0027)\", 0)","_skin":"Default","_validationText":"","clientStateFieldID":"ctl00_ContentPlaceHolder1_txtCNICNo_ClientState","enabled":true,"styles":{HoveredStyle: ["width:160px;", "riTextBox riHover form-control"],InvalidStyle: ["width:160px;", "riTextBox riError form-control"],DisabledStyle: ["width:160px;", "riTextBox riDisabled form-control"],FocusedStyle: ["width:160px;", "riTextBox riFocused form-control"],EmptyMessageStyle: ["width:160px;", "riTextBox riEmpty form-control"],ReadOnlyStyle: ["width:160px;", "riTextBox riRead form-control"],EnabledStyle: ["width:160px;", "riTextBox riEnabled form-control"]}}, null, null, $get("ctl00_ContentPlaceHolder1_txtCNICNo"));
-});
-Sys.Application.add_init(function() {
-    $create(Telerik.Web.UI.RadMaskedTextBox, {"_displayText":"","_focused":false,"_initialMasks":[new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadLiteralMaskPart('-'),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart()],"_initialValueAsText":"","_postBackEventReferenceScript":"setTimeout(\"__doPostBack(\\\u0027ctl00$ContentPlaceHolder1$txtMobileNo\\\u0027,\\\u0027\\\u0027)\", 0)","_skin":"Default","_validationText":"","clientStateFieldID":"ctl00_ContentPlaceHolder1_txtMobileNo_ClientState","enabled":true,"styles":{HoveredStyle: ["width:160px;", "riTextBox riHover form-control"],InvalidStyle: ["width:160px;", "riTextBox riError form-control"],DisabledStyle: ["width:160px;", "riTextBox riDisabled form-control"],FocusedStyle: ["width:160px;", "riTextBox riFocused form-control"],EmptyMessageStyle: ["width:160px;", "riTextBox riEmpty form-control"],ReadOnlyStyle: ["width:160px;", "riTextBox riRead form-control"],EnabledStyle: ["width:160px;", "riTextBox riEnabled form-control"]}}, null, null, $get("ctl00_ContentPlaceHolder1_txtMobileNo"));
-});
-Sys.Application.add_init(function() {
-    $create(AjaxControlToolkit.FilteredTextBoxBehavior, {"FilterType":2,"id":"ContentPlaceHolder1_txtChallanNo_FilteredTextBoxExtender"}, null, null, $get("ContentPlaceHolder1_txtChallanNo"));
-});
-Sys.Application.add_init(function() {
-    $create(AjaxControlToolkit.FilteredTextBoxBehavior, {"FilterType":2,"id":"ContentPlaceHolder1_txtBranchCode_FilteredTextBoxExtender"}, null, null, $get("ContentPlaceHolder1_txtBranchCode"));
-});
-Sys.Application.add_init(function() {
-    $create(AjaxControlToolkit.FilteredTextBoxBehavior, {"FilterType":2,"id":"ContentPlaceHolder1_txtAmount_FilteredTextBoxExtender"}, null, null, $get("ContentPlaceHolder1_txtAmount"));
-});
-Sys.Application.add_init(function() {
-    $create(Sys.UI._ModalUpdateProgress, {"associatedUpdatePanelId":"ContentPlaceHolder1_UpdatePanel2","backgroundCssClass":"modalProgressGreyBackground","cancelControlID":null,"displayAfter":0,"dynamicLayout":true}, null, null, $get("ContentPlaceHolder1_ModalUpdateProgress2"));
-});
-//]]>
+   //<![CDATA[
+            $('#dvPaymentDetail').modal();$('#dvPaymentDetail').removeAttr('tabindex');Sys.Application.add_init(function() {
+                $create(Sys.UI._ModalUpdateProgress, {"associatedUpdatePanelId":"ContentPlaceHolder1_UpdatePanel1","backgroundCssClass":"modalProgressGreyBackground","cancelControlID":null,"displayAfter":0,"dynamicLayout":true}, null, null, $get("ContentPlaceHolder1_ModalUpdateProgress1"));
+            });
+            Sys.Application.add_init(function() {
+                $create(Telerik.Web.UI.RadMaskedTextBox, {"_displayText":"","_focused":false,"_initialMasks":[new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadLiteralMaskPart('-'),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadLiteralMaskPart('-'),new Telerik.Web.UI.RadDigitMaskPart()],"_initialValueAsText":"","_postBackEventReferenceScript":"setTimeout(\"__doPostBack(\\\u0027ctl00$ContentPlaceHolder1$txtCNICNo\\\u0027,\\\u0027\\\u0027)\", 0)","_skin":"Default","_validationText":"","clientStateFieldID":"ctl00_ContentPlaceHolder1_txtCNICNo_ClientState","enabled":true,"styles":{HoveredStyle: ["width:160px;", "riTextBox riHover form-control"],InvalidStyle: ["width:160px;", "riTextBox riError form-control"],DisabledStyle: ["width:160px;", "riTextBox riDisabled form-control"],FocusedStyle: ["width:160px;", "riTextBox riFocused form-control"],EmptyMessageStyle: ["width:160px;", "riTextBox riEmpty form-control"],ReadOnlyStyle: ["width:160px;", "riTextBox riRead form-control"],EnabledStyle: ["width:160px;", "riTextBox riEnabled form-control"]}}, null, null, $get("ctl00_ContentPlaceHolder1_txtCNICNo"));
+            });
+            Sys.Application.add_init(function() {
+                $create(Telerik.Web.UI.RadMaskedTextBox, {"_displayText":"","_focused":false,"_initialMasks":[new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadLiteralMaskPart('-'),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart(),new Telerik.Web.UI.RadDigitMaskPart()],"_initialValueAsText":"","_postBackEventReferenceScript":"setTimeout(\"__doPostBack(\\\u0027ctl00$ContentPlaceHolder1$txtMobileNo\\\u0027,\\\u0027\\\u0027)\", 0)","_skin":"Default","_validationText":"","clientStateFieldID":"ctl00_ContentPlaceHolder1_txtMobileNo_ClientState","enabled":true,"styles":{HoveredStyle: ["width:160px;", "riTextBox riHover form-control"],InvalidStyle: ["width:160px;", "riTextBox riError form-control"],DisabledStyle: ["width:160px;", "riTextBox riDisabled form-control"],FocusedStyle: ["width:160px;", "riTextBox riFocused form-control"],EmptyMessageStyle: ["width:160px;", "riTextBox riEmpty form-control"],ReadOnlyStyle: ["width:160px;", "riTextBox riRead form-control"],EnabledStyle: ["width:160px;", "riTextBox riEnabled form-control"]}}, null, null, $get("ctl00_ContentPlaceHolder1_txtMobileNo"));
+            });
+            Sys.Application.add_init(function() {
+                $create(AjaxControlToolkit.FilteredTextBoxBehavior, {"FilterType":2,"id":"ContentPlaceHolder1_txtChallanNo_FilteredTextBoxExtender"}, null, null, $get("ContentPlaceHolder1_txtChallanNo"));
+            });
+            Sys.Application.add_init(function() {
+                $create(AjaxControlToolkit.FilteredTextBoxBehavior, {"FilterType":2,"id":"ContentPlaceHolder1_txtBranchCode_FilteredTextBoxExtender"}, null, null, $get("ContentPlaceHolder1_txtBranchCode"));
+            });
+            Sys.Application.add_init(function() {
+                $create(AjaxControlToolkit.FilteredTextBoxBehavior, {"FilterType":2,"id":"ContentPlaceHolder1_txtAmount_FilteredTextBoxExtender"}, null, null, $get("ContentPlaceHolder1_txtAmount"));
+            });
+            Sys.Application.add_init(function() {
+                $create(Sys.UI._ModalUpdateProgress, {"associatedUpdatePanelId":"ContentPlaceHolder1_UpdatePanel2","backgroundCssClass":"modalProgressGreyBackground","cancelControlID":null,"displayAfter":0,"dynamicLayout":true}, null, null, $get("ContentPlaceHolder1_ModalUpdateProgress2"));
+            });
+            //]]>
 </script>
 <script>
     $(document).ready(function() {
+        // for cnic masking
+        $('#cnic').mask('00000-0000000-0');
+        // for mobile masking
+        $('#mobile_no').mask('0000-0000000');
+
+        $('.select2').select2({
+            placeholder: "--- Please Select ---",
+            allowClear: true // Enables "x" to remove selections
+        });
+
+        // get districts
         $('#province_id').on('change', function() {
             var provinceId = $(this).val();
             // alert(provinceId);
+            showLoader();
+            // return false;
             if (provinceId) {
                 $.ajax({
                     url: '/api/get-provincesRecord/' + provinceId, // Adjust to your route
                     type: 'GET',
                     dataType: 'json',
-                    success: function(response) {
+                    success: function(data) {
                         
-                        console.table(response);
-
+                        $('#district_id').removeAttr('disabled');
+                        $('#district_id').empty();
+                        $('#tehsil_id').empty();
+                        $('#district_id').append('<option value="default_option" disabled selected>Select Districts</option>');
+                        $('#tehsil_id').append('<option value="default_option" disabled selected>Select Tehsil</option>');
+                        $.each(data, function (key, value) {
+                            console.log(data);
+                            $('#district_id').append('<option value="' + value.id + '">' + value.name + '</option>');
+                        });
+                        hideLoader();
                     },
                     error: function(xhr) {
                         console.log(xhr.responseText);
                     }
+                
                 });
             }
+           
+        });
+
+        $('#category_area_operations').on('change',function(){
+            var selectedIndex = $(this).prop('selectedIndex'); // 0-based index
+            if (selectedIndex == 2) {
+            $('.categoryArea').show();
+            $('#tehsil_id')
+                .attr('multiple', 'multiple')
+                .attr('name', 'tehsil_id[]')
+                .val(null);
+                $('#tehsil_id').select2('destroy').select2({
+                    allowClear: true
+                });
+            } else if(selectedIndex == 3) {
+                $('.categoryArea').show();
+                $('#tehsil_id')
+                    .removeAttr('multiple')
+                    .attr('name', 'tehsil_id')
+                    .val(null); // optional: clear previous value
+                    $('#tehsil_id').select2('destroy').select2({
+                    placeholder: "--- Please Select ---",
+                        allowClear: false
+                    });
+            }else{
+                $('.categoryArea').hide();
+            }
+        });
+         
+        
+       
+
+       
+
+        // get tehsils
+        $('#district_id').change(function () {
+            var districtId = $(this).val();
+            showLoader();
+            $.get('/api/get-tehsils/' + districtId, function (data) {
+                console.table(data); false;
+                // Populate tehsil dropdown
+                $('#tehsil_id').removeAttr('disabled');
+                $('#tehsil_id').empty();
+                // $('#tehsil_id').append('<option value="default_option" disabled selected>Select Tehsil</option>');
+                $.each(data, function (key, value) {
+                    $('#tehsil_id').append('<option value="' + value.id + '">' + value.name + '</option>');
+                });
+                hideLoader();
+            });
         });
     });
+
+    function showLoader() {
+        $('#ContentPlaceHolder1_ModalUpdateProgress1').show();
+        $('.card').hide();
+    }
+    // Function to hide the loader
+    function hideLoader() {
+        setTimeout(function () {
+            $('#ContentPlaceHolder1_ModalUpdateProgress1').hide();
+            $('.card').show();
+        }, 100);
+    }
 </script>
 
 </form>
