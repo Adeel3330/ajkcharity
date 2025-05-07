@@ -24,7 +24,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-   
+
     <script type="text/javascript">
 
         function pageLoad() {
@@ -213,9 +213,10 @@
         .select2-container--default .select2-selection--single {
             border: 1px solid #aaa !important;
             border-radius: 0px !important;
-            height: 45px !important;
+            height: 35px !important;
+            padding: 2px !important;
         }
-       
+
 
             .select2-container--default .select2-selection--single .select2-selection__rendered {
                 color: #000000 !important;
@@ -242,8 +243,9 @@
         .select2-container--classic .select2-results__options .select2-results__option[aria-selected="true"], .select2-container--default .select2-results__options .select2-results__option[aria-selected="true"] {
             background-color: #228B22 !important;
         }
-        input:not([type="radio"]) {
-            height: 45px;
+        input:not([type="radio"]):not([type="checkbox"]):not([type="file"]) {
+            height: 35px;
+            padding:0px 25px !important;
         }
 
         .btn-primary, .btn-secondary {
@@ -437,7 +439,7 @@
         .m-t-50 {
             margin-top: 50px;
         }
-        
+
     </style>
 
 
@@ -524,7 +526,7 @@
                                                         <strong style="color:white;">{{ Session::get('success')}}</strong>
                                                 </div>
                                             @endif
-    
+
 
                                         </div>
                                         <div class="row">
@@ -554,12 +556,12 @@
                                                     <select name="province" id="province_id" class="form-control select2">
                                                     >
                                                         <option selected="selected" value="0">--- Please Select ---</option>
-                                                        @foreach ($provinces as $item)   
+                                                        @foreach ($provinces as $item)
                                                         <option value="{{ $item->id }}">
                                                             {{ $item->name }}
                                                         </option>
                                                         @endforeach
-                                                   
+
 
 	                                                </select>
                                                 </div>
@@ -568,19 +570,19 @@
                                                 @enderror
                                             </div>
                                             <div class="col-md-6">
-                                               
+
                                                 <div class="form-group">
                                                     <label class="label-control">
                                                         Law under which registered ( <span class="urdu_Font">قانون جس کے تحت رجسٹرڈ ہے</span> ) <span class="danger">&nbsp;*</span></label>
                                                     <select name="law_under_which_registered" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlNatureofEntity\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_ddlNatureofEntity" class="form-control select2">
                                                     <option selected="selected" value="0">--- Please Select ---</option>
-                                                    @foreach ($law_under_registerations as $item)   
+                                                    @foreach ($law_under_registerations as $item)
                                                     <option value="{{ $item->id }}">
                                                         {{ $item->name }}
                                                     </option>
                                                     @endforeach
 	                                               </select>
-                                                   
+
                                                 </div>
                                                 @error('law_under_which_registered')
                                                 <div style="color: red;">{{ $message }}</div>
@@ -598,13 +600,13 @@
                                                         Category: Area of Operations ( <span class="urdu_Font">کیٹیگری: آپریشنز کا علاقہ</span> ) <span class="danger">&nbsp;*</span></label>
                                                     <select name="category_area_operations"  id="category_area_operations" class="form-control select2">
                                                     <option selected="selected" value="0">--- Please Select ---</option>
-                                                   
-                                                    @foreach ($category_area_operations as $item)   
+
+                                                    @foreach ($category_area_operations as $item)
                                                     <option value="{{ $item->id }}">
                                                         {{ $item->name }}
                                                     </option>
                                                     @endforeach
-                                                   
+
 
                                                 </select>
                                             </div>
@@ -619,7 +621,7 @@
                                               <!-- SELECT DISTRICT -->
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        
+
                                                         <label class="form-label custom-required-label">Districts</label>
                                                         <div class="form-control-wrap">
                                                             <select class="form-control select2" value="{{ old('district_id') }}"
@@ -633,7 +635,7 @@
                                                         @enderror
                                                     </div>
                                                 </div>
-                                               
+
 
                                                 <!-- SELECT TEHSIL -->
                                                 <div class="col-md-6">
@@ -643,7 +645,7 @@
                                                             <select id="tehsil_id" class="form-control select2" value="{{ old('tehsil_id') }}"
                                                                 name="tehsil_id" disabled>
                                                                 <option value="default_option" disabled>Select Tehsil</option>
-                                                                
+
                                                             </select>
                                                         </div>
                                                         @error('tehsil_id')
@@ -667,7 +669,7 @@
                                                         </label>
                                                         <fieldset class="position-relative has-icon-left">
                                                             <input name="fullname" type="text" maxlength="100" id="ContentPlaceHolder1_txtFullName" class="form-control" placeholder="Name" />
-                                                           
+
                                                             <div class="form-control-position">
                                                                 <i class="icon-head"></i>
                                                             </div>
@@ -718,7 +720,7 @@
                                                         </label>
                                                         <fieldset class="position-relative has-icon-left">
                                                             <!-- 2015.2.826.45 --><span id="ctl00_ContentPlaceHolder1_txtCNICNo_wrapper" class="riSingle RadInput RadInput_Default" style="width:160px;">
-                                                                <input type="text" id="cnic" name="cnic" class="form-control" value="{{ old('cnic') }}"  class="riTextBox riEnabled form-control cnic" 
+                                                                <input type="text" id="cnic" name="cnic" class="form-control" value="{{ old('cnic') }}"  class="riTextBox riEnabled form-control cnic"
                                                                  />
                                                                 @error('cnic')
                                                                 <div style="color: red;">{{ $message }}</div>
@@ -737,12 +739,12 @@
                                                             Nature of Authorization ( <span class="urdu_Font">اختیار کی نوعیت</span> ) <span class="danger">&nbsp;*</span></label>
                                                         <select name="nature_of_authorization" id="ContentPlaceHolder1_ddlNatureofAuthorization" class="form-control select2">
                                                         <option value="0">--- Please Select ---</option>
-                                                        @foreach ($nature_authorization as $item)   
+                                                        @foreach ($nature_authorization as $item)
                                                         <option value="{{ $item->id }}">
                                                             {{ $item->name }}
                                                         </option>
                                                         @endforeach
-                                                       
+
 
                                                     </select>
                                                     @error('nature_of_authorization')
@@ -759,7 +761,7 @@
                                                             Network ( <span class="urdu_Font">نیٹ ورک</span> ) <span class="danger">&nbsp;*</span></label>
                                                         <select name="network" id="ContentPlaceHolder1_ddlTelcoService" class="form-control select2">
                                                         <option value="0">--- Select ---</option>
-                                                        @foreach ($networks as $item)   
+                                                        @foreach ($networks as $item)
                                                         <option value="{{ $item->id }}">
                                                             {{ $item->name }}
                                                         </option>
@@ -783,7 +785,7 @@
                                                                 @error('mobile_no')
                                                                     <div style="color: red;">{{ $message }}</div>
                                                                 @enderror
-                                                           
+
                                                         </span>
                                                             <div class="form-control-position">
                                                                 <i class="icon-phone2"></i>
@@ -845,7 +847,7 @@
                                                             Authorization Document ( <span class="urdu_Font">اجازتی دستاویز</span> ) <span class="danger">&nbsp;*</span></label>
                                                         <select name="authorization_document" id="ContentPlaceHolder1_ddlAuthorizationDocument" class="form-control select2">
                                                         <option value="0">--- Please Select ---</option>
-                                                        @foreach ($auth_document_type as $item)   
+                                                        @foreach ($auth_document_type as $item)
                                                         <option value="{{ $item->id }}">
                                                             {{ $item->name }}
                                                         </option>
@@ -864,14 +866,14 @@
                                                     </label>
                                                     <span class="danger">&nbsp;*</span>
                                                     <div class="controls">
-                                                        <input type="file" name="document_file"  class="form-control border-primary"  />
+                                                        <input type="file" name="document_file"
+                                                        id="document_file"
+                                                        class="form-control border-primary"  />
                                                         @error('document_file')
                                                         <div style="color: red;">{{ $message }}</div>
                                                         @enderror
-                                                        {{-- <input type="hidden" name="ctl00$ContentPlaceHolder1$hfAuthorizationEvidence" id="ContentPlaceHolder1_hfAuthorizationEvidence" /> --}}
-                                                        {{-- <input type="hidden" name="ctl00$ContentPlaceHolder1$hfuploadNewAuthorizationEvidence" id="ContentPlaceHolder1_hfuploadNewAuthorizationEvidence" /> --}}
                                                         <span class="help-block float-left">(Maximum File Size: 1MB, File Format: JPG/ JPEG/ PNG/ PDF)</span>
-                                                        <a id="ContentPlaceHolder1_hrefuploadAuthorizationEvidence" title="Preview" class="float-left m-5" target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o margin-left-5"></i></a>
+                                                        <div id="document_preview" style="margin-top: 10px;"></div>
                                                         <progress class="progress progress-striped progress-light-green" id="fileProgress" style="display: none"></progress>
                                                     </div>
                                                 </div>
@@ -942,7 +944,7 @@
 
                                                         <select name="bank_name" id="ContentPlaceHolder1_ddlBankName" class="form-control select2 border-primary">
                                                         <option value="0">--- Please Select ---</option>
-                                                        @foreach ($banks as $item)   
+                                                        @foreach ($banks as $item)
                                                         <option value="{{ $item->id }}">
                                                             {{ $item->name }}
                                                         </option>
@@ -999,7 +1001,7 @@
 
                                                         <label class="label-control">Selected Category Fee ( <span class="urdu_Font">منتخب شدہ کیٹیگری کی فیس </span>&nbsp;) <span class="danger">*</span></label>
                                                         <input name="selected_category_fee" type="number" maxlength="10" id="ContentPlaceHolder1_txtSystemAmount" class="aspNetDisabled form-control border-primary" placeholder="PKR" />
-                                                        
+
 
                                                         {{-- <input type="hidden" name="ctl00$ContentPlaceHolder1$CategoryName" id="ContentPlaceHolder1_CategoryName" />
                                                         <input type="hidden" name="ctl00$ContentPlaceHolder1$hfSystemAmount" id="ContentPlaceHolder1_hfSystemAmount" /> --}}
@@ -1028,14 +1030,14 @@
                                                     </label>
                                                     <span class="danger">&nbsp;*</span>
                                                     <div class="controls">
-                                                        <input type="file" name="challan_fee_image"  />
+                                                        <input type="file"
+                                                        id="challan_fee_image"
+                                                        name="challan_fee_image" class="form-control border-primary"  />
                                                         @error('challan_fee_image')
                                                         <div style="color: red;">{{ $message }}</div>
                                                         @enderror
-                                                        <input type="hidden" name="ctl00$ContentPlaceHolder1$hfUploadPaymentSlip" id="ContentPlaceHolder1_hfUploadPaymentSlip" />
-                                                        <input type="hidden" name="ctl00$ContentPlaceHolder1$hfUploadNewPaymentSlip" id="ContentPlaceHolder1_hfUploadNewPaymentSlip" />
                                                         <span class="help-block float-left">(Maximum File Size: 1MB, File Format: JPG/ JPEG/ PNG/ PDF)</span>
-                                                        <a id="ContentPlaceHolder1_hrefuploadPaymentSlip" title="Preview" class="float-left m-5" target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o margin-left-5"></i></a>
+                                                        <div id="challan_preview" style="margin-top: 10px;"></div>
                                                         <progress class="progress progress-striped progress-light-green" id="fileProgress2" style="display: none"></progress>
                                                     </div>
                                                 </div>
@@ -1310,7 +1312,7 @@
                     type: 'GET',
                     dataType: 'json',
                     success: function(data) {
-                        
+
                         $('#district_id').removeAttr('disabled');
                         $('#district_id').empty();
                         $('#tehsil_id').empty();
@@ -1325,10 +1327,10 @@
                     error: function(xhr) {
                         console.log(xhr.responseText);
                     }
-                
+
                 });
             }
-           
+
         });
 
         $('#category_area_operations').on('change',function(){
@@ -1356,11 +1358,6 @@
                 $('.categoryArea').hide();
             }
         });
-         
-        
-       
-
-       
 
         // get tehsils
         $('#district_id').change(function () {
@@ -1377,6 +1374,37 @@
                 });
                 hideLoader();
             });
+        });
+
+        // For Document
+        $('#document_file').on('change', function(e) {
+            $('#fileProgress').show();
+            const file = e.target.files[0];
+            const previewDiv = $('#document_preview');
+
+            if (file) {
+                const fileURL = URL.createObjectURL(file);
+                const linkHtml = `<a href="${fileURL}" target="_blank" download>Preview or Download Document</a>`;
+                previewDiv.html(linkHtml);
+            } else {
+                previewDiv.empty();
+            }
+            $('#fileProgress').hide();
+        });
+        // for challan
+        $('#challan_fee_image').on('change', function(e) {
+            $('#fileProgress2').show();
+            const file = e.target.files[0];
+            const previewDiv = $('#challan_preview');
+
+            if (file) {
+                const fileURL = URL.createObjectURL(file);
+                const linkHtml = `<a href="${fileURL}" target="_blank" download>Preview or Download Challan</a>`;
+                previewDiv.html(linkHtml);
+            } else {
+                previewDiv.empty();
+            }
+            $('#fileProgress2').hide();
         });
     });
 

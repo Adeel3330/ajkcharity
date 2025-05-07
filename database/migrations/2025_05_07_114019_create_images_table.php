@@ -13,17 +13,15 @@ return new class extends Migration
     {
         Schema::create('images', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
             $table->string('url');
             $table->string('type')->nullable();
-            $table->unsignedBigInteger('imageable_id');
-            $table->string('imageable_type');
+            $table->morphs('imageable');
             $table->softDeletes();
             $table->timestamps();
         });
     }
 
-    /**
+    /**te
      * Reverse the migrations.
      */
     public function down(): void
