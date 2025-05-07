@@ -18,6 +18,7 @@ return new class extends Migration
             $table->bigInteger('law_under_which_registered')->nullable();
             $table->string('category_area_operations')->nullable();
             $table->string('fullname')->nullable();
+            $table->string('guardian')->nullable();
             $table->string('guardian_name')->nullable();
             $table->string('cnic')->unique()->nullable();
             $table->bigInteger('nature_of_authorization')->nullable();

@@ -11,6 +11,7 @@ use App\Models\Image;
 use App\Models\Demography;
 use App\Models\AuthorizationDemography;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use Session;
 class RegisterController extends Controller
 {
@@ -23,7 +24,7 @@ class RegisterController extends Controller
         $networks = $this->getChildType('networks');
         $auth_document_type = $this->getChildType('auth_document_type');
         $banks = $this->getChildType('banks');
-        
+
         // dd($law_under_registerations);
         return view('user_signup', [
             'provinces'=>$provinces,
@@ -37,14 +38,20 @@ class RegisterController extends Controller
     }
     public function store(CharityRegistrationRequest $request){
         // dd($request->all());
+        // Check cnic exist
+        $cnic = CharityRegistration::where('cnic', $request->cnic)->exists();
+        if($cnic){
+            Session::flash('error', 'CNIC already exists');
+            return redirect()->back();
+        }
         try {
             DB::beginTransaction();
             $authorization = CharityRegistration::create([
             'charity_name' => $request->charity_name,
-            // 'province' =>  $request->province,
-            'law_under_which_registered' =>  $request->law_under_which_registered,
-            'category_area_operations' =>  $request->charity_name,
+            'law_under_which_registered' =>  $request->law_registered,
+            'category_area_operations' =>  $request->category_area_operations,
             'fullname' =>  $request->fullname,
+            'guardian'=>  $request->guardian,
             'guardian_name' =>  $request->guardian_name,
             'cnic' =>  $request->cnic,
             'nature_of_authorization' =>  $request->nature_of_authorization,
@@ -80,19 +87,19 @@ class RegisterController extends Controller
             }
             if (isset($request->tehsil_id)) {
                 if (is_array($request->tehsil_id)) {
-            
+
                     $items = []; // make sure to initialize before the loop
-            
+
                     foreach ($request->tehsil_id as $item) {
                         $items[] = [
                             'auth_demo_id'   => $authorization->id,
-                            'demography_id'  => $item, 
+                            'demography_id'  => $item,
                             'type'           => 'TEHSIL',
                         ];
                     }
-            
+
                     AuthorizationDemography::insert($items);
-            
+
                 } else {
                     // Single value case
                     AuthorizationDemography::create([
@@ -109,19 +116,17 @@ class RegisterController extends Controller
                 $image = $request->document_file->store('registrations/document', 'public');
                 $path = request()->getSchemeAndHttpHost() . '/storage/' . $image;
                 $authorization->document()->create([
-                    'name' => $image,
                     'url' => $path,
-                    // 'type'=>'document',
+                    'type'=>'document',
                 ]);
             }
-            // Challan Form   
+            // Challan Form
             if (isset($request->challan_fee_image) && !empty($request->challan_fee_image)) {
-                $image = $request->challan_fee_image->store('registrations/challan_forms', 'public');
-                $path = request()->getSchemeAndHttpHost() . '/storage/' . $image;
+                $image_challan = $request->challan_fee_image->store('registrations/challan_forms', 'public');
+                $path_challan = request()->getSchemeAndHttpHost() . '/storage/' . $image_challan;
                 $authorization->challanForm()->create([
-                    'name' => $image,
-                    'url' => $path,
-                    // 'type'=>'challan',
+                    'url' => $path_challan,
+                    'type'=>'challan',
                 ]);
             }
             DB::commit();
@@ -129,7 +134,13 @@ class RegisterController extends Controller
             return redirect()->back();
         } catch (\Throwable $th) {
             DB::rollBack();
+            Log::error('Charity registration failed: ' . $th->getMessage(), [
+                'exception' => $th,
+                'trace' => $th->getTraceAsString(),
+            ]);
             throw $th;
+            Session::flash('error', 'Some thing wrong');
+
         }
 
     }

@@ -10,7 +10,7 @@ class CharityRegistration extends Model
     use softDeletes;
     protected $guarded=[];
     public function province(){
-    return $this->hasONe(Demography::class)->where('type','PROVINCE');
+        return $this->hasONe(Demography::class)->where('type','PROVINCE');
     }
     public function district(){
         return $this->hasONe(Demography::class)->where('type','DISTRICT');
@@ -18,9 +18,10 @@ class CharityRegistration extends Model
     public function tehsils(){
         return $this->hasMany(Demography::class)->where('type','TEHSIL');
     }
+
     public function document()
     {
-        return $this->morphOne(Image::class, 'imageable')->where('type', 'document');
+        return $this->morphOne(Image::class, 'imageable')->where('type', 'document');;
     }
 
     public function challanForm()
