@@ -3,7 +3,7 @@
 @section('content')
     <div class="container mt-5">
         <div class="d-flex justify-content-between align-items-center mb-4">
-        <h3 class="mb-4">Create New Group</h3>
+        <h3 class="mb-4">Update Group</h3>
         <a href="{{ route('admin.group.create') }}" class="btn btn-primary">
                <i class="bi bi-arrow-left"></i> Back
             </a>
@@ -21,7 +21,8 @@
 
         <div class="card">
             <div class="card-body">
-                <form action="{{ route('admin.group.store') }}" method="POST">
+                <form action="{{ route('admin.group.update') }}" method="POST">
+                    @method('PUT')
                     @csrf
 
                     <div class="mb-3">
