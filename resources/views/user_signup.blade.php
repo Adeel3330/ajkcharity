@@ -245,7 +245,7 @@
         }
         input:not([type="radio"]):not([type="checkbox"]):not([type="file"]) {
             height: 35px;
-            padding:0px 25px !important;
+            padding:0px 15px !important;
         }
 
         .btn-primary, .btn-secondary {
@@ -430,6 +430,9 @@
 
         .float-right {
             float: right;
+        }
+        [class^="icon-"] {
+          padding-right: 20px; /* adjust value as needed */
         }
     </style>
 
