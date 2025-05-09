@@ -55,10 +55,10 @@
                                             <i class="bi bi-pencil-square"></i>
                                         </a>
 
-                                        <form action="" method="POST"
+                                        <form action="{{ route('admin.group.destroy',$item->id) }}" method="POST"
                                             onsubmit="return confirm('Are you sure to delete this group?');">
                                             @csrf
-                                            @method('DELET E')
+                                            @method('DELETE')
                                             <button type="submit" class="btn btn-sm btn-danger" title="Delete">
                                                 <i class="bi bi-trash"></i>
                                             </button>
@@ -76,7 +76,7 @@
                 </table>
 
                 {{-- Pagination --}}
-                <div class="mt-3">
+                <div class=" justify-content-end mt-4">
                     {{ $groups->links() }}
                 </div>
             </div>

@@ -35,8 +35,11 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/group-edit/{type}', [TypeController::class, 'edit'])->name('group.edit');
     Route::put('/group-edit/{type}', [TypeController::class, 'update'])->name('group.update');
 
-    Route::delete('/delete',[TypeController::class,'destroy'])->name('delete');
-    
+    Route::delete('/group-delete/{type}',[TypeController::class,'destroy'])->name('group.destroy');
+
+    //DropDownItem
+    Route::get('/item-create', [TypeController::class, 'ItemCreate'])->name('item.create');
+    Route::post('/item-create', [TypeController::class, 'ItemStore'])->name('item.store');
 });
 
 require __DIR__.'/auth.php';
