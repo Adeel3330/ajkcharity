@@ -51,7 +51,7 @@
                                 <td>{{ $item->updated_by }}</td>
                                 <td>
                                     <div class="d-flex gap-1">
-                                        <a href="{{ route('admin.group.edit',$item->id) }}" class="btn btn-sm btn-warning" title="Edit">
+                                        <a href="{{ route('admin.group.edit',$item->id) }}" class="btn btn-sm btn-success" title="Edit">
                                             <i class="bi bi-pencil-square"></i>
                                         </a>
 

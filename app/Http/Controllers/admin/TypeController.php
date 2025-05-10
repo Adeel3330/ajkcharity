@@ -99,4 +99,31 @@ class TypeController extends Controller
             throw $th;
         }
     }
+    public function ItemEdit(Type $type)
+    {
+        return view('admin.types.itemedit', compact('type'));
+    }
+
+    public function ItemUpdate(Request $request, Type $type){
+        $data=$request->validate(
+            [
+            "parent_id"=>"required",
+            "name"=>"required",
+            "description"=>"nullable"
+        ]
+            );
+            try {
+                $type::where('id', $type->id)->update($data);
+            return redirect()->route('admin.items')->with('message', 'Items are updated successfully');
+        } 
+        catch (\Throwable $th) {
+            return back()->with('error','ItemUpdated failed');
+            }
+    }
+
+    public function ItemDestroy(Type $type)
+    {
+        $type->delete();
+        return redirect()->route('admin.items')->with('message','Item Deleted Successfully');
+    }
 }

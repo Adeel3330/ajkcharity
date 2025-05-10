@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
-    public function index(){
+    public function userindex(){
         $users = User::all();
         return view('admin.users.index',compact('users'));
     }
