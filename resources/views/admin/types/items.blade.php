@@ -9,12 +9,29 @@
                 <i class="bi bi-plus-lg"></i> Create
             </a>
         </div>
-
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <form method="GET" action="">
+                    <div class="row">
+                        <div class="col-md-9 mb-2 mb-md-0">
+                            <input type="text" name="search" value="{{ request('search') }}" class="form-control"
+                                placeholder="Search by parent name , name or description..." />
+                        </div>
+                        <div class="col-md-3">
+                            <button type="submit" class="btn btn-info w-100">
+                                <i class="fa fa-search me-1"></i> Search
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
         @if (session()->has('message'))
             <div class="alert alert-success text-white alert-dismissible fade show" role="alert"
                 style="background-color:green;">
                 <strong>{{ session('message') }}</strong>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert"
+                    aria-label="Close"></button>
             </div>
         @endif
 
@@ -25,14 +42,12 @@
                 <table class="table table-bordered table-striped align-middle">
                     <thead class="table-dark">
                         <tr>
-                            <th></th>
+                            <th>Sr #</th>
                             <th>Parent Name</th>
                             <th>Name</th>
                             <th>Description</th>
-                            <th>Status</th>
                             <th>Order</th>
-                            <th>Created By</th>
-                            <th>Updated By</th>
+                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -40,10 +55,11 @@
                         @forelse ($items as $index => $item)
                             <tr>
                                 <td>{{ $index + 1 }}</td>
+                                <td>{{ $item->parent->name }}</td>
                                 <td>{{ $item->name }}</td>
                                 <td>{{ $item->description }}</td>
                                 <td>{{ $item->order }}</td>
-                                
+
                                 <td>
                                     @if ($item->status == 1)
                                         <span class="badge bg-success">Active</span>
@@ -51,16 +67,15 @@
                                         <span class="badge bg-secondary">Inactive</span>
                                     @endif
                                 </td>
-                                <td>{{ $item->created_by }}</td>
-                                <td>{{ $item->updated_by }}</td>
-                                <td>{{ $item->action }}</td>
+
                                 <td>
                                     <div class="d-flex gap-1">
-                                        <a href="{{ route('admin.item.edit', $item->id) }}" class="btn btn-sm btn-success" title="Edit">
+                                        <a href="{{ route('admin.item.edit', $item->id) }}" class="btn btn-sm btn-success"
+                                            title="Edit">
                                             <i class="bi bi-pencil-square"></i>
                                         </a>
 
-                                        <form action="{{ route('admin.item.destroy',$item->id) }}" method="POST"
+                                        <form action="{{ route('admin.item.destroy', $item->id) }}" method="POST"
                                             onsubmit="return confirm('Are you sure to delete this group?');">
                                             @csrf
                                             @method('DELETE')

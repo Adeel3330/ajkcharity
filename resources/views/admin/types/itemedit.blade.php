@@ -9,29 +9,34 @@
             </a>
             </div>
         <!-- Display Validation Errors -->
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul class="mb-0">
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
+       
 
         <div class="card">
             <div class="card-body">
                <form action="{{ route('admin.item.update', $type->id) }}" method="POST">
                 @csrf
                 @method('PUT')
-                     <div class="mb-3">
-                        <label for="name" class="form-label">Parent</label>
-                        <input type="text" name="parentName" class="form-control" value="{{ old('parentName',$type->parentName) }}" required>
+                <div class="row">
+                     <div class="col-md-6 mb-3">
+                        <label for="name" class="form-label">Parent  </label>
+                        <select name="parent_id" class="form-control select2" required>
+                                <option selected disabled>Select Parent </option>
+                                @foreach ($groups as $group)
+                                    <option value="{{ $group->id }}" @if ($group->id == $type->parent_id) selected @endif>{{ $group->name }}</option>
+                                @endforeach
+                        </select>
+                         @error('parent_id')
+                                <span class="text-danger">{{ $message }}</span>
+                         @enderror
                      </div>
-                    <div class="mb-3">
+                    <div class="col-md-6 mb-3">
                         <label for="name" class="form-label">New Item</label>
                         <input type="text" name="name" class="form-control" value="{{ old('name',$type->name) }}" required>
                     </div>
+                    </div>
+                     @error('name')
+                                <span class="text-danger">{{ $message }}</span>
+                     @enderror
 
                     <div class="mb-3">
                         <label for="description" class="form-label">Description</label>
