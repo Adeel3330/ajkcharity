@@ -25,7 +25,7 @@ Route::get('/login', function () {
 // Admin Authenticated Routes
 Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard',[HomeController::class, 'index'])->name('dashboard');
-    Route::get('/users',[UserController::class,'index'])->name('users');
+    Route::get('/users',[UserController::class,'userindex'])->name('users');
     Route::get('/types',[TypeController::class,'index'])->name('types');
     Route::get('/items', [TypeController::class, 'items'])->name('items');
     Route::get('/group-create', [TypeController::class, 'create'])->name('group.create');
@@ -38,8 +38,11 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::delete('/group-delete/{type}',[TypeController::class,'destroy'])->name('group.destroy');
 
     //DropDownItem
-    Route::get('/item-create', [TypeController::class, 'ItemCreate'])->name('item.create');
-    Route::post('/item-create', [TypeController::class, 'ItemStore'])->name('item.store');
+    Route::get('/item/create', [TypeController::class, 'ItemCreate'])->name('item.create');
+    Route::post('/item/store', [TypeController::class, 'ItemStore'])->name('item.store');
+    Route::get('/item/edit/{type}', [TypeController::class, 'ItemEdit'])->name('item.edit');
+    Route::put('/item/update/{type}', [TypeController::class, 'ItemUpdate'])->name('item.update');
+    Route::delete('/item-delete/{type}', [TypeController::class, 'ItemDestroy'])->name('item.destroy');
 });
 
 require __DIR__.'/auth.php';
