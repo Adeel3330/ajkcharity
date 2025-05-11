@@ -1,5 +1,4 @@
 @extends('admin.layouts.app')
-
 @section('content')
     <div class="container mt-5">
         {{-- Header with Create Button --}}
@@ -9,35 +8,26 @@
                 <i class="bi bi-plus-lg"></i> Create
             </a>
         </div>
-        <div class="card shadow-sm mb-4">
-            <div class="card-body">
-                <form method="GET" action="">
-                    <div class="row">
-                        <div class="col-md-9 mb-2 mb-md-0">
-                            <input type="text" name="search" value="{{ request('search') }}" class="form-control"
-                                placeholder="Search by parent name , name or description..." />
-                        </div>
-                        <div class="col-md-3">
-                            <button type="submit" class="btn btn-info w-100">
-                                <i class="fa fa-search me-1"></i> Search
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
         @if (session()->has('message'))
             <div class="alert alert-success text-white alert-dismissible fade show" role="alert"
                 style="background-color:green;">
                 <strong>{{ session('message') }}</strong>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert"
-                    aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
-
-
+        <div class="row">
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input type="search" class="form-control" id="dt-search-0"
+                        placeholder="Search by Parent Name,Name or Description" aria-controls="DataTables_Table_0">
+                    <button class="btn btn-outline-secondary" type="button" id="search-button">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
         {{-- Groups Table --}}
-        <div class="card shadow-sm">
+        <div class="card shadow-sm mt-4">
             <div class="card-body">
                 <table class="table table-bordered table-striped align-middle">
                     <thead class="table-dark">
@@ -94,7 +84,6 @@
                         @endforelse
                     </tbody>
                 </table>
-
                 {{-- Pagination --}}
                 <div class=" justify-content-end mt-4">
                     {{ $items->links() }}

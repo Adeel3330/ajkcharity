@@ -1,5 +1,4 @@
 @extends('admin.layouts.app')
-
 @section('content')
     <div class="container mt-5">
         <div class="d-flex justify-content-between align-items-center mb-4">
@@ -9,24 +8,21 @@
             </a>
         </div>
         <!-- Display Validation Errors -->
-
         <div class="card">
             <div class="card-body">
                 <form action="{{ route('admin.group.store') }}" method="POST">
                     @csrf
-                   
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Group Name</label>
-                            <input type="text" name="name" class="form-control" value="{{ old('name') }}">
-                        </div>
-                        @error('name')
-                            <span class="text-danger">{{ $message }}</span>
-                        @enderror
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Group Name</label>
+                        <input type="text" name="name" class="form-control" value="{{ old('name') }}">
+                    </div>
+                    @error('name')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
 
-                        <div class="mb-3">
-                            <label for="description" class="form-label">Description</label>
-                            <textarea name="description" class="form-control" rows="3">{{ old('description') }}</textarea>
-                       
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea name="description" class="form-control" rows="3">{{ old('description') }}</textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

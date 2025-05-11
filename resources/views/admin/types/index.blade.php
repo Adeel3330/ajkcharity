@@ -14,12 +14,12 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="input-group">
-                    <input type="search" class="form-control" id="dt-search-0" placeholder="Search by Name"
-                        aria-controls="DataTables_Table_0">
+                    <input type="search" value="{{ request('search') }}" class="form-control" id="dt-search-0"
+                        placeholder="Search by Name" aria-controls="DataTables_Table_0">
                     <button class="btn btn-outline-secondary" type="button" id="search-button">
                         <i class="bi bi-search"></i>
                     </button>
-                   
+
                 </div>
             </div>
         </div>

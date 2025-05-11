@@ -13,13 +13,11 @@ class TypeController extends Controller
 {
     public function index(Request $request)
     {
-        $groups = Type::where('parent_id', null)->paginate(10);
-        $query=Type::query();
-        if ($request->has('search')) {
-            $search=$request->search;
-            $query->where('name','like', "%{$search}%")->orWhere('description','like', "%{$search}");
-        }
-        return view('admin.types.index', compact('groups'));
+        $search=$request->input('search');
+        $services=Type::whereNotNull('parent_id')->filter(['search'=> $search])->get();
+
+        $groups = Type::where('parent_id', null)->paginate(10); 
+        return view('admin.types.index', compact('groups','services'));
     }
     public function store(Request $request)
     {
@@ -40,11 +38,6 @@ class TypeController extends Controller
     {
 
         $items = Type::with('parent')->whereNotNull('parent_id')->orderBy('id','DESC')->paginate(10);
-        $query = Type::query();
-        if ($request->has('search')) {
-            $search = $request->search;
-            $query->where('parent_name', 'like', "%{$search}%")->orWhere('name', 'like', "%{$search}%")->orWhere('description','like',"%{$search}%");
-        }
         return view('admin.types.items', compact('items'));
     }
 
