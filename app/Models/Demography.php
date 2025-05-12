@@ -8,4 +8,8 @@ class Demography extends Model
 {
     use softDeletes;
     protected $guarded=[];
+    public function parent()
+    {
+        return $this->belongsTo(Demography::class, 'parent_id', 'id');
+    }
 }
