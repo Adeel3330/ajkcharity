@@ -23,7 +23,6 @@
                     </div>
                 </div>
             </div>
-        </form>
 
 
         {{-- Flash Message --}}
@@ -35,7 +34,45 @@
                     aria-label="Close"></button>
             </div>
         @endif
+        <div class="tabs mt-4">
+             <!-- Tabs Start -->
+       <div class="container tab-links items">
+           <!-- Tabs -->
+           <ul class="nav nav-pills mb-3 border-bottom border-2" id="pills-tab" role="tablist">
+               <li class="nav-item" role="presentation">
+                   <input
+                       class="btn btn-primary d-none d-md-inline-flex nav-link fw-semibold 
+                       @if ($type!= 'PROVINCE' && $type!= 'DISTRICT' && $type!= 'TEHSIL') active @endif
+                        position-relative"
+                       type="submit" name="all" value="All" />
+               </li>
+               <li class="nav-item" role="presentation">
 
+                   <button
+                       class="btn btn-primary d-none d-md-inline-flex nav-link fw-semibold 
+                       @if ($type == 'PROVINCE') active @endif
+                        position-relative"
+                       type="submit" name="type" value="PROVINCE">Provinces</button>
+               </li>
+               <li class="nav-item" role="presentation">
+                   <button
+                       class="btn btn-primary d-none d-md-inline-flex nav-link fw-semibold 
+                       @if ($type == 'DISTRICT') active @endif
+                        position-relative"
+                       type="submit" name="type" value="DISTRICT">Districts</button>
+               </li>
+                <li class="nav-item" role="presentation">
+                   <button
+                       class="btn btn-primary d-none d-md-inline-flex nav-link fw-semibold 
+                       @if ($type == 'TEHSIL') active @endif
+                        position-relative"
+                       type="submit" name="type" value="TEHSIL">Tehsils</button>
+               </li>
+
+           </ul>
+         </form>
+
+       </div>
         {{-- Groups Table --}}
         <div class="card shadow-sm mt-3">
             <div class="card-body">
@@ -84,9 +121,10 @@
 
                 {{-- Pagination --}}
                 <div class="flex justify-content-end mt-3">
-                    {{ $demography->links() }}
+                    {{ $demography->withQueryString()->links() }}
                 </div>
             </div>
         </div>
+       </div>
     </div>
 @endsection
