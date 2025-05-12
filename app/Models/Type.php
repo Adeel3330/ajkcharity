@@ -10,15 +10,14 @@ use Symfony\Component\Console\Descriptor\Descriptor;
 
 class Type extends Model
 {
-    // use softDeletes;
+    use softDeletes;
+    use HasFactory;
     protected $guarded = [];
-    public function parent()
+
+     public function parent()
     {
         return $this->belongsTo(Type::class, 'parent_id', 'id');
     }
-
-    use HasFactory;
-
     public function scopeSearch($query, $search)
     {
         if (!empty($search)) {
