@@ -10,20 +10,23 @@ use Symfony\Component\Console\Descriptor\Descriptor;
 
 class Type extends Model
 {
-    use softDeletes;
-    protected $guarded=[];
-    public function parent(){
-        return $this->belongsTo(Type::class,'parent_id','id');
+    // use softDeletes;
+    protected $guarded = [];
+    public function parent()
+    {
+        return $this->belongsTo(Type::class, 'parent_id', 'id');
     }
 
     use HasFactory;
-    public function scopeFilter($query,array $filters)
+
+    public function scopeSearch($query, $search)
     {
-        if ($filters['search'] ?? false) {
-            $query->where('name', 'like', '%' . request('search') . '%')
-                ->orWhere('description', 'like', '%' . request('search') . '%');       
+        if (!empty($search)) {
+            return $query->where(function ($q) use ($search) {
+                $q->where('name', 'like', "%{$search}%")
+                    ->orWhere('description', 'like', "%{$search}%");
+            });
         }
-       
+        return $query;
     }
-    
 }
