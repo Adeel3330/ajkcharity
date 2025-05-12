@@ -30,7 +30,7 @@
             <div class="alert alert-success text-white alert-dismissible fade show" role="alert"
                 style="background-color: green;">
                 <strong>{{ session('message') }}</strong>
-                <button type="button" class="btn-close btn-close-white mt-5" data-bs-dismiss="alert"
+                <button type="button" class="btn-close btn-close-white mt-1" data-bs-dismiss="alert"
                     aria-label="Close"></button>
             </div>
         @endif

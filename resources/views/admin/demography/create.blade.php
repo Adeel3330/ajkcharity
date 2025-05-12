@@ -17,11 +17,20 @@
                         {{-- Parent --}}
                         <div class="mb-3 col-md-4">
                             <label for="parent" class="form-label">Parent</label>
-                            <input type="text" name="parent" class="form-control" value="{{ old('parent') }}">
-                            @error('parent')
+                            <select name="parent_id" class="form-control">
+                                <option value="">Select Parent</option>
+                                @foreach ($demographies as $demography)
+                                    <option value="{{ $demography->id }}"
+                                        {{ old('parent') == $demography->id ? 'selected' : '' }}>
+                                        {{ $demography->name }}
+                                    </option>
+                                @endforeach
+                            </select>
+                            @error('parent_id')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
+
 
                         {{-- Name --}}
                         <div class="mb-3 col-md-4">
@@ -35,11 +44,17 @@
                         {{-- Type --}}
                         <div class="mb-3 col-md-4">
                             <label for="type" class="form-label">Type</label>
-                            <input type="text" name="type" class="form-control" value="{{ old('type') }}">
+                            <select name="type" class="form-control">
+                                <option value="">Select Type</option>
+                                <option value="Province" {{ old('type') == 'Province' ? 'selected' : '' }}>Provinces</option>
+                                <option value="District" {{ old('type') == 'District' ? 'selected' : '' }}>Districts</option>
+                                <option value="Tehsil" {{ old('type') == 'Tehsil' ? 'selected' : '' }}>Tehsils</option>
+                            </select>
                             @error('type')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
+
                     </div>
 
                     <button type="submit" class="btn btn-primary mt-2">Submit</button>

@@ -18,14 +18,23 @@
                     @csrf
                     @method('PUT')
                     <div class="row">
+
+                        {{-- Parent --}}
                         <div class="mb-3 col-md-4">
-                            <label for="parent_name" class="form-label">Parent Name</label>
-                            <input type="text" name="name" class="form-control"
-                                value="{{ old('parent_name', $demography->parent_name) }}">
+                            <label for="parent" class="form-label">Parent</label>
+                            <select name="parent_id" class="form-control">
+                                <option value="">Select Parent</option>
+                                @foreach ($demographies as $item)
+                                    <option value="{{ $item->id }}"
+                                        {{ ($item->id == $demography->parent_id) ? 'selected' : '' }}>
+                                        {{ $item->name }}
+                                    </option>
+                                @endforeach
+                            </select>
+                            @error('parent_id')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
                         </div>
-                        @error('name')
-                            <span class="text-danger">{{ $message }}</span>
-                        @enderror
 
                         <div class="mb-3 col-md-4">
                             <label for="name" class="form-label"> Name</label>
@@ -36,10 +45,18 @@
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
 
+                        {{-- Type --}}
                         <div class="mb-3 col-md-4">
                             <label for="type" class="form-label">Type</label>
-                            <input type="text" name="type" class="form-control" value="{{ $demography->type }}">
-
+                            <select name="type" class="form-control">
+                                <option value="">Select Type</option>
+                                <option value="Province" {{ $demography->type == 'PROVINCE' ? 'selected' : '' }}>Provinces</option>
+                                <option value="District" {{ $demography->type == 'DISTRICT' ? 'selected' : '' }}>Districts</option>
+                                <option value="Tehsil" {{ $demography->type == 'TEHSIL' ? 'selected' : '' }}>Tehsils</option>
+                            </select>
+                            @error('type')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
