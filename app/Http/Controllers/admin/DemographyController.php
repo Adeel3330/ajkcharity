@@ -17,6 +17,7 @@ class DemographyController extends Controller
          ->when($request->has('type'), function ($query) use ($request) {
             return $query->where('type', $request->type); // <-- return also safe here
          })
+          ->whereIn('type', ['DISTRICT', 'PROVINCE', 'TEHSIL'])
          ->paginate(10);
 
         $type = isset($request->type)? $request->type :'all';
