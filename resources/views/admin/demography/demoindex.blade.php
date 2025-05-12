@@ -4,14 +4,14 @@
     <div class="container mt-5">
         {{-- Header with Create Button --}}
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <h3 class="mb-0">Groups List</h3>
-            <a href="{{ route('admin.group.create') }}" class="btn btn-primary">
+            <h3 class="mb-0">Provinces List</h3>
+            <a href="" class="btn btn-primary">
                 <i class="bi bi-plus-lg"></i> Create
             </a>
         </div>
 
         {{-- Search Input --}}
-        <form method="GET" action="{{ route('admin.types') }}">
+        <form method="GET" action="{{ route('admin.demography') }}">
             <div class="row">
                 <div class="col-md-4">
                     <div class="input-group">
@@ -43,36 +43,27 @@
                     <thead class="table-dark">
                         <tr>
                             <th>SrNo</th>
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Status</th>
-                            <th>Created By</th>
-                            <th>Updated By</th>
+                            <th>Parent</th>
+                            <th>Name</th>  
+                            <th>Type</th> 
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse ($groups as $index => $item)
+                        @forelse ($demography as $index => $item)
                             <tr>
                                 <td>{{ $index + 1 }}</td>
+                                <td>{{ $item->Parent }}</td>
                                 <td>{{ $item->name }}</td>
-                                <td>{{ $item->description }}</td>
-                                <td>
-                                    @if ($item->status == 1)
-                                        <span class="badge bg-success">Active</span>
-                                    @else
-                                        <span class="badge bg-secondary">Inactive</span>
-                                    @endif
-                                </td>
-                                <td>{{ $item->created_by }}</td>
-                                <td>{{ $item->updated_by }}</td>
+                                <td>{{ $item->Type }}</td>
+                                
                                 <td>
                                     <div class="d-flex gap-1">
-                                        <a href="{{ route('admin.group.edit', $item->id) }}" class="btn btn-sm btn-success"
+                                        <a href="" class="btn btn-sm btn-success"
                                             title="Edit">
                                             <i class="bi bi-pencil-square"></i>
                                         </a>
-                                        <form action="{{ route('admin.group.destroy', $item->id) }}" method="POST"
+                                        <form action="" method="POST"
                                             onsubmit="return confirm('Are you sure to delete this group?');">
                                             @csrf
                                             @method('DELETE')
@@ -85,7 +76,7 @@
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="7" class="text-center text-muted">No groups found.</td>
+                                <td colspan="7" class="text-center text-muted">No Data found.</td>
                             </tr>
                         @endforelse
                     </tbody>
@@ -93,7 +84,7 @@
 
                 {{-- Pagination --}}
                 <div class="flex justify-content-end mt-3">
-                    {{ $groups->links() }}
+                    {{ $demography->links() }}
                 </div>
             </div>
         </div>
