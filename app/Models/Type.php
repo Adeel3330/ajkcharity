@@ -24,7 +24,10 @@ class Type extends Model
         if (!empty($search)) {
             return $query->where(function ($q) use ($search) {
                 $q->where('name', 'like', "%{$search}%")
-                    ->orWhere('description', 'like', "%{$search}%");
+                    ->orWhere('description', 'like', "%{$search}%")
+                    ->orWhereHas('parent', function ($query) use ($search) {
+                    $query->where('name', 'like', "%{$search}%");
+                });
             });
         }
         return $query;
