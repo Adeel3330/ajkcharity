@@ -1,5 +1,4 @@
 @extends('admin.layouts.app')
-
 @section('content')
     <div class="container mt-5">
         {{-- Header with Create Button --}}
@@ -9,7 +8,6 @@
                 <i class="bi bi-plus-lg"></i> Create
             </a>
         </div>
-
         @if (session()->has('message'))
             <div class="alert alert-success text-white alert-dismissible fade show" role="alert"
                 style="background-color:green;">
@@ -17,22 +15,29 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
-
-
+        <div class="row">
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input type="search" class="form-control" id="dt-search-0"
+                        placeholder="Search by Parent Name,Name or Description" aria-controls="DataTables_Table_0">
+                    <button class="btn btn-outline-secondary" type="button" id="search-button">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
         {{-- Groups Table --}}
-        <div class="card shadow-sm">
+        <div class="card shadow-sm mt-4">
             <div class="card-body">
                 <table class="table table-bordered table-striped align-middle">
                     <thead class="table-dark">
                         <tr>
-                            <th></th>
+                            <th>Sr #</th>
                             <th>Parent Name</th>
                             <th>Name</th>
                             <th>Description</th>
-                            <th>Status</th>
                             <th>Order</th>
-                            <th>Created By</th>
-                            <th>Updated By</th>
+                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -40,10 +45,11 @@
                         @forelse ($items as $index => $item)
                             <tr>
                                 <td>{{ $index + 1 }}</td>
+                                <td>{{ $item->parent->name }}</td>
                                 <td>{{ $item->name }}</td>
                                 <td>{{ $item->description }}</td>
                                 <td>{{ $item->order }}</td>
-                                
+
                                 <td>
                                     @if ($item->status == 1)
                                         <span class="badge bg-success">Active</span>
@@ -51,16 +57,15 @@
                                         <span class="badge bg-secondary">Inactive</span>
                                     @endif
                                 </td>
-                                <td>{{ $item->created_by }}</td>
-                                <td>{{ $item->updated_by }}</td>
-                                <td>{{ $item->action }}</td>
+
                                 <td>
                                     <div class="d-flex gap-1">
-                                        <a href="{{ route('admin.item.edit', $item->id) }}" class="btn btn-sm btn-success" title="Edit">
+                                        <a href="{{ route('admin.item.edit', $item->id) }}" class="btn btn-sm btn-success"
+                                            title="Edit">
                                             <i class="bi bi-pencil-square"></i>
                                         </a>
 
-                                        <form action="{{ route('admin.item.destroy',$item->id) }}" method="POST"
+                                        <form action="{{ route('admin.item.destroy', $item->id) }}" method="POST"
                                             onsubmit="return confirm('Are you sure to delete this group?');">
                                             @csrf
                                             @method('DELETE')
@@ -79,7 +84,6 @@
                         @endforelse
                     </tbody>
                 </table>
-
                 {{-- Pagination --}}
                 <div class=" justify-content-end mt-4">
                     {{ $items->links() }}

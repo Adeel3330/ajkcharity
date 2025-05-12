@@ -10,22 +10,37 @@
             </a>
         </div>
 
+        {{-- Search Input --}}
+        <div class="row">
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input type="search" value="{{ request('search') }}" class="form-control" id="dt-search-0"
+                        placeholder="Search by Name" aria-controls="DataTables_Table_0">
+                    <button class="btn btn-outline-secondary" type="button" id="search-button">
+                        <i class="bi bi-search"></i>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
+        {{-- Flash Message --}}
         @if (session()->has('message'))
             <div class="alert alert-success text-white alert-dismissible fade show" role="alert"
-                style="background-color:green;">
+                style="background-color: green;">
                 <strong>{{ session('message') }}</strong>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white mt-5" data-bs-dismiss="alert"
+                    aria-label="Close"></button>
             </div>
         @endif
 
-
         {{-- Groups Table --}}
-        <div class="card shadow-sm">
+        <div class="card shadow-sm mt-3">
             <div class="card-body">
                 <table class="table table-bordered table-striped align-middle">
                     <thead class="table-dark">
                         <tr>
-                            <th></th>
+                            <th>SrNo</th>
                             <th>Name</th>
                             <th>Description</th>
                             <th>Status</th>
@@ -51,11 +66,11 @@
                                 <td>{{ $item->updated_by }}</td>
                                 <td>
                                     <div class="d-flex gap-1">
-                                        <a href="{{ route('admin.group.edit',$item->id) }}" class="btn btn-sm btn-success" title="Edit">
+                                        <a href="{{ route('admin.group.edit', $item->id) }}" class="btn btn-sm btn-success"
+                                            title="Edit">
                                             <i class="bi bi-pencil-square"></i>
                                         </a>
-
-                                        <form action="{{ route('admin.group.destroy',$item->id) }}" method="POST"
+                                        <form action="{{ route('admin.group.destroy', $item->id) }}" method="POST"
                                             onsubmit="return confirm('Are you sure to delete this group?');">
                                             @csrf
                                             @method('DELETE')
@@ -65,18 +80,17 @@
                                         </form>
                                     </div>
                                 </td>
-
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="8" class="text-center text-muted">No items found.</td>
+                                <td colspan="7" class="text-center text-muted">No groups found.</td>
                             </tr>
                         @endforelse
                     </tbody>
                 </table>
 
                 {{-- Pagination --}}
-                <div class=" justify-content-end mt-4">
+                <div class="flex justify-content-end mt-3">
                     {{ $groups->links() }}
                 </div>
             </div>

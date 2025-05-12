@@ -11,10 +11,13 @@ use function PHPSTORM_META\type;
 
 class TypeController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $groups = Type::where('parent_id', null)->paginate(10);
-        return view('admin.types.index', compact('groups'));
+        $search=$request->input('search');
+        $services=Type::whereNotNull('parent_id')->filter(['search'=> $search])->get();
+
+        $groups = Type::where('parent_id', null)->paginate(10); 
+        return view('admin.types.index', compact('groups','services'));
     }
     public function store(Request $request)
     {
@@ -25,16 +28,16 @@ class TypeController extends Controller
         ]);
         try {
             Type::create($data);
-            return redirect()->route('admin.types')->with('message', 'Group created successfully');
+            return redirect()->route('admin.types')->with('message', 'Group Type created successfully');
         } catch (\Throwable $th) {
             throw $th;
         }
     }
 
-    public function items()
+    public function items(Request $request)
     {
 
-        $items = Type::with('parent')->whereNotNull('parent_id')->paginate(10);
+        $items = Type::with('parent')->whereNotNull('parent_id')->orderBy('id','DESC')->paginate(10);
         return view('admin.types.items', compact('items'));
     }
 
@@ -65,7 +68,7 @@ class TypeController extends Controller
         );
         try {
             Type::where('id', $type->id)->update($data);
-            return redirect()->route('admin.types')->with('message', 'Types Updated Successfully');
+            return redirect()->route('admin.types')->with('message', 'Group Types Updated Successfully');
         } catch (\Throwable $th) {
             //throw $th;
             return back()->with('error', 'updated failed');
@@ -74,7 +77,7 @@ class TypeController extends Controller
     public function destroy(Type $type)
     {
         $type->delete();
-        return redirect()->route('admin.types')->with('message', 'Type Deleted successfully');
+        return redirect()->route('admin.types')->with('message', 'Group Type Deleted successfully');
     }
 
     //DropDownItem
@@ -86,34 +89,37 @@ class TypeController extends Controller
 
     public function ItemStore(Request $request)
     {
+        // dd($request->all());
 
         $data = $request->validate([
-            "parent_id"=>"required",
-            "name" => "required",
+            "parent_id"=>"required|integer",
+            "name" => "required|string",
             "description" => 'nullable'
         ]);
+
         try {
             Type::create($data);
-            return redirect()->route('admin.types')->with('message', 'New Item created successfully');
+            return redirect()->route('admin.items')->with('message', 'New Item created successfully');
         } catch (\Throwable $th) {
             throw $th;
         }
     }
     public function ItemEdit(Type $type)
     {
-        return view('admin.types.itemedit', compact('type'));
+        $groups = Type::where('parent_id', null)->get();
+        // dd($type);
+        return view('admin.types.itemedit', compact('type','groups'));
     }
 
     public function ItemUpdate(Request $request, Type $type){
-        $data=$request->validate(
-            [
+        $data=$request->validate([
             "parent_id"=>"required",
             "name"=>"required",
             "description"=>"nullable"
-        ]
-            );
-            try {
-                $type::where('id', $type->id)->update($data);
+             ]);
+            //  dd($type);
+        try {
+            $type->update($data);
             return redirect()->route('admin.items')->with('message', 'Items are updated successfully');
         } 
         catch (\Throwable $th) {

@@ -9,15 +9,8 @@
             </a>
             </div>
         <!-- Display Validation Errors -->
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul class="mb-0">
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
+        
+    
 
         <div class="card">
             <div class="card-body">
@@ -27,8 +20,11 @@
 
                     <div class="mb-3">
                         <label for="name" class="form-label">Group Name</label>
-                        <input type="text" name="name" class="form-control" value="{{ old('name',$type->name) }}" required>
+                        <input type="text" name="name" class="form-control" value="{{ old('name',$type->name) }}" >
                     </div>
+                     @error('name')
+                                <span class="text-danger">{{ $message }}</span>
+                         @enderror
 
                     <div class="mb-3">
                         <label for="description" class="form-label">Description</label>

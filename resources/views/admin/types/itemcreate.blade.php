@@ -8,16 +8,7 @@
                 <i class="bi bi-arrow-left"></i> Back
             </a>
         </div>
-        <!-- Display Validation Errors -->
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul class="mb-0">
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
+
         <div class="card">
             <div class="card-body">
                 <form action="{{ route('admin.item.store') }}" method="POST">
@@ -32,16 +23,18 @@
                                     <option value="{{ $group->id }}">{{ $group->name }}</option>
                                 @endforeach
                             </select>
+                            @error('parent_id')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
                         </div>
                         <!-- Group Name Select -->
                         <div class="col-md-6 mb-3">
-                            <label for="group_name" class="form-label">Group Name</label>
-                            <select name="group_name" class="form-control select2" required>
-                                <option selected disabled>Select Group Name</option>
-                                @foreach ($groups as $group)
-                                    <option value="{{ $group->name }}">{{ $group->name }}</option>
-                                @endforeach
-                            </select>
+                            <label for="group_name" class="form-label">Item Name</label>
+
+                            <input class="form-control" type="text" placeholder="Item name" name="name">
+                            @error('name')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
                         </div>
                     </div>
                     <div class="mb-3">
