@@ -31,7 +31,7 @@
         <ul class="menu-sub">
           <li class="menu-item">
             <a href="pages-account-settings-account.html" class="menu-link">
-              <div class="text-truncate" data-i18n="Account">Divisions</div>
+              <div class="text-truncate" data-i18n="Account">Provinces</div>
             </a>
           </li>
           <li class="menu-item">

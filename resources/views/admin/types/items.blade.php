@@ -15,24 +15,26 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
-        <div class="row">
-            <div class="col-md-4">
-                <div class="input-group">
-                    <input type="search" class="form-control" id="dt-search-0"
-                        placeholder="Search by Parent Name,Name or Description" aria-controls="DataTables_Table_0">
-                    <button class="btn btn-outline-secondary" type="button" id="search-button">
-                        <i class="bi bi-search"></i>
-                    </button>
+         <form method="GET" action="{{ route('admin.items') }}">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <input type="search" value="{{ request('search') }}" name="search" class="form-control"
+                            placeholder="Search by Parent Name,Name,Description ">
+                        <button class="btn btn-outline-secondary" type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </form>
         {{-- Groups Table --}}
         <div class="card shadow-sm mt-4">
             <div class="card-body">
                 <table class="table table-bordered table-striped align-middle">
                     <thead class="table-dark">
                         <tr>
-                            <th>Sr #</th>
+                            <th>SrNO</th>
                             <th>Parent Name</th>
                             <th>Name</th>
                             <th>Description</th>
