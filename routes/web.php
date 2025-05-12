@@ -8,6 +8,7 @@ use App\Http\Controllers\{
 };
 //admin
 use App\Http\Controllers\admin\{
+    DemographyController,
     HomeController,
     TypeController,
     UserController,
@@ -26,8 +27,12 @@ Route::get('/login', function () {
 Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard',[HomeController::class, 'index'])->name('dashboard');
     Route::get('/users',[UserController::class,'userindex'])->name('users');
+    //GroupIndex
     Route::get('/types',[TypeController::class,'index'])->name('types');
+    //ItemIndex
     Route::get('/items', [TypeController::class, 'items'])->name('items');
+    //DemoGraphy
+    // Route::get('/demography', [DemographyController::class, 'indexdemography'])->name('demography');
     Route::get('/group-create', [TypeController::class, 'create'])->name('group.create');
     // Route::get('/item-create', [TypeController::class, 'createItem'])->name('item.create');
     Route::put('/group-update',[TypeController::class, 'update'])->name('update');
@@ -43,6 +48,9 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/item/edit/{type}', [TypeController::class, 'ItemEdit'])->name('item.edit');
     Route::put('/item/update/{type}', [TypeController::class, 'ItemUpdate'])->name('item.update');
     Route::delete('/item-delete/{type}', [TypeController::class, 'ItemDestroy'])->name('item.destroy');
+
+    //DemoGraphy
+    Route::get('/demography',[DemographyController::class,'index'])->name('demography');
 });
 
 require __DIR__.'/auth.php';
