@@ -31,8 +31,7 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/types',[TypeController::class,'index'])->name('types');
     //ItemIndex
     Route::get('/items', [TypeController::class, 'items'])->name('items');
-    //DemoGraphy
-    // Route::get('/demography', [DemographyController::class, 'indexdemography'])->name('demography');
+   
     Route::get('/group-create', [TypeController::class, 'create'])->name('group.create');
     // Route::get('/item-create', [TypeController::class, 'createItem'])->name('item.create');
     Route::put('/group-update',[TypeController::class, 'update'])->name('update');
@@ -50,7 +49,13 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::delete('/item-delete/{type}', [TypeController::class, 'ItemDestroy'])->name('item.destroy');
 
     //DemoGraphy
+    //DemographyIndex
     Route::get('/demography',[DemographyController::class,'index'])->name('demography');
+    Route::get('/demography/create',[DemographyController::class,'create'])->name('demography.create');
+    Route::post('/demography/store',[DemographyController::class,'store'])->name('demography.store');
+    Route::get('/demography/edit/{demography}',[DemographyController::class,'edit'])->name('demography.edit');
+    Route::put('/demography/update/{demogrphy}',[DemographyController::class,'update'])->name('demography.update');
+    Route::delete('/demography/delete/{demogrphy}', [DemographyController::class, 'destroy'])->name('demography.destroy');
 });
 
 require __DIR__.'/auth.php';
