@@ -4,8 +4,8 @@
     <div class="container mt-5">
         {{-- Header with Create Button --}}
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <h3 class="mb-0">Provinces List</h3>
-            <a href="" class="btn btn-primary">
+            <h3 class="mb-0">Demography List</h3>
+            <a href="{{ route('admin.demography.create') }}" class="btn btn-primary">
                 <i class="bi bi-plus-lg"></i> Create
             </a>
         </div>
@@ -53,17 +53,17 @@
                         @forelse ($demography as $index => $item)
                             <tr>
                                 <td>{{ $index + 1 }}</td>
-                                <td>{{ $item->Parent }}</td>
+                                <td>{{ $item->Parent->name??'N/A' }}</td>
                                 <td>{{ $item->name }}</td>
-                                <td>{{ $item->Type }}</td>
+                                <td>{{ $item->type }}</td>
                                 
                                 <td>
                                     <div class="d-flex gap-1">
-                                        <a href="" class="btn btn-sm btn-success"
+                                        <a href="{{ route('admin.demography.edit',$item->id)}}" class="btn btn-sm btn-success"
                                             title="Edit">
                                             <i class="bi bi-pencil-square"></i>
                                         </a>
-                                        <form action="" method="POST"
+                                        <form action="{{ route('admin.demography.destroy',$item->id) }}" method="POST"
                                             onsubmit="return confirm('Are you sure to delete this group?');">
                                             @csrf
                                             @method('DELETE')
