@@ -26,13 +26,16 @@ class DemographyController extends Controller
    }
     public function store(Request $request)
     {
-        dd($request->all());
+
+
         $data = $request->validate([
             'parent_id' => 'required',
             'name' => 'required',
             'type' => 'required'
         ]);
-       
+
+        // dd($request->all());
+
         try {
             Demography::create($data);
             return redirect()->route('admin.demography')->with('message', 'New Demography Created Successfully');
@@ -40,25 +43,28 @@ class DemographyController extends Controller
             throw $th;
         }
     }
-    public function create() {
-        return view('admin.demography.create');
+    public function create()
+    {
+        $demographies=Demography::where('parent_id',null)->get();
+        return view('admin.demography.create',compact('demographies'));
     }
 
     public function edit(Demography $demography)
     {
-        return view('admin.demography.edit',compact('demography'));
+        $demographies = Demography::where('parent_id', null)->get();
+        return view('admin.demography.edit', compact('demography', 'demographies'));
     }
 
     public function update(Request $request, Demography $demography)
     {
-        $data= $request->validate([
-            'parent_id'=>'required',
-            'name'=>'required',
-            'type'=>'required'
+        $data = $request->validate([
+            'parent_id' => 'required',
+            'name' => 'required',
+            'type' => 'required'
         ]);
         try {
-            Demography::where('id',$demography->id)->update($data);
-            return redirect()->route('admin.demography')->with('message','Demography Updated Successfully');
+            Demography::where('id', $demography->id)->update($data);
+            return redirect()->route('admin.demography')->with('message', 'Demography Updated Successfully');
         } catch (\Throwable $th) {
             throw $th;
         }
@@ -66,7 +72,7 @@ class DemographyController extends Controller
     public function destroy(Demography $demography)
     {
         $demography->delete();
-        return redirect()->route('admin.demography')->with('message','Demography Deleted Successfully');
+        return redirect()->route('admin.demography')->with('message', 'Demography Deleted Successfully');
     }
 
 }
