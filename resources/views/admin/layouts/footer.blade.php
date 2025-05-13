@@ -1,43 +1,6 @@
-<footer class="content-footer footer bg-footer-theme">
-    <div class="container-xxl">
-      <div
-        class="footer-container d-flex align-items-center justify-content-between py-4 flex-md-row flex-column">
-        <div class="mb-2 mb-md-0">
-          ©
-          <script>
-            document.write(new Date().getFullYear());
-          </script>
-          , made with ❤️🖤 by
-          <a href="https://themeselection.com" target="_blank" class="footer-link">ThemeSelection</a>
-        </div>
-        <div class="d-none d-lg-inline-block">
-          <a
-            href="https://themeselection.com/item/category/admin-templates/"
-            target="_blank"
-            class="footer-link me-4"
-            >Admin Templates</a
-          >
-          <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
-          <a
-            href="https://themeselection.com/item/category/bootstrap-admin-templates/"
-            target="_blank"
-            class="footer-link me-4"
-            >Bootstrap Dashboard</a
-          >
-          <a
-            href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/documentation/"
-            target="_blank"
-            class="footer-link me-4"
-            >Documentation</a
-          >
-
-          <a
-            href="https://github.com/themeselection/sneat-bootstrap-html-admin-template-free/issues"
-            target="_blank"
-            class="footer-link"
-            >Support</a
-          >
-        </div>
-      </div>
-    </div>
-  </footer>
+<footer class="footer navbar-fixed-bottom footer-dark navbar-shadow" style="position: unset !important; background: #006837 !important; color: #ffffff !important; padding: 1em !important;">
+            <p class="clearfix text-sm-center mb-0 px-2">
+                <span class="float-md-left d-xs-block d-md-inline-block" style="color: #ffffff !important;">&#169; AJK Charity Commission, <a href="https://www.punjab.gov.pk/" target="_blank" style="color: #ffffff !important;">Government of the AJK</a></span>
+                <span class="float-md-right d-xs-block d-md-inline-block" style="color: #ffffff !important;">Powered by: <a href="https://www.pitb.gov.pk/" target="_blank" style="color: #ffffff !important;">AJK Information Technology Board</a></span>
+            </p>
+        </footer>

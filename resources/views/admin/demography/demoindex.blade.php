@@ -30,13 +30,13 @@
             <div class="alert alert-success text-white alert-dismissible fade show" role="alert"
                 style="background-color: green;">
                 <strong>{{ session('message') }}</strong>
-                <button type="button" class="btn-close btn-close-white mt-1" data-bs-dismiss="alert"
+                <button type="button" class="btn-close btn-close-white mt-5" data-bs-dismiss="alert"
                     aria-label="Close"></button>
             </div>
         @endif
         <div class="tabs mt-4">
              <!-- Tabs Start -->
-       <div class="container tab-links items">
+       <div class="container tab-links items ps-0">
            <!-- Tabs -->
            <ul class="nav nav-pills mb-3 border-bottom border-2" id="pills-tab" role="tablist">
                <li class="nav-item" role="presentation">
@@ -71,7 +71,6 @@
 
            </ul>
          </form>
-
        </div>
         {{-- Groups Table --}}
         <div class="card shadow-sm mt-3">

@@ -237,6 +237,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                 <span class="float-md-right d-xs-block d-md-inline-block" style="color: #ffffff !important;">Powered by: <a href="https://www.pitb.gov.pk/" target="_blank" style="color: #ffffff !important;">AJK Information Technology Board</a></span>
             </p>
         </footer>
+        
         <script src="App_Themes/app-assets/vendors/js/ui/tether.min.js" type="text/javascript"></script>
         <script src="App_Themes/app-assets/js/core/libraries/bootstrap.min.js" type="text/javascript"></script>
         <script src="App_Themes/app-assets/vendors/js/forms/select/select2.full.min.js" type="text/javascript"></script>

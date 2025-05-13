@@ -27,18 +27,18 @@ class DemographyController extends Controller
     public function store(Request $request)
     {
 
-
+        // dd($request->all());
         $data = $request->validate([
             'parent_id' => 'required',
             'name' => 'required',
             'type' => 'required'
         ]);
 
-        // dd($request->all());
+        
 
         try {
             Demography::create($data);
-            return redirect()->route('admin.demography')->with('message', 'New Demography Created Successfully');
+            return redirect()->route('admin.demography')->with('message', ' Demography Created Successfully');
         } catch (\Throwable $th) {
             throw $th;
         }
