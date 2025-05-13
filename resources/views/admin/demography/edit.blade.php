@@ -50,9 +50,9 @@
                             <label for="type" class="form-label">Type</label>
                             <select name="type"  class="form-control select2" id="select2">
                                 <option value="">Select Type</option>
-                                <option value="Province" {{ $demography->type == 'PROVINCE' ? 'selected' : '' }}>Provinces</option>
-                                <option value="District" {{ $demography->type == 'DISTRICT' ? 'selected' : '' }}>Districts</option>
-                                <option value="Tehsil" {{ $demography->type == 'TEHSIL' ? 'selected' : '' }}>Tehsils</option>
+                                <option value="PROVINCE" {{ $demography->type == 'PROVINCE' ? 'selected' : '' }}>Provinces</option>
+                                <option value="DISTRICT" {{ $demography->type == 'DISTRICT' ? 'selected' : '' }}>Districts</option>
+                                <option value="TEHSIL" {{ $demography->type == 'TEHSIL' ? 'selected' : '' }}>Tehsils</option>
                             </select>
                             @error('type')
                                 <span class="text-danger">{{ $message }}</span>
