@@ -56,6 +56,9 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/demography/edit/{demography}',[DemographyController::class,'edit'])->name('demography.edit');
     Route::put('/demography/update/{demogrphy}',[DemographyController::class,'update'])->name('demography.update');
     Route::delete('/demography/delete/{demogrphy}', [DemographyController::class, 'destroy'])->name('demography.destroy');
+
+    //Registration Index
+    Route::get('/get-registration',[RegisterController::class, 'getRegistrations'])->name('getRegistrations');
 });
 
 require __DIR__.'/auth.php';

@@ -31,7 +31,7 @@
             <ul class="menu-sub">
                 <li class="menu-item">
                     <a href="{{ route('admin.demography') }}" class="menu-link">
-                        <div class="text-truncate" data-i18n="Account">Gets demography</div>
+                        <div class="text-truncate" data-i18n="Account">Gets Demography</div>
                     </a>
                 </li>
 
@@ -69,5 +69,14 @@
                 </li>
             </ul>
         </li>
+        <ul>
+
+            <a href="{{ route('admin.getRegistrations') }}" class="menu-link d-flex align-items-center">
+                <i class="bi bi-person-add me-2"></i>
+                <div class="text-truncate" data-i18n="Accordion">Registration</div>
+            </a>
+
+        </ul>
+
     </ul>
 </aside>

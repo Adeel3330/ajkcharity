@@ -15,8 +15,15 @@ use Illuminate\Support\Facades\Log;
 use Session;
 class RegisterController extends Controller
 {
+    public function getRegistrations()
+    {
+        $charities = CharityRegistration::paginate(10);
+        return view('admin.registration.index', compact('charities'));
+    }
     public function index(){
+        
         $provinces = Demography::where('type','PROVINCE')->get();
+        
         // dd($provinces);
         $law_under_registerations = $this->getChildType('law_under_registered');
         $category_area_operations = $this->getChildType('category_area_operations');
