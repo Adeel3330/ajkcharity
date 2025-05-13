@@ -44,11 +44,11 @@
                         {{-- Type --}}
                         <div class="mb-3 col-md-4">
                             <label for="type" class="form-label">Type</label>
-                            <select name="type" class="form-control">
+                            <select name="type" class="form-control select2">
                                 <option value="">Select Type</option>
-                                <option value="Province" {{ old('type') == 'Province' ? 'selected' : '' }}>Provinces</option>
-                                <option value="District" {{ old('type') == 'District' ? 'selected' : '' }}>Districts</option>
-                                <option value="Tehsil" {{ old('type') == 'Tehsil' ? 'selected' : '' }}>Tehsils</option>
+                                <option value="PROVINCE" {{ old('type') == 'PROVINCE' ? 'selected' : '' }}>Provinces</option>
+                                <option value="DISTRICT" {{ old('type') == 'DISTRICT' ? 'selected' : '' }}>Districts</option>
+                                <option value="TEHSIL" {{ old('type') == 'TEHSIL' ? 'selected' : '' }}>Tehsils</option>
                             </select>
                             @error('type')
                                 <span class="text-danger">{{ $message }}</span>
