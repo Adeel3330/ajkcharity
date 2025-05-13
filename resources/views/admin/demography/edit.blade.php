@@ -22,7 +22,7 @@
                         {{-- Parent --}}
                         <div class="mb-3 col-md-4">
                             <label for="parent" class="form-label">Parent</label>
-                            <select name="parent_id" class="form-control">
+                            <select name="parent_id"  class="form-control select2" id="select2">
                                 <option value="">Select Parent</option>
                                 @foreach ($demographies as $item)
                                     <option value="{{ $item->id }}"
@@ -48,7 +48,7 @@
                         {{-- Type --}}
                         <div class="mb-3 col-md-4">
                             <label for="type" class="form-label">Type</label>
-                            <select name="type" class="form-control">
+                            <select name="type"  class="form-control select2" id="select2">
                                 <option value="">Select Type</option>
                                 <option value="PROVINCE" {{ $demography->type == 'PROVINCE' ? 'selected' : '' }}>Provinces</option>
                                 <option value="DISTRICT" {{ $demography->type == 'DISTRICT' ? 'selected' : '' }}>Districts</option>

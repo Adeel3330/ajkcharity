@@ -39,6 +39,7 @@
     <!-- Vendors CSS -->
 
     <link rel="stylesheet" href="{{ url('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
+    <link rel="stylesheet" href="{{ url('App_Themes/app-assets/vendors/css/forms/selects/select2.min.css') }}" />
 
     <!-- endbuild -->
 
@@ -93,14 +94,7 @@
     </div>
     <!-- / Layout wrapper -->
 
-    <div class="buy-now">
-      <a
-        href="https://themeselection.com/item/sneat-dashboard-pro-bootstrap/"
-        target="_blank"
-        class="btn btn-danger btn-buy-now"
-        >Upgrade to Pro</a
-      >
-    </div>
+    
 
     <!-- Core JS -->
 
@@ -117,6 +111,8 @@
 
     <!-- Vendors JS -->
     <script src="{{ url('assets/vendor/libs/apex-charts/apexcharts.js')}}"></script>
+    <script src="{{ url('assets/vendor/libs/apex-charts/apexcharts.js')}}"></script>
+    <script src="{{ url('App_Themes/app-assets/vendors/js/forms/select/select2.full.min.js') }}" type="text/javascript"></script>
 
     <!-- Main JS -->
 
@@ -127,5 +123,13 @@
 
     <!-- Place this tag before closing body tag for github widget button. -->
     <script async defer src="https://buttons.github.io/buttons.js')}}"></script>
+
+    <script>
+      $(document).ready(function(){
+           $('.select2').select2({
+            searchable:true,
+           });
+      })
+      </script>
   </body>
 </html>
