@@ -29,7 +29,7 @@ class DemographyController extends Controller
 
 
         $data = $request->validate([
-            'parent_id' => 'required',
+            'parent_id' => 'nullable',
             'name' => 'required',
             'type' => 'required'
         ]);
@@ -45,7 +45,7 @@ class DemographyController extends Controller
     }
     public function create()
     {
-        $demographies=Demography::where('parent_id',null)->get();
+        $demographies = Demography::where('parent_id',null)->get();
         return view('admin.demography.create',compact('demographies'));
     }
 
@@ -55,15 +55,16 @@ class DemographyController extends Controller
         return view('admin.demography.edit', compact('demography', 'demographies'));
     }
 
-    public function update(Request $request, Demography $demography)
+    public function update(Request $request, Demography $demogrphy)
     {
         $data = $request->validate([
-            'parent_id' => 'required',
+            'parent_id' => 'nullable',
             'name' => 'required',
             'type' => 'required'
         ]);
+        // dd($demogrphy);
         try {
-            Demography::where('id', $demography->id)->update($data);
+            Demography::where('id', $demogrphy->id)->update($data);
             return redirect()->route('admin.demography')->with('message', 'Demography Updated Successfully');
         } catch (\Throwable $th) {
             throw $th;
