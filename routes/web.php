@@ -23,7 +23,7 @@ Route::post('register-charity',[RegisterController::class,'store'])->name('chari
 Route::get('/login', function () {
     return view('admin_login');
 })->name('login');
-// Admin Authenticated Routes
+// Admin Authenticated Routes   
 Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard',[HomeController::class, 'index'])->name('dashboard');
     Route::get('/users',[UserController::class,'userindex'])->name('users');
@@ -59,6 +59,8 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
 
     //Registration Index
     Route::get('/get-registration',[RegisterController::class, 'getRegistrations'])->name('getRegistrations');
+
+    Route::get('/show-registrations/{charityRegistration}',[RegisterController::class,'show'])->name('registration.show');
 });
 
 require __DIR__.'/auth.php';

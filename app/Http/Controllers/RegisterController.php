@@ -15,6 +15,12 @@ use Illuminate\Support\Facades\Log;
 use Session;
 class RegisterController extends Controller
 {
+    public function show(CharityRegistration $charityRegistration)
+    {
+        // dd($charityRegistration);
+
+        return view('admin.registration.show', compact('charityRegistration'));  
+    }
     public function getRegistrations()
     {
         $charities = CharityRegistration::paginate(10);
