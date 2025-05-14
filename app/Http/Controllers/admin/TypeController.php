@@ -24,7 +24,7 @@ class TypeController extends Controller
     {
         $data = $request->validate([
             "name" => "required",
-            "description" => "required"
+            "description" => 'nullable'
         ]);
         try {
             Type::create($data);
@@ -96,7 +96,7 @@ class TypeController extends Controller
 
         try {
             Type::create($data);
-            return redirect()->route('admin.items')->with('message', 'New Item created successfully');
+            return redirect()->route('admin.items')->with('message', ' Item created successfully');
         } catch (\Throwable $th) {
             throw $th;
         }
@@ -118,7 +118,7 @@ class TypeController extends Controller
         //  dd($type);
         try {
             $type->update($data);
-            return redirect()->route('admin.items')->with('message', 'Items are updated successfully');
+            return redirect()->route('admin.items')->with('message', 'Item are updated successfully');
         } catch (\Throwable $th) {
             return back()->with('error', 'ItemUpdated failed');
         }
