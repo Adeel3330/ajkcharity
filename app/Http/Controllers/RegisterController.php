@@ -15,17 +15,7 @@ use Illuminate\Support\Facades\Log;
 use Session;
 class RegisterController extends Controller
 {
-    public function show(CharityRegistration $charityRegistration)
-    {
-        // dd($charityRegistration);
 
-        return view('admin.registration.show', compact('charityRegistration'));  
-    }
-    public function getRegistrations()
-    {
-        $charities = CharityRegistration::paginate(10);
-        return view('admin.registration.index', compact('charities'));
-    }
     public function index(){
         
         $provinces = Demography::where('type','PROVINCE')->get();
@@ -162,5 +152,15 @@ class RegisterController extends Controller
     {
         $parent_type = Type::where('name', $parent_type_name)->first();
         return Type::where('parent_id', $parent_type->id)->get();
+    }
+    public function show(CharityRegistration $charityRegistration)
+    {
+
+        return view('admin.registration.show', compact('charityRegistration'));
+    }
+    public function getRegistrations()
+    {
+        $charities = CharityRegistration::paginate(10);
+        return view('admin.registration.index', compact('charities'));
     }
 }
