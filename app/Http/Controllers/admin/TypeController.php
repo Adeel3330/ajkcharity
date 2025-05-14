@@ -24,7 +24,7 @@ class TypeController extends Controller
     {
         $data = $request->validate([
             "name" => "required",
-            "description" => "required"
+            "description" => "nullable"
         ]);
         try {
             Type::create($data);
