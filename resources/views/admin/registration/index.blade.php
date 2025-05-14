@@ -39,7 +39,7 @@
                                 <td>{{ $charity->cnic }}</td>
                                 <td>{{ $charity->email }}</td>
                                 <td>
-                                    <a href="" class="btn btn-sm btn-info" title="View">
+                                    <a href="{{ route('admin.registration.show',$charity->id) }}" class="btn btn-sm btn-info" title="View">
                                         <i class="bi bi-eye"></i>
                                     </a>
                                 </td>

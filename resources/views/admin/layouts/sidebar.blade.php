@@ -69,6 +69,7 @@
                 </li>
             </ul>
         </li>
+    <br/>
         <ul>
 
             <a href="{{ route('admin.getRegistrations') }}" class="menu-link d-flex align-items-center">
